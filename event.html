@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Толока в Стрийському парку — Екотолока</title>
+<meta name="theme-color" content="#2E7D47">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
@@ -16,33 +17,61 @@
   <nav class="nav"><a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a></nav>
   <div class="header-actions">
     <a href="login.html" class="btn btn--secondary btn--sm">Увійти</a>
-    <button class="burger" data-burger aria-label="Меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    <button class="burger" data-burger aria-label="Меню"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
   </div>
 </div></header>
-<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close>✕ Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="login.html">Увійти</a><a href="profile.html">Профіль</a></div></div>
+<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Закрити</span></button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="login.html">Увійти</a><a href="profile.html">Профіль</a></div></div>
 
 <main id="main">
 
-  <section style="padding: var(--space-8) 0; background: var(--color-surface-alt)">
-    <div class="container">
-      <a href="events.html" class="link-btn" style="margin-bottom: var(--space-3)">← Всі події</a>
-      <div style="display:flex; gap: var(--space-2); flex-wrap:wrap; margin-bottom: var(--space-3)">
+  <!-- EVENT HERO -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <a href="events.html" class="link-btn" style="margin-bottom: var(--space-4)">
+        <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Всі події
+      </a>
+
+      <div class="tag-row" style="margin-bottom: var(--space-4)">
         <span class="chip">Парк</span>
         <span class="chip chip--muted">Галицький район</span>
         <span class="chip chip--accent">Family-friendly</span>
-        <span class="chip chip--warning">2 у листі очікування</span>
+        <span class="chip chip--warning">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          2 у листі очікування
+        </span>
       </div>
-      <h1 style="margin-bottom: var(--space-2)">Толока в Стрийському парку</h1>
-      <p style="font-size: 1.25rem; color: var(--color-text-muted); margin-bottom: var(--space-5)">
-        Субота, 26 квітня · 10:00–13:00
-      </p>
-      <div style="display:flex; align-items:center; gap: var(--space-4); flex-wrap:wrap">
+
+      <h1 style="max-width: 22ch">Толока в Стрийському парку</h1>
+
+      <div class="row" style="gap: var(--space-5); margin-top: var(--space-3)">
+        <div class="row" style="gap: var(--space-2)">
+          <div class="date-tile" aria-hidden="true">
+            <div class="date-tile__month">Кві</div>
+            <div class="date-tile__day">26</div>
+          </div>
+          <div>
+            <strong>Субота, 26 квітня</strong>
+            <div class="muted" style="font-size: var(--fs-small)">10:00–13:00 · 3 години</div>
+          </div>
+        </div>
+        <div class="row" style="gap: var(--space-2)">
+          <div class="icon-circle" style="width: 48px; height: 48px; border-radius: 14px"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <strong>Біля фонтану</strong>
+            <div class="muted" style="font-size: var(--fs-small)">Центральна алея</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="gap: var(--space-5); margin-top: var(--space-6)">
         <div class="avatar-stack" aria-hidden="true">
-          <div class="img-placeholder img-placeholder--avatar" data-label=""></div>
-          <div class="img-placeholder img-placeholder--avatar" data-label=""></div>
-          <div class="img-placeholder img-placeholder--avatar" data-label=""></div>
-          <div class="img-placeholder img-placeholder--avatar" data-label=""></div>
-          <div class="img-placeholder img-placeholder--avatar" data-label=""></div>
+          <span class="img-placeholder img-placeholder--avatar">О</span>
+          <span class="img-placeholder img-placeholder--avatar">М</span>
+          <span class="img-placeholder img-placeholder--avatar">А</span>
+          <span class="img-placeholder img-placeholder--avatar">Т</span>
+          <span class="img-placeholder img-placeholder--avatar">К</span>
         </div>
         <span><strong>37 людей вже йдуть</strong> · 4 вперше · 8 з твого району</span>
       </div>
@@ -52,24 +81,30 @@
   <section class="section--tight">
     <div class="container">
       <div class="split">
-        <div>
-          <div class="img-placeholder img-placeholder--wide" data-label="Стрийський парк — центральна алея" style="margin-bottom: var(--space-6)"></div>
+        <div class="stack-xl">
 
-          <h2>Як усе пройде</h2>
-          <div class="timeline">
-            <div class="timeline__row"><div class="timeline__time">10:00</div><div class="timeline__desc">Зустрічаємось біля фонтану</div></div>
-            <div class="timeline__row"><div class="timeline__time">10:15</div><div class="timeline__desc">Ділимось на 3 групи, короткий інструктаж</div></div>
-            <div class="timeline__row"><div class="timeline__time">10:30</div><div class="timeline__desc">Прибираємо алеї і галявини</div></div>
-            <div class="timeline__row"><div class="timeline__time">12:30</div><div class="timeline__desc">Чай, печиво, фото До/Після</div></div>
-            <div class="timeline__row"><div class="timeline__time">13:00</div><div class="timeline__desc">Розходимось</div></div>
-          </div>
+          <div class="img-placeholder img-placeholder--wide round-organic" style="box-shadow: var(--shadow-md)">Стрийський парк<br>центральна алея</div>
 
-          <h2 style="margin-top: var(--space-10)">Що робимо</h2>
-          <p>Чистимо центральну алею і галявини після зими. Збираємо пластик, папір, дрібне скло окремо. Біомасу (листя, гілки) — в компост-зону.</p>
+          <section>
+            <h2>Як усе пройде</h2>
+            <div class="timeline">
+              <div class="timeline__row"><div class="timeline__time">10:00</div><div class="timeline__desc">Зустрічаємось біля фонтану</div></div>
+              <div class="timeline__row"><div class="timeline__time">10:15</div><div class="timeline__desc">Ділимось на 3 групи, короткий інструктаж</div></div>
+              <div class="timeline__row"><div class="timeline__time">10:30</div><div class="timeline__desc">Прибираємо алеї і галявини</div></div>
+              <div class="timeline__row"><div class="timeline__time">12:30</div><div class="timeline__desc">Чай, печиво, фото До/Після</div></div>
+              <div class="timeline__row"><div class="timeline__time">13:00</div><div class="timeline__desc">Розходимось</div></div>
+            </div>
+          </section>
 
-          <div class="info-cols" style="margin-top: var(--space-8)">
+          <section>
+            <h2>Що робимо</h2>
+            <p>Чистимо центральну алею і галявини після зими. Збираємо пластик, папір, дрібне скло окремо. Біомасу (листя, гілки) — в компост-зону.</p>
+          </section>
+
+          <section class="info-cols">
             <div class="card">
-              <h3 style="margin-top:0">Що взяти</h3>
+              <div class="icon-circle" style="margin-bottom: var(--space-3)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1-2-2 2 2 0 0 1 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><polyline points="18 12 22 16 18 20"/></svg></div>
+              <h3 style="margin-top: 0">Що взяти</h3>
               <ul>
                 <li>Одяг, що не шкода</li>
                 <li>Зручне взуття</li>
@@ -77,7 +112,8 @@
               </ul>
             </div>
             <div class="card">
-              <h3 style="margin-top:0">Що дамо</h3>
+              <div class="icon-circle icon-circle--accent" style="margin-bottom: var(--space-3)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <h3 style="margin-top: 0">Що дамо</h3>
               <ul>
                 <li>Граблі й совки</li>
                 <li>Рукавички</li>
@@ -85,47 +121,78 @@
                 <li>Чай з печивом</li>
               </ul>
             </div>
-          </div>
+          </section>
 
-          <h2 style="margin-top: var(--space-10)">Де зустрічаємось</h2>
-          <p class="muted">Біля фонтану на центральній алеї. Орієнтир — велика жовта лавка.</p>
-          <div class="map-embed" style="margin-top: var(--space-3)">
-            <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2572.8!2d24.027!3d49.832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1700000001" title="Стрийський парк на карті"></iframe>
-          </div>
-
-          <h2 style="margin-top: var(--space-10)">Організатор</h2>
-          <div class="card" style="display:flex; gap: var(--space-4); align-items:center">
-            <div class="img-placeholder img-placeholder--avatar" style="width:64px; height:64px" aria-hidden="true"></div>
-            <div>
-              <strong>Олена Лисак</strong>
-              <p class="muted" style="margin:0; font-size: var(--fs-small)">14 толок як учасник · 8 організованих · Легенда</p>
-              <p style="margin: var(--space-2) 0 0">«Працюю в IT, по вихідних прибираю Стрийський. Кава на зустрічі — моя.»</p>
-              <p class="muted" style="font-size: var(--fs-small); margin-top: var(--space-2)">Напиши, якщо є питання: @olena_tuloka</p>
+          <section>
+            <h2>Де зустрічаємось</h2>
+            <p class="muted">Біля фонтану на центральній алеї. Орієнтир — велика жовта лавка.</p>
+            <div class="map-embed" style="margin-top: var(--space-3)">
+              <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2572.8!2d24.027!3d49.832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1700000001" title="Стрийський парк на карті"></iframe>
             </div>
-          </div>
+          </section>
 
-          <h2 style="margin-top: var(--space-10)">Часті питання</h2>
-          <details class="accordion"><summary>Що, якщо буде дощ?</summary><p>Невеликий — прибираємо. Сильний — перенесемо на неділю, напишемо тобі за день до події.</p></details>
-          <details class="accordion"><summary>Чи можна з дитиною?</summary><p>Можна. Для дітей є свої мінізавдання. Дитина до 12 — з дорослим.</p></details>
-          <details class="accordion"><summary>Я один піду?</summary><p>Тут уже 37 людей. На минулій толоці 7 знайомились вперше — це нормально.</p></details>
-          <details class="accordion"><summary>Що з битим склом?</summary><p>Збираємо окремо. У організатора є спецконтейнер. Ти сам не чіпаєш руками.</p></details>
+          <section>
+            <h2>Організатор</h2>
+            <div class="card" style="display:flex; gap: var(--space-4); align-items:flex-start">
+              <span class="img-placeholder img-placeholder--avatar" style="width:72px; height:72px; font-size: 1.5rem">О</span>
+              <div style="flex: 1">
+                <strong style="font-size: var(--fs-h4)">Олена Лисак</strong>
+                <div class="tag-row" style="margin-top: var(--space-2)">
+                  <span class="chip chip--outline">14 толок як учасник</span>
+                  <span class="chip chip--outline">8 організованих</span>
+                  <span class="chip">Легенда</span>
+                </div>
+                <p style="margin: var(--space-3) 0 0">«Працюю в IT, по вихідних прибираю Стрийський. Кава на зустрічі — моя.»</p>
+                <p class="muted" style="font-size: var(--fs-small); margin-top: var(--space-2)">Напиши, якщо є питання: @olena_tuloka</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Часті питання</h2>
+            <details class="accordion"><summary>Що, якщо буде дощ?</summary><p>Невеликий — прибираємо. Сильний — перенесемо на неділю, напишемо тобі за день до події.</p></details>
+            <details class="accordion"><summary>Чи можна з дитиною?</summary><p>Можна. Для дітей є свої мінізавдання. Дитина до 12 — з дорослим.</p></details>
+            <details class="accordion"><summary>Я один піду?</summary><p>Тут уже 37 людей. На минулій толоці 7 знайомились вперше — це нормально.</p></details>
+            <details class="accordion"><summary>Що з битим склом?</summary><p>Збираємо окремо. У організатора є спецконтейнер. Ти сам не чіпаєш руками.</p></details>
+          </section>
 
         </div>
 
         <aside>
-          <div class="card card--highlight" style="position:sticky; top: 88px">
-            <div class="chip chip--warning" style="margin-bottom: var(--space-3)">2 у листі очікування</div>
-            <div style="font-family: var(--font-display); font-size: 2rem; font-weight: 700; line-height:1;">37<span class="muted" style="font-size:1rem; font-weight:400">/35</span></div>
+          <div class="card card--highlight" style="position: sticky; top: 96px">
+            <span class="chip chip--warning" style="margin-bottom: var(--space-3)">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              2 у листі очікування
+            </span>
+            <div class="row" style="align-items: baseline; gap: var(--space-2)">
+              <span class="number-display" style="font-size: 3.5rem">37</span>
+              <span class="muted" style="font-size: var(--fs-body-lg)">/35</span>
+            </div>
             <p class="muted" style="font-size: var(--fs-small); margin-top: var(--space-1)">Якщо хтось не зможе — місце перейде тобі.</p>
-
             <div class="progress" style="margin: var(--space-4) 0"><div class="progress__bar" style="width: 100%"></div></div>
 
-            <button class="btn btn--primary btn--block btn--lg" data-modal-open="join">Приєднатись до листа очікування</button>
-            <button class="btn btn--ghost btn--block" style="margin-top: var(--space-2)" data-modal-open="invite">Запросити друзів</button>
-            <button class="btn btn--ghost btn--block" data-modal-open="share">Поділитись</button>
+            <button class="btn btn--primary btn--block btn--lg" data-modal-open="join">
+              Приєднатись до листа очікування
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+            <button class="btn btn--secondary btn--block" style="margin-top: var(--space-2)" data-modal-open="invite">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+              Запросити друзів
+            </button>
+            <button class="btn btn--ghost btn--block" data-modal-open="share">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Поділитись
+            </button>
 
             <hr class="divider" style="margin: var(--space-5) 0">
-            <small class="muted">📅 Субота, 26 квітня · 10:00–13:00<br>📍 Стрийський парк · біля фонтану</small>
+            <div class="row" style="gap: var(--space-2); font-size: var(--fs-small)">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Субота, 26 квітня · 10:00</span>
+            </div>
+            <div class="row" style="gap: var(--space-2); font-size: var(--fs-small); margin-top: var(--space-2)">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Стрийський · біля фонтану</span>
+            </div>
           </div>
         </aside>
       </div>
@@ -134,28 +201,47 @@
 
 </main>
 
-<!-- MODAL: Join (soft-gate) -->
+<!-- MODAL: Join -->
 <div class="modal-bg" data-modal="join" role="dialog" aria-modal="true" aria-labelledby="join-title">
   <div class="modal">
-    <div class="modal__header"><h3 id="join-title" style="margin:0">Готово за 30 секунд</h3><button class="modal__close" data-modal-close aria-label="Закрити">✕</button></div>
+    <div class="modal__header">
+      <div>
+        <span class="eyebrow">Реєстрація</span>
+        <h3 id="join-title" style="margin:0">Готово за 30 секунд</h3>
+      </div>
+      <button class="modal__close" data-modal-close aria-label="Закрити"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
     <p class="muted">Щоб потрапити у список — твій email і як тебе звати. Нагадаємо за день до толоки.</p>
     <form data-demo-form="confirm.html" class="stack">
-      <div class="field"><label class="field__label" for="name">Як тебе звати?</label><input class="input" id="name" required placeholder="Наприклад, Марко"></div>
-      <div class="field"><label class="field__label" for="email">Email</label><input class="input" type="email" id="email" required placeholder="ty@example.com"><div class="field__hint">На нього надішлемо підтвердження і нагадування.</div></div>
+      <div class="field">
+        <label class="field__label" for="name">Як тебе звати?</label>
+        <input class="input" id="name" required placeholder="Наприклад, Марко">
+      </div>
+      <div class="field">
+        <label class="field__label" for="email">Email</label>
+        <input class="input" type="email" id="email" required placeholder="ty@example.com">
+        <div class="field__hint">На нього надішлемо підтвердження і нагадування.</div>
+      </div>
       <button type="submit" class="btn btn--primary btn--block btn--lg">Приєднатись</button>
-      <p class="muted center" style="font-size: var(--fs-small)">Маєш акаунт? <a href="login.html">Увійти через Google чи Facebook</a></p>
+      <p class="muted center" style="font-size: var(--fs-small); margin: 0">Маєш акаунт? <a href="login.html">Увійти через Google чи Facebook</a></p>
     </form>
   </div>
 </div>
 
-<!-- MODAL: Invite friends -->
-<div class="modal-bg" data-modal="invite" role="dialog" aria-modal="true" aria-labelledby="invite-title">
+<!-- MODAL: Invite -->
+<div class="modal-bg" data-modal="invite" role="dialog" aria-modal="true">
   <div class="modal">
-    <div class="modal__header"><h3 id="invite-title" style="margin:0">Запросити друзів</h3><button class="modal__close" data-modal-close>✕</button></div>
+    <div class="modal__header">
+      <div>
+        <span class="eyebrow">Команда</span>
+        <h3 style="margin:0">Запросити друзів</h3>
+      </div>
+      <button class="modal__close" data-modal-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
     <p class="muted">Копіюй посилання — друг відкриє і побачить банер «Марко кличе тебе в команду».</p>
-    <div class="card" style="display:flex; gap: var(--space-3); align-items:center; padding: var(--space-3)">
+    <div class="card card--soft" style="display:flex; gap: var(--space-3); align-items:center; padding: var(--space-3)">
       <code style="flex:1; overflow:auto; font-size: var(--fs-small)">ekotoloka.org/e/stryi-apr26?team=marko</code>
-      <button class="btn btn--primary btn--sm" data-copy="ekotoloka.org/e/stryi-apr26?team=marko">Копіювати</button>
+      <button class="btn btn--primary btn--sm" data-copy="ekotoloka.org/e/stryi-apr26?team=marko">Копія</button>
     </div>
     <div class="grid grid--3" style="margin-top: var(--space-4)">
       <a href="#" class="btn btn--secondary">Viber</a>
@@ -166,9 +252,12 @@
 </div>
 
 <!-- MODAL: Share -->
-<div class="modal-bg" data-modal="share" role="dialog" aria-modal="true">
+<div class="modal-bg" data-modal="share" role="dialog">
   <div class="modal">
-    <div class="modal__header"><h3 style="margin:0">Поділитись подією</h3><button class="modal__close" data-modal-close>✕</button></div>
+    <div class="modal__header">
+      <h3 style="margin:0">Поділитись подією</h3>
+      <button class="modal__close" data-modal-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
     <div class="grid grid--3">
       <a href="#" class="btn btn--secondary">Instagram</a>
       <a href="#" class="btn btn--secondary">Facebook</a>
@@ -180,12 +269,15 @@
   </div>
 </div>
 
-<footer class="site-footer"><div class="container"><div class="footer-grid">
-  <div class="footer-col"><a href="index.html" class="logo" style="color:#fff"><span class="logo__mark">Е</span>Екотолока</a><p style="margin-top: var(--space-3); opacity:0.75">Сусідські прибирання у Львові.</p></div>
-  <div class="footer-col"><h4>Сайт</h4><ul><li><a href="events.html">Знайти подію</a></li><li><a href="results.html">Результати</a></li><li><a href="community.html">Ком'юніті</a></li><li><a href="support.html">Підтримати</a></li></ul></div>
-  <div class="footer-col"><h4>Допомога</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="report.html">Сповістити</a></li><li><a href="news.html">Новини</a></li></ul></div>
-  <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookie.html">Cookie</a></li></ul></div>
-</div><div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів.</span><span>Зроблено з 💚</span></div></div></footer>
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-col"><a href="index.html" class="logo"><span class="logo__mark">Е</span>Екотолока</a><p style="margin-top: var(--space-4); opacity:0.75; max-width: 38ch">Сусідські прибирання у Львові.</p></div>
+    <div class="footer-col"><h4>Сайт</h4><ul><li><a href="events.html">Знайти подію</a></li><li><a href="results.html">Результати</a></li><li><a href="community.html">Ком'юніті</a></li><li><a href="support.html">Підтримати</a></li></ul></div>
+    <div class="footer-col"><h4>Допомога</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="report.html">Сповістити</a></li><li><a href="news.html">Новини</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookie.html">Cookie</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів.</span><span>Зроблено руками ком'юніті</span></div>
+</div></footer>
 
 <script src="js/main.js"></script>
 </body>

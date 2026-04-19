@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Привіт! — Екотолока</title>
+<title>Привіт — Екотолока</title>
+<meta name="theme-color" content="#2E7D47">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
@@ -14,19 +15,24 @@
 </div></header>
 
 <main>
-  <section class="section">
-    <div class="container container--narrow">
-      <div class="card" style="padding: var(--space-8); max-width: 480px; margin: 0 auto">
-        <div style="font-size: 3rem; text-align: center; margin-bottom: var(--space-3)">👋</div>
+  <section class="section" style="position: relative; overflow: hidden">
+    <span class="blob blob--warm" style="top: -10%; right: -10%" aria-hidden="true"></span>
+    <div class="container container--narrow" style="position: relative">
+      <div class="card card--organic reveal" style="padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem); max-width: 520px; margin: 0 auto; box-shadow: var(--shadow-lg)">
+        <div class="icon-circle" style="margin-inline: auto; margin-bottom: var(--space-4); width: 80px; height: 80px; background: var(--gradient-warm)"><svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg></div>
+        <span class="eyebrow" style="justify-content: center; display: flex">Ласкаво просимо</span>
         <h1 style="text-align: center; margin-bottom: var(--space-3)">Як тебе звати?</h1>
-        <p class="muted center" style="margin-bottom: var(--space-6)">Одне поле — і готово. Решту заповниш, коли захочеш.</p>
+        <p class="muted center" style="margin-bottom: var(--space-8); margin-inline: auto">Одне поле — і готово. Решту заповниш, коли захочеш.</p>
 
         <form data-demo-form="profile.html" class="stack">
           <div class="field">
             <label class="field__label sr-only" for="name">Ім'я</label>
-            <input class="input" type="text" id="name" required placeholder="Твоє ім'я" autofocus style="font-size: 1.25rem; text-align:center; padding: var(--space-4)">
+            <input class="input" type="text" id="name" required placeholder="Твоє ім'я" autofocus style="font-size: 1.375rem; text-align:center; padding: var(--space-5); height: 72px; border-radius: var(--radius-lg)">
           </div>
-          <button type="submit" class="btn btn--primary btn--block btn--lg">Готово</button>
+          <button type="submit" class="btn btn--primary btn--block btn--lg">
+            Готово
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
           <a href="profile.html" class="btn btn--ghost btn--block">Пропустити — заповню пізніше</a>
         </form>
       </div>
@@ -34,7 +40,7 @@
   </section>
 </main>
 
-<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:0"><span>© 2026 ГО «Екотолока».</span></div></div></footer>
+<footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 ГО «Екотолока».</span></div></div></footer>
 <script src="js/main.js"></script>
 </body>
 </html>

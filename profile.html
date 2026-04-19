@@ -4,36 +4,62 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Мій профіль — Екотолока</title>
+<meta name="theme-color" content="#2E7D47">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
 <header class="site-header"><div class="container site-header__inner">
   <a href="index.html" class="logo"><span class="logo__mark">Е</span><span>Екотолока</span></a>
   <nav class="nav"><a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a></nav>
-  <div class="header-actions"><a href="events.html" class="btn btn--primary btn--sm">Знайти подію</a><button class="burger" data-burger aria-label="Меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
+  <div class="header-actions"><a href="events.html" class="btn btn--primary btn--sm">Знайти подію</a><button class="burger" data-burger aria-label="Меню"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
 </div></header>
-<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close>✕ Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="profile.html">Профіль</a></div></div>
+<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="profile.html">Профіль</a></div></div>
 
 <main>
-  <section class="section--tight">
+  <section class="section--tight" style="padding-top: var(--space-8)">
     <div class="container">
 
       <div class="profile-hero">
         <div class="profile-hero__inner">
           <div class="profile-hero__avatar">М</div>
-          <div style="flex:1; min-width: 200px">
-            <h1 style="margin: 0 0 var(--space-1); font-size: 2rem">Привіт, Марко</h1>
-            <p class="muted" style="margin:0">Галицький район · з нами з січня 2026 · <strong>Свій</strong></p>
+          <div style="flex:1; min-width: 220px">
+            <span class="eyebrow" style="margin-bottom: 0">Привіт</span>
+            <h1 style="margin: var(--space-1) 0; font-size: 2rem">Марко</h1>
+            <div class="tag-row" style="margin-top: var(--space-2)">
+              <span class="chip">Свій</span>
+              <span class="chip chip--muted">Галицький</span>
+              <span class="chip chip--outline">з січня 2026</span>
+            </div>
           </div>
-          <div><a href="#" class="btn btn--secondary">Поділитись профілем</a></div>
+          <a href="#" class="btn btn--secondary">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Поділитись
+          </a>
         </div>
-        <div class="stats-strip" style="margin: var(--space-6) var(--space-5) 0; background: rgba(255,255,255,0.6)">
-          <div class="stat"><div class="stat__value">18 кг</div><div class="stat__label">прибрав сміття</div></div>
-          <div class="stat"><div class="stat__value">3</div><div class="stat__label">толоки</div></div>
-          <div class="stat"><div class="stat__value">5 год</div><div class="stat__label">часу</div></div>
-          <div class="stat"><div class="stat__value">2</div><div class="stat__label">бейджі</div></div>
+      </div>
+
+      <div class="bento" style="margin-bottom: var(--space-8)">
+        <div class="card bento__wide" style="display: flex; flex-direction: column; justify-content: center">
+          <span class="eyebrow" style="margin-bottom: var(--space-2)">Сміття</span>
+          <div class="number-display" style="font-size: 3.5rem">18 <span style="font-size: 1.5rem; color: var(--color-text-muted)">кг</span></div>
+          <p class="muted" style="margin: var(--space-2) 0 0">прибрано за 3 толоки</p>
+        </div>
+        <div class="card" style="display: flex; flex-direction: column; justify-content: center; text-align: center">
+          <div class="icon-circle" style="margin-inline: auto; margin-bottom: var(--space-2)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <strong style="font-size: 1.5rem; font-family: var(--font-display)">3</strong>
+          <div class="muted" style="font-size: var(--fs-small)">толоки</div>
+        </div>
+        <div class="card" style="display: flex; flex-direction: column; justify-content: center; text-align: center">
+          <div class="icon-circle icon-circle--accent" style="margin-inline: auto; margin-bottom: var(--space-2)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <strong style="font-size: 1.5rem; font-family: var(--font-display)">5</strong>
+          <div class="muted" style="font-size: var(--fs-small)">годин</div>
+        </div>
+        <div class="card card--primary bento__wide" style="display: flex; flex-direction: column; justify-content: center">
+          <span class="chip chip--dark" style="align-self: flex-start; margin-bottom: var(--space-2)">Рівень · Свій</span>
+          <strong style="font-family: var(--font-display); font-size: 1.75rem; color: #fff">2 толоки до «Актива»</strong>
+          <div class="progress" style="margin-top: var(--space-3); background: rgba(255,255,255,0.2)"><div class="progress__bar" style="width: 60%; background: var(--color-accent)"></div></div>
         </div>
       </div>
 
@@ -48,44 +74,47 @@
       <!-- HISTORY -->
       <div data-tab-panel="history" data-group="profile" class="tab-panel is-active stack">
         <div class="card card--highlight">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap: var(--space-4); flex-wrap:wrap">
-            <div>
+          <div class="row-between">
+            <div style="flex: 1; min-width: 260px">
               <span class="chip">Майбутня</span>
               <h3 style="margin: var(--space-2) 0">Толока в Стрийському парку</h3>
               <p class="muted" style="margin:0">Сб 26.04 · 10:00–13:00 · біля фонтану</p>
             </div>
-            <div style="display:flex; gap: var(--space-2); flex-wrap: wrap">
+            <div class="row" style="gap: var(--space-2)">
               <a href="event.html" class="btn btn--secondary btn--sm">Деталі</a>
               <button class="btn btn--ghost btn--sm" onclick="showToast('Учасника вилучено')">Не зможу</button>
             </div>
           </div>
         </div>
         <div class="card">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap: var(--space-4); flex-wrap:wrap">
-            <div>
-              <span class="chip chip--muted">Завершено</span>
+          <div class="row-between">
+            <div style="flex: 1; min-width: 260px">
+              <span class="chip chip--muted">Завершено · 26.03</span>
               <h3 style="margin: var(--space-2) 0">Толока у Стрийському</h3>
-              <p class="muted" style="margin:0">26 березня · 6 кг твоїх · 🏆 бейдж «Перша толока»</p>
+              <p class="muted" style="margin:0">6 кг твоїх · бейдж «Перша толока»</p>
             </div>
-            <button class="btn btn--secondary btn--sm" data-modal-open="share2">Поділитись</button>
+            <button class="btn btn--secondary btn--sm" data-modal-open="share2">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Поділитись
+            </button>
           </div>
         </div>
         <div class="card">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap: var(--space-4); flex-wrap:wrap">
-            <div>
-              <span class="chip chip--muted">Завершено</span>
+          <div class="row-between">
+            <div style="flex: 1; min-width: 260px">
+              <span class="chip chip--muted">Завершено · 12.03</span>
               <h3 style="margin: var(--space-2) 0">After-work на Валах</h3>
-              <p class="muted" style="margin:0">12 березня · 4 кг твоїх</p>
+              <p class="muted" style="margin:0">4 кг твоїх</p>
             </div>
             <button class="btn btn--secondary btn--sm" data-modal-open="share2">Поділитись</button>
           </div>
         </div>
         <div class="card">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap: var(--space-4); flex-wrap:wrap">
-            <div>
-              <span class="chip chip--muted">Завершено</span>
+          <div class="row-between">
+            <div style="flex: 1; min-width: 260px">
+              <span class="chip chip--muted">Завершено · 24.02</span>
               <h3 style="margin: var(--space-2) 0">Двір на Сихові</h3>
-              <p class="muted" style="margin:0">24 лютого · 8 кг твоїх</p>
+              <p class="muted" style="margin:0">8 кг твоїх</p>
             </div>
             <button class="btn btn--secondary btn--sm" data-modal-open="share2">Поділитись</button>
           </div>
@@ -94,33 +123,29 @@
 
       <!-- BADGES -->
       <div data-tab-panel="badges" data-group="profile" class="tab-panel">
-        <p class="muted">2 з 12 відкрито</p>
+        <p class="muted"><strong>2 з 12</strong> відкрито</p>
         <div class="grid grid--4" style="margin-top: var(--space-6)">
-          <div class="badge-tile"><div class="badge-tile__icon">🥉</div><strong>Перша толока</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Ну все, ти в темі.</p></div>
-          <div class="badge-tile"><div class="badge-tile__icon">🌅</div><strong>Ранкова пташка</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">До кави і прибрав.</p></div>
-          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🤝</div><strong>Тандем</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">3 толоки з напарником</p></div>
-          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🏘️</div><strong>Актив району</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">10 толок у своєму районі</p></div>
-          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🌧️</div><strong>Мокрий і щасливий</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Толока під дощем</p></div>
-          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">❄️</div><strong>Зимовий герой</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Толока в грудні–лютому</p></div>
-          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🗺️</div><strong>Всеміщанин</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">5 різних районів</p></div>
-          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">👥</div><strong>Командир</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">3 друзі дійшли на толоку</p></div>
-          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">👁️</div><strong>Очі міста</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">3 повідомлення</p></div>
-          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">⭐</div><strong>Свій серед своїх</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">5 толок</p></div>
-          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🏛️</div><strong>Легенда</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">25 толок</p></div>
-          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🎯</div><strong>Мер одного дня</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Організуй свою толоку</p></div>
+          <div class="badge-tile"><div class="badge-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><strong>Перша толока</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Ну все, ти в темі.</p></div>
+          <div class="badge-tile"><div class="badge-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div><strong>Ранкова пташка</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">До кави і прибрав.</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><strong>Тандем</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">3 толоки з напарником</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><strong>Актив району</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">10 толок у районі</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><strong>Мокрий і щасливий</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Толока під дощем</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><strong>Зимовий герой</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Толока грудень–лютий</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><strong>Всеміщанин</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">5 різних районів</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><strong>Командир</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">3 друзі дійшли</p></div>
         </div>
       </div>
 
       <!-- TEAMS -->
       <div data-tab-panel="teams" data-group="profile" class="tab-panel">
-        <p class="muted">Ти в 1 команді</p>
+        <p class="muted">Ти в <strong>1 команді</strong></p>
         <div class="card" style="margin-top: var(--space-4)">
-          <div style="display:flex; justify-content: space-between; align-items:flex-start; gap: var(--space-4); flex-wrap:wrap">
-            <div><h3 style="margin-top:0">Команда Марка</h3><p class="muted" style="margin:0">2 людини · створена для толоки в Стрийському</p></div>
+          <div class="row-between">
+            <div style="flex: 1; min-width: 260px"><h3 style="margin-top:0">Команда Марка</h3><p class="muted" style="margin:0">2 людини · створена для толоки в Стрийському</p></div>
             <button class="btn btn--secondary btn--sm" data-modal-open="invite2">Запросити ще</button>
           </div>
         </div>
-        <div class="card" style="margin-top: var(--space-4); text-align: center; border-style: dashed">
+        <div class="card card--dashed" style="margin-top: var(--space-4); text-align: center">
           <p class="muted" style="margin:0">Ще не в команді? Запроси друга на наступну толоку</p>
           <button class="btn btn--primary" style="margin-top: var(--space-3)" data-modal-open="invite2">Запросити друга</button>
         </div>
@@ -130,23 +155,21 @@
       <div data-tab-panel="perks" data-group="profile" class="tab-panel">
         <p class="muted">Знижки відкриваються залежно від кількості толок</p>
         <div class="grid grid--3" style="margin-top: var(--space-6)">
-          <div class="card"><div class="chip">Доступно</div><h3 style="margin: var(--space-3) 0 var(--space-2)">Зелене зерно</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−20% на каву у день толоки</p><button class="btn btn--secondary btn--block" style="margin-top: var(--space-4)">Показати код</button></div>
-          <div class="card"><div class="chip">Доступно</div><h3 style="margin: var(--space-3) 0 var(--space-2)">Ровер</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">1 год безкоштовно за 1-шу толоку</p><button class="btn btn--secondary btn--block" style="margin-top: var(--space-4)">Активувати</button></div>
-          <div class="card" style="opacity: 0.55"><div class="chip chip--muted">Ще 2 толоки</div><h3 style="margin: var(--space-3) 0 var(--space-2)">Голка</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−15% після 3+ толок</p></div>
-          <div class="card" style="opacity: 0.55"><div class="chip chip--muted">Ще 1 толока</div><h3 style="margin: var(--space-3) 0 var(--space-2)">Hart</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−30% на перший місяць за 2+ толок</p></div>
-          <div class="card" style="opacity: 0.55"><div class="chip chip--muted">Ще 4 толоки</div><h3 style="margin: var(--space-3) 0 var(--space-2)">Книгарня «На розі»</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−10% після 5+ толок</p></div>
+          <div class="card"><div class="row-between"><span class="chip">Доступно</span><span class="muted" style="font-size: var(--fs-micro)">Кав'ярня</span></div><h3 style="margin: var(--space-3) 0 var(--space-2)">Зелене зерно</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−20% на каву у день толоки</p><button class="btn btn--secondary btn--block" style="margin-top: var(--space-4)">Показати код</button></div>
+          <div class="card"><div class="row-between"><span class="chip">Доступно</span><span class="muted" style="font-size: var(--fs-micro)">Велопрокат</span></div><h3 style="margin: var(--space-3) 0 var(--space-2)">Ровер</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">1 год безкоштовно</p><button class="btn btn--secondary btn--block" style="margin-top: var(--space-4)">Активувати</button></div>
+          <div class="card" style="opacity: 0.55"><div class="row-between"><span class="chip chip--muted">Ще 2 толоки</span><span class="muted" style="font-size: var(--fs-micro)">Одяг</span></div><h3 style="margin: var(--space-3) 0 var(--space-2)">Голка</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−15% після 3+ толок</p></div>
+          <div class="card" style="opacity: 0.55"><div class="row-between"><span class="chip chip--muted">Ще 1 толока</span><span class="muted" style="font-size: var(--fs-micro)">Спорт</span></div><h3 style="margin: var(--space-3) 0 var(--space-2)">Hart</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−30% на перший місяць</p></div>
+          <div class="card" style="opacity: 0.55"><div class="row-between"><span class="chip chip--muted">Ще 4 толоки</span><span class="muted" style="font-size: var(--fs-micro)">Книги</span></div><h3 style="margin: var(--space-3) 0 var(--space-2)">Книгарня «На розі»</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−10% після 5+ толок</p></div>
         </div>
       </div>
 
       <!-- SETTINGS -->
       <div data-tab-panel="settings" data-group="profile" class="tab-panel">
-        <div class="card stack-lg" style="max-width: 560px">
+        <div class="card stack-lg" style="max-width: 600px">
           <h3 style="margin-top:0">Ім'я та email</h3>
           <div class="field"><label class="field__label" for="s-name">Ім'я</label><input class="input" id="s-name" value="Марко"></div>
           <div class="field"><label class="field__label" for="s-email">Email</label><input class="input" id="s-email" value="marko@example.com"></div>
-          <div class="field"><label class="field__label" for="s-district">Район</label>
-            <select class="select" id="s-district"><option>Галицький</option><option>Шевченківський</option><option>Личаківський</option><option>Сихівський</option><option>Франківський</option><option>Залізничний</option></select>
-          </div>
+          <div class="field"><label class="field__label" for="s-district">Район</label><select class="select" id="s-district"><option>Галицький</option><option>Шевченківський</option><option>Личаківський</option><option>Сихівський</option><option>Франківський</option><option>Залізничний</option></select></div>
 
           <hr class="divider">
 
@@ -157,17 +180,20 @@
           <hr class="divider">
 
           <h3 style="margin-top:0">Нагадування</h3>
-          <div class="checkbox"><input type="checkbox" checked id="n1"> <label for="n1">Нагадати за тиждень (Save-the-date)</label></div>
-          <div class="checkbox"><input type="checkbox" checked id="n2"> <label for="n2">Нагадати за день до толоки</label></div>
-          <div class="checkbox"><input type="checkbox" id="n3"> <label for="n3">Нагадати за 2 години</label></div>
+          <div class="checkbox"><input type="checkbox" checked id="n1"> <label for="n1">За тиждень (save-the-date)</label></div>
+          <div class="checkbox"><input type="checkbox" checked id="n2"> <label for="n2">За день до толоки</label></div>
+          <div class="checkbox"><input type="checkbox" id="n3"> <label for="n3">За 2 години</label></div>
           <div class="checkbox"><input type="checkbox" checked id="n4"> <label for="n4">Фото та статистика після толоки</label></div>
           <div class="checkbox"><input type="checkbox" id="n5"> <label for="n5">Новини і анонси</label></div>
 
           <hr class="divider">
 
-          <button class="btn btn--primary" onclick="showToast('Збережено')">Зберегти</button>
+          <div class="row" style="gap: var(--space-3)">
+            <button class="btn btn--primary" onclick="showToast('Збережено')">Зберегти</button>
+            <a href="login.html" class="btn btn--ghost">Вийти</a>
+          </div>
           <p class="muted" style="font-size: var(--fs-small); margin: 0">
-            <a href="#" onclick="return confirm('Точно видалити акаунт? Всі дані підуть.')">Видалити акаунт</a> · <a href="login.html">Вийти</a>
+            <a href="#" onclick="return confirm('Точно видалити акаунт? Всі дані підуть.')">Видалити акаунт</a>
           </p>
         </div>
       </div>
@@ -179,29 +205,32 @@
 <!-- MODAL: Share -->
 <div class="modal-bg" data-modal="share2" role="dialog">
   <div class="modal">
-    <div class="modal__header"><h3 style="margin:0">Поділитись результатом</h3><button class="modal__close" data-modal-close>✕</button></div>
-    <p class="muted">Ось три шаблони — обери формат і завантаж.</p>
+    <div class="modal__header"><h3 style="margin:0">Поділитись результатом</h3><button class="modal__close" data-modal-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <p class="muted">Три шаблони — обери формат і завантаж.</p>
     <div class="grid grid--3" style="margin: var(--space-4) 0">
-      <div class="card center"><div class="img-placeholder" style="aspect-ratio: 9/16" data-label="Story IG"></div><small class="muted">Instagram 9:16</small></div>
-      <div class="card center"><div class="img-placeholder" style="aspect-ratio: 9/16" data-label="TikTok"></div><small class="muted">TikTok 9:16</small></div>
-      <div class="card center"><div class="img-placeholder" style="aspect-ratio: 1/1" data-label="FB"></div><small class="muted">Facebook 1:1</small></div>
+      <div class="card center" style="padding: var(--space-2)"><div class="img-placeholder img-placeholder--story">Story</div><small class="muted" style="display: block; margin-top: var(--space-2)">IG 9:16</small></div>
+      <div class="card center" style="padding: var(--space-2)"><div class="img-placeholder img-placeholder--story">TikTok</div><small class="muted" style="display: block; margin-top: var(--space-2)">9:16</small></div>
+      <div class="card center" style="padding: var(--space-2)"><div class="img-placeholder img-placeholder--square">FB</div><small class="muted" style="display: block; margin-top: var(--space-2)">FB 1:1</small></div>
     </div>
-    <button class="btn btn--primary btn--block" onclick="showToast('Файл завантажено. Текст у буфері.')">Завантажити</button>
+    <button class="btn btn--primary btn--block" onclick="showToast('Файл завантажено · текст у буфері')">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Завантажити
+    </button>
   </div>
 </div>
 
 <!-- MODAL: Invite -->
 <div class="modal-bg" data-modal="invite2" role="dialog">
   <div class="modal">
-    <div class="modal__header"><h3 style="margin:0">Запросити друзів</h3><button class="modal__close" data-modal-close>✕</button></div>
-    <div class="card" style="display:flex; gap: var(--space-3); align-items:center; padding: var(--space-3)">
+    <div class="modal__header"><h3 style="margin:0">Запросити друзів</h3><button class="modal__close" data-modal-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="card card--soft" style="display:flex; gap: var(--space-3); align-items:center; padding: var(--space-3)">
       <code style="flex:1; overflow:auto; font-size: var(--fs-small)">ekotoloka.org/team/marko</code>
       <button class="btn btn--primary btn--sm" data-copy="ekotoloka.org/team/marko">Копія</button>
     </div>
   </div>
 </div>
 
-<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:0"><span>© 2026 ГО «Екотолока». Львів.</span></div></div></footer>
+<footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів.</span></div></div></footer>
 <script src="js/main.js"></script>
 </body>
 </html>

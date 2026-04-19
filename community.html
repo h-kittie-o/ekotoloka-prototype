@@ -4,31 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ком'юніті — Екотолока</title>
+<meta name="theme-color" content="#2E7D47">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
 <header class="site-header"><div class="container site-header__inner">
   <a href="index.html" class="logo"><span class="logo__mark">Е</span><span>Екотолока</span></a>
   <nav class="nav"><a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a></nav>
-  <div class="header-actions"><a href="events.html" class="btn btn--primary btn--sm">Знайти подію</a><button class="burger" data-burger aria-label="Меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
+  <div class="header-actions"><a href="events.html" class="btn btn--primary btn--sm">Знайти подію</a><button class="burger" data-burger aria-label="Меню"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
 </div></header>
-<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close>✕ Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="login.html">Увійти</a><a href="profile.html">Профіль</a></div></div>
+<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="login.html">Увійти</a><a href="profile.html">Профіль</a></div></div>
 
 <main>
-  <section class="hero">
-    <div class="container">
+  <section class="hero hero--lg">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <span class="blob" style="top: 20%; left: -10%" aria-hidden="true"></span>
+    <span class="blob blob--warm blob--sm" style="bottom: 10%; right: -6%" aria-hidden="true"></span>
+    <div class="container hero__inner">
       <span class="eyebrow">Про нас</span>
-      <h1>Люди, які прибирають Львів</h1>
+      <h1 style="max-width: 18ch">Люди, які прибирають Львів</h1>
       <p class="hero__sub">Ми віримо, що чисте місто починається з того, що сусіди домовляються зустрітися у суботу на годину.</p>
     </div>
   </section>
 
   <section class="section--tight">
     <div class="container container--narrow">
-      <div class="prose">
-        <h2>Про проєкт</h2>
+      <div class="prose prose--editorial reveal">
         <p>Екотолока — це не організація. Це домовленість між людьми прибрати разом і потім разом чай випити. Почали у 2024-му з одного двору у Франківському. Зараз — весь Львів.</p>
         <p>Ми не отримуємо зарплат і не продаємо рекламу. Живемо з донатів і партнерств. Кожен інструмент, кожен пакет, кожна чашка чаю оплачені або людьми, або партнерами.</p>
       </div>
@@ -37,49 +40,47 @@
 
   <section class="section" style="background: var(--color-surface-alt)">
     <div class="container">
-      <span class="eyebrow">Герої місяця</span>
-      <h2>Стіна слави</h2>
-      <p class="muted">Люди, які прийшли найчастіше за останні 30 днів. Приєднуйся.</p>
+      <div class="row-between" style="margin-bottom: var(--space-6); align-items: flex-end">
+        <div>
+          <span class="eyebrow">Герої місяця</span>
+          <h2>Стіна слави</h2>
+          <p class="muted" style="margin: 0; max-width: 50ch">Люди, які прийшли найчастіше за останні 30 днів. Приєднуйся.</p>
+        </div>
+      </div>
 
-      <div class="leaderboard" style="margin-top: var(--space-6)">
-        <div class="leaderboard__row leaderboard__row--top3">
-          <div class="leaderboard__rank">🥇</div>
-          <div style="display:flex; gap: var(--space-3); align-items:center">
-            <div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div>
+      <div class="leaderboard">
+        <div class="leaderboard__row leaderboard__row--1 reveal">
+          <div class="leaderboard__rank">1</div>
+          <div class="row">
+            <span class="img-placeholder img-placeholder--avatar" style="width: 48px; height: 48px; font-size: 1.125rem">О</span>
             <div><strong>Олена Лисак</strong><div class="muted" style="font-size: var(--fs-small)">Галицький · Легенда · 4 бейджі</div></div>
           </div>
           <div style="text-align:right"><strong>27 толок</strong><div class="muted" style="font-size: var(--fs-small)">124 кг · 81 год</div></div>
         </div>
-        <div class="leaderboard__row leaderboard__row--top3">
-          <div class="leaderboard__rank">🥈</div>
-          <div style="display:flex; gap: var(--space-3); align-items:center">
-            <div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div>
+        <div class="leaderboard__row leaderboard__row--2 reveal" data-reveal-delay="80">
+          <div class="leaderboard__rank">2</div>
+          <div class="row">
+            <span class="img-placeholder img-placeholder--avatar" style="width: 48px; height: 48px; font-size: 1.125rem">М</span>
             <div><strong>Максим Петрич</strong><div class="muted" style="font-size: var(--fs-small)">Шевченківський · Актив</div></div>
           </div>
           <div style="text-align:right"><strong>14 толок</strong><div class="muted" style="font-size: var(--fs-small)">62 кг · 38 год</div></div>
         </div>
-        <div class="leaderboard__row leaderboard__row--top3">
-          <div class="leaderboard__rank">🥉</div>
-          <div style="display:flex; gap: var(--space-3); align-items:center">
-            <div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div>
+        <div class="leaderboard__row leaderboard__row--3 reveal" data-reveal-delay="160">
+          <div class="leaderboard__rank">3</div>
+          <div class="row">
+            <span class="img-placeholder img-placeholder--avatar" style="width: 48px; height: 48px; font-size: 1.125rem">Н</span>
             <div><strong>Назар Йосипович</strong><div class="muted" style="font-size: var(--fs-small)">Галицький · Актив</div></div>
           </div>
           <div style="text-align:right"><strong>11 толок</strong><div class="muted" style="font-size: var(--fs-small)">54 кг · 42 год</div></div>
         </div>
         <div class="leaderboard__row">
           <div class="leaderboard__rank">4</div>
-          <div style="display:flex; gap: var(--space-3); align-items:center">
-            <div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div>
-            <div><strong>Іра Бобак</strong><div class="muted" style="font-size: var(--fs-small)">Сихівський · Свій</div></div>
-          </div>
+          <div class="row"><span class="img-placeholder img-placeholder--avatar" style="width: 48px; height: 48px; font-size: 1.125rem">І</span><div><strong>Іра Бобак</strong><div class="muted" style="font-size: var(--fs-small)">Сихівський · Свій</div></div></div>
           <div style="text-align:right"><strong>9 толок</strong><div class="muted" style="font-size: var(--fs-small)">41 кг · 27 год</div></div>
         </div>
         <div class="leaderboard__row">
           <div class="leaderboard__rank">5</div>
-          <div style="display:flex; gap: var(--space-3); align-items:center">
-            <div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div>
-            <div><strong>Ольга Василівна</strong><div class="muted" style="font-size: var(--fs-small)">Личаківський · Свій</div></div>
-          </div>
+          <div class="row"><span class="img-placeholder img-placeholder--avatar" style="width: 48px; height: 48px; font-size: 1.125rem">О</span><div><strong>Ольга Василівна</strong><div class="muted" style="font-size: var(--fs-small)">Личаківський · Свій</div></div></div>
           <div style="text-align:right"><strong>7 толок</strong><div class="muted" style="font-size: var(--fs-small)">29 кг · 21 год</div></div>
         </div>
       </div>
@@ -88,32 +89,36 @@
 
   <section class="section">
     <div class="container">
-      <span class="eyebrow">Голоси ком'юніті</span>
-      <h2>Відгуки</h2>
-      <div class="grid grid--3" style="margin-top: var(--space-6)">
-        <div class="card">
-          <p>«Думав буде нудно — пішов зі Стрийського з п'ятьма новими номерами. Прибирання норм, а от чай з сусідкою Іриною — взагалі вогонь. Наступної суботи ведемо всю команду.»</p>
-          <div style="display:flex; gap: var(--space-3); align-items:center; margin-top: var(--space-4)"><div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div><div><strong>Андрій, 29</strong><div class="muted" style="font-size: var(--fs-small)">IT</div></div></div>
+      <div class="row-between" style="margin-bottom: var(--space-6); align-items: flex-end">
+        <div>
+          <span class="eyebrow">Голоси ком'юніті</span>
+          <h2>Відгуки</h2>
         </div>
-        <div class="card">
-          <p>«Уперше почула від внучки. Прийшла, хвилювалась — думала буде молодь і я зайва. А там пані Галина моїх років, вже обмінюємося рецептами бабки.»</p>
-          <div style="display:flex; gap: var(--space-3); align-items:center; margin-top: var(--space-4)"><div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div><div><strong>Ольга Василівна, 62</strong><div class="muted" style="font-size: var(--fs-small)">Личаківський</div></div></div>
+      </div>
+      <div class="grid grid--3">
+        <div class="card card--organic quote-card reveal">
+          <p style="margin: 0">«Думав буде нудно — пішов зі Стрийського з п'ятьма новими номерами. Прибирання норм, а от чай з сусідкою Іриною — взагалі вогонь.»</p>
+          <div class="quote-card__attr"><span class="img-placeholder img-placeholder--avatar">А</span><div><strong>Андрій, 29</strong><div class="muted" style="font-size: var(--fs-small)">IT</div></div></div>
         </div>
-        <div class="card">
-          <p>«Приходила на пари з Сихова — думала, чому двір такий. Прибрала. Другу толоку вже сама попросила у дворі батьків.»</p>
-          <div style="display:flex; gap: var(--space-3); align-items:center; margin-top: var(--space-4)"><div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div><div><strong>Мирослава, 24</strong><div class="muted" style="font-size: var(--fs-small)">Студентка</div></div></div>
+        <div class="card quote-card reveal" data-reveal-delay="80">
+          <p style="margin: 0">«Уперше почула від внучки. Прийшла, хвилювалась. А там пані Галина моїх років, вже обмінюємося рецептами бабки.»</p>
+          <div class="quote-card__attr"><span class="img-placeholder img-placeholder--avatar">О</span><div><strong>Ольга Василівна, 62</strong><div class="muted" style="font-size: var(--fs-small)">Личаківський</div></div></div>
         </div>
-        <div class="card">
-          <p>«Пішли з сином 7 років. Син вдома посортував сміття сам — тепер ми всі так робимо.»</p>
-          <div style="display:flex; gap: var(--space-3); align-items:center; margin-top: var(--space-4)"><div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div><div><strong>Роман, 34</strong><div class="muted" style="font-size: var(--fs-small)">Батько двох</div></div></div>
+        <div class="card quote-card reveal" data-reveal-delay="160">
+          <p style="margin: 0">«Приходила на пари з Сихова — думала, чому двір такий. Прибрала. Другу толоку вже сама попросила у дворі батьків.»</p>
+          <div class="quote-card__attr"><span class="img-placeholder img-placeholder--avatar">М</span><div><strong>Мирослава, 24</strong><div class="muted" style="font-size: var(--fs-small)">Студентка</div></div></div>
         </div>
-        <div class="card">
-          <p>«Найбільше кайфу — коли фотка До/Після. Я її в Stories, до мене у DM прийшли 4 друзі на наступну.»</p>
-          <div style="display:flex; gap: var(--space-3); align-items:center; margin-top: var(--space-4)"><div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div><div><strong>Катя, 27</strong><div class="muted" style="font-size: var(--fs-small)">Маркетинг</div></div></div>
+        <div class="card quote-card">
+          <p style="margin: 0">«Пішли з сином 7 років. Син вдома посортував сміття сам — тепер ми всі так робимо.»</p>
+          <div class="quote-card__attr"><span class="img-placeholder img-placeholder--avatar">Р</span><div><strong>Роман, 34</strong><div class="muted" style="font-size: var(--fs-small)">Батько двох</div></div></div>
         </div>
-        <div class="card">
-          <p>«Боявся, що це буде з прапорами і агітками. Прийшов — просто люди з граблями і чай у термосі. Гарно, що без цього.»</p>
-          <div style="display:flex; gap: var(--space-3); align-items:center; margin-top: var(--space-4)"><div class="img-placeholder img-placeholder--avatar" aria-hidden="true"></div><div><strong>Тарас, 31</strong><div class="muted" style="font-size: var(--fs-small)">Дизайнер</div></div></div>
+        <div class="card quote-card">
+          <p style="margin: 0">«Найбільше кайфу — коли фотка До/Після. Я її в Stories, до мене у DM прийшли 4 друзі на наступну.»</p>
+          <div class="quote-card__attr"><span class="img-placeholder img-placeholder--avatar">К</span><div><strong>Катя, 27</strong><div class="muted" style="font-size: var(--fs-small)">Маркетинг</div></div></div>
+        </div>
+        <div class="card card--organic quote-card">
+          <p style="margin: 0">«Боявся, що це буде з прапорами і агітками. Прийшов — просто люди з граблями і чай у термосі. Гарно, що без цього.»</p>
+          <div class="quote-card__attr"><span class="img-placeholder img-placeholder--avatar">Т</span><div><strong>Тарас, 31</strong><div class="muted" style="font-size: var(--fs-small)">Дизайнер</div></div></div>
         </div>
       </div>
     </div>
@@ -121,30 +126,37 @@
 
   <section class="section" style="background: var(--color-surface-alt)">
     <div class="container">
-      <span class="eyebrow">Партнери</span>
-      <h2>З ким ми робимо толоки можливими</h2>
-      <div class="grid grid--4" style="margin-top: var(--space-6)">
-        <div class="card center" style="padding: var(--space-6) var(--space-3)">Зелене зерно</div>
-        <div class="card center" style="padding: var(--space-6) var(--space-3)">Ровер</div>
-        <div class="card center" style="padding: var(--space-6) var(--space-3)">Голка</div>
-        <div class="card center" style="padding: var(--space-6) var(--space-3)">Hart</div>
-        <div class="card center" style="padding: var(--space-6) var(--space-3)">Книгарня «На розі»</div>
-        <div class="card center" style="padding: var(--space-6) var(--space-3)">Музей народної архітектури</div>
-        <div class="card center" style="padding: var(--space-6) var(--space-3)">+ ти?</div>
+      <div class="row-between" style="margin-bottom: var(--space-6); align-items: flex-end">
+        <div>
+          <span class="eyebrow">Партнери</span>
+          <h2>З ким робимо толоки можливими</h2>
+        </div>
+        <a href="support.html#partner" class="btn btn--secondary">Стати партнером</a>
       </div>
-      <div style="margin-top: var(--space-6)">
-        <a href="support.html#partner" class="btn btn--primary">Стати партнером</a>
+      <div class="grid grid--4">
+        <div class="card center" style="padding: var(--space-6) var(--space-3); font-weight: var(--fw-bold); color: var(--color-text-muted)">Зелене зерно</div>
+        <div class="card center" style="padding: var(--space-6) var(--space-3); font-weight: var(--fw-bold); color: var(--color-text-muted)">Ровер</div>
+        <div class="card center" style="padding: var(--space-6) var(--space-3); font-weight: var(--fw-bold); color: var(--color-text-muted)">Голка</div>
+        <div class="card center" style="padding: var(--space-6) var(--space-3); font-weight: var(--fw-bold); color: var(--color-text-muted)">Hart</div>
+        <div class="card center" style="padding: var(--space-6) var(--space-3); font-weight: var(--fw-bold); color: var(--color-text-muted)">Книгарня «На розі»</div>
+        <div class="card center" style="padding: var(--space-6) var(--space-3); font-weight: var(--fw-bold); color: var(--color-text-muted)">Музей нар. арх.</div>
+        <div class="card card--dashed center" style="padding: var(--space-6) var(--space-3)">
+          <a href="support.html#partner" style="text-decoration: none; color: var(--color-primary)"><strong>+ ти?</strong></a>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="site-footer"><div class="container"><div class="footer-grid">
-  <div class="footer-col"><a href="index.html" class="logo" style="color:#fff"><span class="logo__mark">Е</span>Екотолока</a><p style="margin-top: var(--space-3); opacity:0.75">Сусідські прибирання у Львові.</p></div>
-  <div class="footer-col"><h4>Сайт</h4><ul><li><a href="events.html">Знайти подію</a></li><li><a href="results.html">Результати</a></li><li><a href="community.html">Ком'юніті</a></li><li><a href="support.html">Підтримати</a></li></ul></div>
-  <div class="footer-col"><h4>Допомога</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="report.html">Сповістити</a></li><li><a href="news.html">Новини</a></li></ul></div>
-  <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookie.html">Cookie</a></li></ul></div>
-</div><div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів.</span><span>Зроблено з 💚</span></div></div></footer>
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-col"><a href="index.html" class="logo"><span class="logo__mark">Е</span>Екотолока</a><p style="margin-top: var(--space-4); opacity:0.75; max-width: 38ch">Сусідські прибирання у Львові.</p></div>
+    <div class="footer-col"><h4>Сайт</h4><ul><li><a href="events.html">Знайти подію</a></li><li><a href="results.html">Результати</a></li><li><a href="community.html">Ком'юніті</a></li><li><a href="support.html">Підтримати</a></li></ul></div>
+    <div class="footer-col"><h4>Допомога</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="report.html">Сповістити</a></li><li><a href="news.html">Новини</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookie.html">Cookie</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів.</span><span>Зроблено руками ком'юніті</span></div>
+</div></footer>
 
 <script src="js/main.js"></script>
 </body>

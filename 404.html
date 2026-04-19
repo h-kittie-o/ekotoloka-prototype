@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Сторінка не знайдена — Екотолока</title>
+<meta name="theme-color" content="#2E7D47">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
@@ -15,20 +16,25 @@
 </div></header>
 
 <main>
-  <section class="section">
-    <div class="container container--narrow center">
-      <div style="font-family: var(--font-display); font-size: 8rem; font-weight: 700; color: var(--color-primary); line-height: 1; margin-bottom: var(--space-4)">404</div>
+  <section class="section" style="position: relative; overflow: hidden">
+    <span class="blob" style="top: -10%; left: 50%; transform: translateX(-50%)" aria-hidden="true"></span>
+    <span class="blob blob--accent blob--sm" style="bottom: 10%; right: 10%" aria-hidden="true"></span>
+    <div class="container container--narrow error-404" style="position: relative">
+      <div class="error-404__num" aria-hidden="true">404</div>
       <h1>Такої сторінки нема</h1>
-      <p class="muted" style="font-size: 1.25rem; max-width: 40ch; margin-inline: auto">Може, ти шукав толоку? Ми знаємо, де їх 10.</p>
-      <div style="margin-top: var(--space-6); display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap">
-        <a href="events.html" class="btn btn--primary btn--lg">Знайти толоку</a>
-        <a href="index.html" class="btn btn--secondary btn--lg">На головну</a>
+      <p class="lead" style="margin-inline: auto">Може, ти шукав толоку? Ми знаємо, де їх 10.</p>
+      <div class="row" style="justify-content: center; margin-top: var(--space-8)">
+        <a href="events.html" class="btn btn--primary btn--lg">
+          Знайти толоку
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="index.html" class="btn btn--ghost btn--lg">На головну</a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:0"><span>© 2026 ГО «Екотолока».</span></div></div></footer>
+<footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 ГО «Екотолока».</span></div></div></footer>
 <script src="js/main.js"></script>
 </body>
 </html>
