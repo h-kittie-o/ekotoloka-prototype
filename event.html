@@ -36,34 +36,26 @@
         Всі події
       </a>
 
-      <div class="tag-row" style="margin-bottom: var(--space-4)">
-        <span class="chip">Парк</span>
-        <span class="chip chip--muted">Галицький район</span>
-        <span class="chip chip--accent">Family-friendly</span>
-        <span class="chip chip--warning">
-          <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          2 у листі очікування
-        </span>
-      </div>
+      <div class="tag-row" data-ef="chips" style="margin-bottom: var(--space-4)"></div>
 
-      <h1 style="max-width: 22ch">Толока в Стрийському парку</h1>
+      <h1 data-ef="title" style="max-width: 22ch">Толока</h1>
 
       <div class="row" style="gap: var(--space-5); margin-top: var(--space-3)">
         <div class="row" style="gap: var(--space-2)">
           <div class="date-tile" aria-hidden="true">
-            <div class="date-tile__month">Кві</div>
-            <div class="date-tile__day">26</div>
+            <div class="date-tile__month" data-ef="date-month">—</div>
+            <div class="date-tile__day" data-ef="date-day">—</div>
           </div>
           <div>
-            <strong>Субота, 26 квітня</strong>
-            <div class="muted" style="font-size: var(--fs-small)">10:00–13:00 · 3 години</div>
+            <strong data-ef="date-full">—</strong>
+            <div class="muted" data-ef="date-time" style="font-size: var(--fs-small)">—</div>
           </div>
         </div>
         <div class="row" style="gap: var(--space-2)">
           <div class="icon-circle" style="width: 48px; height: 48px; border-radius: 14px"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div>
-            <strong>Біля фонтану</strong>
-            <div class="muted" style="font-size: var(--fs-small)">Центральна алея</div>
+            <strong data-ef="loc-primary">—</strong>
+            <div class="muted" data-ef="loc-secondary" style="font-size: var(--fs-small)">—</div>
           </div>
         </div>
       </div>
@@ -76,7 +68,7 @@
           <span class="img-placeholder img-placeholder--avatar">Т</span>
           <span class="img-placeholder img-placeholder--avatar">К</span>
         </div>
-        <span><strong>37 людей вже йдуть</strong> · 4 вперше · 8 з твого району</span>
+        <span data-ef="participants-summary"></span>
       </div>
     </div>
   </section>
@@ -86,96 +78,71 @@
       <div class="split">
         <div class="stack-xl">
 
-          <div class="img-placeholder img-placeholder--wide round-organic" style="box-shadow: var(--shadow-md)">Стрийський парк<br>центральна алея</div>
+          <div class="img-placeholder img-placeholder--wide round-organic" data-ef="hero-image" style="box-shadow: var(--shadow-md)"></div>
 
           <section>
             <h2>Як усе пройде</h2>
-            <div class="timeline">
-              <div class="timeline__row"><div class="timeline__time">10:00</div><div class="timeline__desc">Зустрічаємось біля фонтану</div></div>
-              <div class="timeline__row"><div class="timeline__time">10:15</div><div class="timeline__desc">Ділимось на 3 групи, короткий інструктаж</div></div>
-              <div class="timeline__row"><div class="timeline__time">10:30</div><div class="timeline__desc">Прибираємо алеї і галявини</div></div>
-              <div class="timeline__row"><div class="timeline__time">12:30</div><div class="timeline__desc">Чай, печиво, фото До/Після</div></div>
-              <div class="timeline__row"><div class="timeline__time">13:00</div><div class="timeline__desc">Розходимось</div></div>
-            </div>
+            <div class="timeline" data-ef="timeline"></div>
           </section>
 
           <section>
             <h2>Що робимо</h2>
-            <p>Чистимо центральну алею і галявини після зими. Збираємо пластик, папір, дрібне скло окремо. Біомасу (листя, гілки) — в компост-зону.</p>
+            <p data-ef="what-we-do"></p>
           </section>
 
           <section class="info-cols">
             <div class="card">
               <div class="icon-circle" style="margin-bottom: var(--space-3)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1-2-2 2 2 0 0 1 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><polyline points="18 12 22 16 18 20"/></svg></div>
               <h3 style="margin-top: 0">Що взяти</h3>
-              <ul>
-                <li>Одяг, що не шкода</li>
-                <li>Зручне взуття</li>
-                <li>Воду <span class="muted">(ми теж будемо, але свою звичніше)</span></li>
-              </ul>
+              <ul data-ef="bring"></ul>
             </div>
             <div class="card">
               <div class="icon-circle icon-circle--accent" style="margin-bottom: var(--space-3)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
               <h3 style="margin-top: 0">Що дамо</h3>
-              <ul>
-                <li>Граблі й совки</li>
-                <li>Рукавички</li>
-                <li>Пакети</li>
-                <li>Чай з печивом</li>
-              </ul>
+              <ul data-ef="provide"></ul>
             </div>
           </section>
 
           <section>
             <h2>Де зустрічаємось</h2>
-            <p class="muted">Біля фонтану на центральній алеї. Орієнтир — велика жовта лавка.</p>
+            <p class="muted" data-ef="meet-at"></p>
             <div class="map-embed" style="margin-top: var(--space-3)">
-              <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2572.8!2d24.027!3d49.832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1700000001" title="Стрийський парк на карті"></iframe>
+              <iframe data-ef="map-iframe" loading="lazy" src="" title=""></iframe>
             </div>
           </section>
 
           <section>
             <h2>Організатор</h2>
             <div class="card" style="display:flex; gap: var(--space-4); align-items:flex-start">
-              <span class="img-placeholder img-placeholder--avatar" style="width:72px; height:72px; font-size: 1.5rem">О</span>
+              <span class="img-placeholder img-placeholder--avatar" data-ef="org-initial" style="width:72px; height:72px; font-size: 1.5rem"></span>
               <div style="flex: 1">
-                <strong style="font-size: var(--fs-h4)">Олена Лисак</strong>
-                <div class="tag-row" style="margin-top: var(--space-2)">
-                  <span class="chip chip--outline">14 толок як учасник</span>
-                  <span class="chip chip--outline">8 організованих</span>
-                  <span class="chip">Легенда</span>
-                </div>
-                <p style="margin: var(--space-3) 0 0">«Працюю в IT, по вихідних прибираю Стрийський. Кава на зустрічі — моя.»</p>
-                <p class="muted" style="font-size: var(--fs-small); margin-top: var(--space-2)">Напиши, якщо є питання: @olena_tuloka</p>
+                <strong data-ef="org-name" style="font-size: var(--fs-h4)"></strong>
+                <div class="tag-row" data-ef="org-badges" style="margin-top: var(--space-2)"></div>
+                <p data-ef="org-quote" style="margin: var(--space-3) 0 0"></p>
+                <p class="muted" data-ef="org-contact" style="font-size: var(--fs-small); margin-top: var(--space-2)"></p>
               </div>
             </div>
           </section>
 
           <section>
             <h2>Часті питання</h2>
-            <details class="accordion"><summary>Що, якщо буде дощ?</summary><p>Невеликий — прибираємо. Сильний — перенесемо на неділю, напишемо тобі за день до події.</p></details>
-            <details class="accordion"><summary>Чи можна з дитиною?</summary><p>Можна. Для дітей є свої мінізавдання. Дитина до 12 — з дорослим.</p></details>
-            <details class="accordion"><summary>Я один піду?</summary><p>Тут уже 37 людей. На минулій толоці 7 знайомились вперше — це нормально.</p></details>
-            <details class="accordion"><summary>Що з битим склом?</summary><p>Збираємо окремо. У організатора є спецконтейнер. Ти сам не чіпаєш руками.</p></details>
+            <div data-ef="faq"></div>
           </section>
 
         </div>
 
         <aside>
           <div class="card card--highlight" style="position: sticky; top: 96px">
-            <span class="chip chip--warning" style="margin-bottom: var(--space-3)">
-              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              2 у листі очікування
-            </span>
+            <span class="chip chip--warning" data-ef="sidebar-waitlist" style="margin-bottom: var(--space-3); display:none"></span>
             <div class="row" style="align-items: baseline; gap: var(--space-2)">
-              <span class="number-display" style="font-size: 3.5rem">37</span>
-              <span class="muted" style="font-size: var(--fs-body-lg)">/35</span>
+              <span class="number-display" data-ef="count" style="font-size: 3.5rem">—</span>
+              <span class="muted" data-ef="capacity" style="font-size: var(--fs-body-lg)">/—</span>
             </div>
-            <p class="muted" style="font-size: var(--fs-small); margin-top: var(--space-1)">Якщо хтось не зможе — місце перейде тобі.</p>
-            <div class="progress" style="margin: var(--space-4) 0"><div class="progress__bar" style="width: 100%"></div></div>
+            <p class="muted" data-ef="waitlist-note" style="font-size: var(--fs-small); margin-top: var(--space-1); display:none">Якщо хтось не зможе — місце перейде тобі.</p>
+            <div class="progress" style="margin: var(--space-4) 0"><div class="progress__bar" data-ef="progress" style="width: 0%"></div></div>
 
-            <button class="btn btn--primary btn--block btn--lg" data-modal-open="join" style="white-space: normal">
-              Приєднатись до waitlist
+            <button class="btn btn--primary btn--block btn--lg" data-ef="cta-btn" data-modal-open="join" style="white-space: normal">
+              Записатись на толоку
               <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </button>
             <button class="btn btn--secondary btn--block" style="margin-top: var(--space-2)" data-modal-open="invite">
@@ -190,11 +157,11 @@
             <hr class="divider" style="margin: var(--space-5) 0">
             <div class="row" style="gap: var(--space-2); font-size: var(--fs-small)">
               <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              <span>Субота, 26 квітня · 10:00</span>
+              <span data-ef="date-sidebar">—</span>
             </div>
             <div class="row" style="gap: var(--space-2); font-size: var(--fs-small); margin-top: var(--space-2)">
               <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Стрийський · біля фонтану</span>
+              <span data-ef="loc-short">—</span>
             </div>
           </div>
         </aside>
@@ -243,8 +210,8 @@
     </div>
     <p class="muted">Копіюй посилання — друг відкриє і побачить банер «Марко кличе тебе в команду».</p>
     <div class="card card--soft" style="display:flex; gap: var(--space-3); align-items:center; padding: var(--space-3)">
-      <code style="flex:1; overflow:auto; font-size: var(--fs-small)">ekotoloka.org/e/stryi-apr26?team=marko</code>
-      <button class="btn btn--primary btn--sm" data-copy="ekotoloka.org/e/stryi-apr26?team=marko">Копія</button>
+      <code data-ef="invite-code" style="flex:1; overflow:auto; font-size: var(--fs-small)"></code>
+      <button class="btn btn--primary btn--sm" data-ef-copy="invite" data-copy="">Копія</button>
     </div>
     <div class="grid grid--3" style="margin-top: var(--space-4)">
       <a href="#" class="btn btn--secondary">Viber</a>
@@ -267,7 +234,7 @@
       <a href="#" class="btn btn--secondary">TikTok</a>
       <a href="#" class="btn btn--secondary">Viber</a>
       <a href="#" class="btn btn--secondary">Telegram</a>
-      <button class="btn btn--secondary" data-copy="ekotoloka.org/e/stryi-apr26">Копія</button>
+      <button class="btn btn--secondary" data-ef-copy="share" data-copy="">Копія</button>
     </div>
   </div>
 </div>
@@ -282,6 +249,8 @@
   <div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів.</span><span>Зроблено руками ком'юніті</span></div>
 </div></footer>
 
+<script src="js/events-data.js"></script>
+<script src="js/event-render.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
