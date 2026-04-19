@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Готово — Екотолока</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+<header class="site-header"><div class="container site-header__inner">
+  <a href="index.html" class="logo"><span class="logo__mark">Е</span><span>Екотолока</span></a>
+  <nav class="nav"><a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a></nav>
+  <div class="header-actions">
+    <a href="profile.html" class="btn btn--secondary btn--sm">Профіль</a>
+    <button class="burger" data-burger aria-label="Меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+  </div>
+</div></header>
+<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close>✕ Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="profile.html">Профіль</a></div></div>
+
+<main>
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="card card--highlight center" style="padding: var(--space-10) var(--space-6)">
+        <div style="font-size: 4rem; line-height: 1">🎉</div>
+        <h1 style="margin-top: var(--space-4)">Готово. Чекаємо на тебе в суботу.</h1>
+        <p class="muted" style="font-size: 1.125rem; max-width: 40ch; margin-inline:auto">
+          Субота, 26 квітня · 10:00–13:00<br>
+          <strong>Стрийський парк</strong> · біля фонтану, центральна алея
+        </p>
+
+        <div class="alert alert--info" style="text-align:left; margin: var(--space-6) 0">
+          📧 Нагадаємо на email за день до толоки. Якщо не бачиш листа за хвилину — глянь у спам.
+        </div>
+
+        <div class="grid grid--3" style="margin-top: var(--space-6)">
+          <a href="#" class="btn btn--primary">Додати в календар</a>
+          <a href="event.html" class="btn btn--secondary" data-modal-open="invite">Запросити друзів</a>
+          <a href="profile.html" class="btn btn--ghost">В мій профіль</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: var(--space-6)">
+        <h3 style="margin-top:0">Хочеш нагадування одразу в браузер?</h3>
+        <p class="muted">Увімкни повідомлення — напишемо за 24 години і за 2 до початку. Не спамитимемо.</p>
+        <div style="display:flex; gap:var(--space-3); flex-wrap:wrap">
+          <button class="btn btn--primary" onclick="showToast('Нотифікації увімкнено')">Увімкнути</button>
+          <button class="btn btn--ghost" onclick="showToast('Ок, нагадаємо тільки на email')">Не треба, email вистачить</button>
+        </div>
+      </div>
+
+      <p class="muted center" style="margin-top: var(--space-8); font-size: var(--fs-small)">
+        Не зможеш прийти? <a href="#" onclick="showToast('Учасника вилучено з події'); return false;">Скажи нам без драми →</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:0"><span>© 2026 ГО «Екотолока». Львів.</span></div></div></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Знайти толоку — Екотолока</title>
+<meta name="description" content="Мапа і список толок у Львові — за районом, датою і типом.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Перейти до основного вмісту</a>
+
+<header class="site-header"><div class="container site-header__inner">
+  <a href="index.html" class="logo"><span class="logo__mark">Е</span><span>Екотолока</span></a>
+  <nav class="nav" aria-label="Головна навігація">
+    <a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a>
+  </nav>
+  <div class="header-actions">
+    <a href="login.html" class="btn btn--secondary btn--sm">Увійти</a>
+    <button class="burger" data-burger aria-label="Відкрити меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+  </div>
+</div></header>
+
+<div class="drawer" data-drawer role="dialog" aria-modal="true">
+  <div class="drawer__panel">
+    <button class="btn btn--ghost btn--sm drawer__close" data-drawer-close>✕ Закрити</button>
+    <a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="login.html">Увійти</a><a href="profile.html">Профіль</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="section--tight" style="background: var(--color-surface-alt)">
+    <div class="container">
+      <span class="eyebrow">Львів · вихідні</span>
+      <h1 style="margin-bottom: var(--space-3)">Знайди свою толоку</h1>
+      <p class="muted" style="max-width: 52ch">Обери район, дату або шукай за назвою. На кожній події видно, скільки людей уже йдуть.</p>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="container">
+
+      <div class="filter-bar" role="search" style="margin-bottom: var(--space-5)">
+        <input type="search" class="input" placeholder="Стрийський, Личаківський, Сихів..." aria-label="Пошук">
+        <select class="select" aria-label="Район">
+          <option>Всі райони</option>
+          <option>Галицький</option><option>Шевченківський</option><option>Личаківський</option><option>Сихівський</option><option>Франківський</option><option>Залізничний</option>
+        </select>
+        <select class="select" aria-label="Тип">
+          <option>Всі типи</option><option>Парк</option><option>Двір</option><option>Річка</option><option>Ліс</option><option>Сквер</option>
+        </select>
+        <select class="select" aria-label="Дата">
+          <option>Будь-коли</option><option>Цього тижня</option><option>Наступного</option><option>За місяць</option>
+        </select>
+        <button class="btn btn--secondary">Поруч зі мною</button>
+      </div>
+
+      <div class="tabs" data-tabs="events-view" role="tablist" aria-label="Вид">
+        <button role="tab" data-tab="map" class="is-active">Карта</button>
+        <button role="tab" data-tab="list">Список</button>
+        <button role="tab" data-tab="calendar">Календар</button>
+      </div>
+
+      <!-- MAP -->
+      <div data-tab-panel="map" data-group="events-view" class="tab-panel is-active" style="margin-top: var(--space-5)">
+        <div class="map-embed" aria-label="Карта подій у Львові">
+          <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d42228.77!2d24.01!3d49.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1700000000" title="Карта Львова"></iframe>
+        </div>
+        <p class="muted" style="margin-top: var(--space-3); font-size: var(--fs-small)">Пінами позначені толоки у найближчі 2 тижні. Клікни пін, щоб побачити деталі.</p>
+      </div>
+
+      <!-- LIST -->
+      <div data-tab-panel="list" data-group="events-view" class="tab-panel" style="margin-top: var(--space-5)">
+        <div class="grid grid--3">
+
+          <a href="event.html" class="card card--hover event-card">
+            <div class="event-card__image"><div class="img-placeholder img-placeholder--wide" data-label="Стрийський парк"></div></div>
+            <div class="event-card__meta"><span class="chip">Парк</span><span class="chip chip--muted">Галицький</span><span class="chip chip--warning">Waitlist</span></div>
+            <h3 class="event-card__title">Толока в Стрийському парку</h3>
+            <p class="muted">Сб 26.04 · 10:00–13:00 · біля фонтану</p>
+            <div class="event-card__footer"><span class="muted" style="font-size: var(--fs-small)"><strong>37/35</strong> · 4 вперше</span><span class="link-btn">Деталі →</span></div>
+          </a>
+
+          <a href="event.html" class="card card--hover event-card">
+            <div class="event-card__image"><div class="img-placeholder img-placeholder--wide" data-label="Високий замок"></div></div>
+            <div class="event-card__meta"><span class="chip">Пагорб</span><span class="chip chip--muted">Шевченківський</span></div>
+            <h3 class="event-card__title">Високий замок</h3>
+            <p class="muted">Нд 27.04 · 9:00–12:00 · оглядовий майданчик</p>
+            <div class="event-card__footer"><span class="muted" style="font-size: var(--fs-small)"><strong>14/25</strong></span><span class="link-btn">Деталі →</span></div>
+          </a>
+
+          <a href="event.html" class="card card--hover event-card">
+            <div class="event-card__image"><div class="img-placeholder img-placeholder--wide" data-label="After-work на Валах"></div></div>
+            <div class="event-card__meta"><span class="chip chip--accent">Після роботи</span><span class="chip chip--muted">Галицький</span></div>
+            <h3 class="event-card__title">After-work толока на Валах</h3>
+            <p class="muted">Ср 29.04 · 18:30–20:00 · центр</p>
+            <div class="event-card__footer"><span class="muted" style="font-size: var(--fs-small)"><strong>8/15</strong></span><span class="link-btn">Деталі →</span></div>
+          </a>
+
+          <a href="event.html" class="card card--hover event-card">
+            <div class="event-card__image"><div class="img-placeholder img-placeholder--wide" data-label="Двір на Сихові"></div></div>
+            <div class="event-card__meta"><span class="chip">Двір</span><span class="chip chip--muted">Сихівський</span><span class="chip chip--accent">Family</span></div>
+            <h3 class="event-card__title">Двір на Червоній Калині</h3>
+            <p class="muted">Сб 26.04 · 11:00–13:00</p>
+            <div class="event-card__footer"><span class="muted" style="font-size: var(--fs-small)"><strong>18/20</strong> · 8 знайомих</span><span class="link-btn">Деталі →</span></div>
+          </a>
+
+          <a href="event.html" class="card card--hover event-card">
+            <div class="event-card__image"><div class="img-placeholder img-placeholder--wide" data-label="Парк Знесіння"></div></div>
+            <div class="event-card__meta"><span class="chip">Парк</span><span class="chip chip--muted">Личаківський</span></div>
+            <h3 class="event-card__title">Парк Знесіння</h3>
+            <p class="muted">Сб 03.05 · 10:00–13:00</p>
+            <div class="event-card__footer"><span class="muted" style="font-size: var(--fs-small)"><strong>9/30</strong> · багато місця</span><span class="link-btn">Деталі →</span></div>
+          </a>
+
+          <a href="event.html" class="card card--hover event-card">
+            <div class="event-card__image"><div class="img-placeholder img-placeholder--wide" data-label="Полтва"></div></div>
+            <div class="event-card__meta"><span class="chip">Річка</span><span class="chip chip--muted">Галицький</span><span class="chip chip--error">Складно</span></div>
+            <h3 class="event-card__title">Прибирання Полтви</h3>
+            <p class="muted">Нд 04.05 · 10:00–14:00 · болотні чоботи</p>
+            <div class="event-card__footer"><span class="muted" style="font-size: var(--fs-small)"><strong>32/50</strong></span><span class="link-btn">Деталі →</span></div>
+          </a>
+
+          <a href="event.html" class="card card--hover event-card">
+            <div class="event-card__image"><div class="img-placeholder img-placeholder--wide" data-label="Сквер на Фредра"></div></div>
+            <div class="event-card__meta"><span class="chip">Сквер</span><span class="chip chip--muted">Галицький</span><span class="chip chip--accent">Нова</span></div>
+            <h3 class="event-card__title">Сквер на Фредра</h3>
+            <p class="muted">Сб 10.05 · 10:00–12:00</p>
+            <div class="event-card__footer"><span class="muted" style="font-size: var(--fs-small)"><strong>6/15</strong> · шукаємо перших</span><span class="link-btn">Деталі →</span></div>
+          </a>
+
+          <a href="event.html" class="card card--hover event-card">
+            <div class="event-card__image"><div class="img-placeholder img-placeholder--wide" data-label="Шевченківський гай"></div></div>
+            <div class="event-card__meta"><span class="chip">Ліс</span><span class="chip chip--muted">Шевченківський</span></div>
+            <h3 class="event-card__title">Шевченківський гай</h3>
+            <p class="muted">Сб 17.05 · 9:00–13:00 · партнер: музей</p>
+            <div class="event-card__footer"><span class="muted" style="font-size: var(--fs-small)"><strong>28/40</strong></span><span class="link-btn">Деталі →</span></div>
+          </a>
+
+          <a href="event.html" class="card card--hover event-card">
+            <div class="event-card__image"><div class="img-placeholder img-placeholder--wide" data-label="Кульпарківська"></div></div>
+            <div class="event-card__meta"><span class="chip">Сквер</span><span class="chip chip--muted">Франківський</span></div>
+            <h3 class="event-card__title">Сквер на Кульпарківській</h3>
+            <p class="muted">Сб 17.05 · 11:00–13:00</p>
+            <div class="event-card__footer"><span class="muted" style="font-size: var(--fs-small)"><strong>15/25</strong></span><span class="link-btn">Деталі →</span></div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- CALENDAR -->
+      <div data-tab-panel="calendar" data-group="events-view" class="tab-panel" style="margin-top: var(--space-5)">
+        <div class="card">
+          <h3 style="margin-bottom: var(--space-4)">Квітень–Травень 2026</h3>
+          <div style="display:grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-2); text-align:center;">
+            <div class="muted" style="font-size: var(--fs-small); padding: var(--space-2) 0">Пн</div>
+            <div class="muted" style="font-size: var(--fs-small); padding: var(--space-2) 0">Вт</div>
+            <div class="muted" style="font-size: var(--fs-small); padding: var(--space-2) 0">Ср</div>
+            <div class="muted" style="font-size: var(--fs-small); padding: var(--space-2) 0">Чт</div>
+            <div class="muted" style="font-size: var(--fs-small); padding: var(--space-2) 0">Пт</div>
+            <div class="muted" style="font-size: var(--fs-small); padding: var(--space-2) 0">Сб</div>
+            <div class="muted" style="font-size: var(--fs-small); padding: var(--space-2) 0">Нд</div>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-2); margin-top: var(--space-2);">
+            <!-- quick static calendar: 30 days -->
+            <div class="card" style="padding: var(--space-2); min-height: 64px;">20</div>
+            <div class="card" style="padding: var(--space-2); min-height: 64px;">21</div>
+            <div class="card" style="padding: var(--space-2); min-height: 64px;">22</div>
+            <div class="card" style="padding: var(--space-2); min-height: 64px;">23</div>
+            <div class="card" style="padding: var(--space-2); min-height: 64px;">24</div>
+            <div class="card" style="padding: var(--space-2); min-height: 64px;">25</div>
+            <a href="event.html" class="card card--hover card--highlight" style="padding: var(--space-2); min-height: 64px; display:flex; flex-direction:column; justify-content:space-between;"><strong>26</strong><span class="chip" style="font-size: 10px">3 події</span></a>
+            <a href="event.html" class="card card--hover card--highlight" style="padding: var(--space-2); min-height: 64px; display:flex; flex-direction:column; justify-content:space-between;"><strong>27</strong><span class="chip" style="font-size: 10px">1 подія</span></a>
+            <div class="card" style="padding: var(--space-2); min-height: 64px;">28</div>
+            <a href="event.html" class="card card--hover card--highlight" style="padding: var(--space-2); min-height: 64px; display:flex; flex-direction:column; justify-content:space-between;"><strong>29</strong><span class="chip" style="font-size: 10px">After-work</span></a>
+            <div class="card" style="padding: var(--space-2); min-height: 64px;">30</div>
+            <div class="card" style="padding: var(--space-2); min-height: 64px;">1</div>
+            <div class="card" style="padding: var(--space-2); min-height: 64px;">2</div>
+            <a href="event.html" class="card card--hover card--highlight" style="padding: var(--space-2); min-height: 64px; display:flex; flex-direction:column; justify-content:space-between;"><strong>3</strong><span class="chip" style="font-size: 10px">Знесіння</span></a>
+            <a href="event.html" class="card card--hover card--highlight" style="padding: var(--space-2); min-height: 64px; display:flex; flex-direction:column; justify-content:space-between;"><strong>4</strong><span class="chip" style="font-size: 10px">Полтва</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-col"><a href="index.html" class="logo" style="color:#fff"><span class="logo__mark">Е</span>Екотолока</a><p style="margin-top: var(--space-3); opacity:0.75; max-width: 38ch">Сусідські прибирання у Львові.</p><div style="margin-top: var(--space-4); display:flex; gap: var(--space-3)"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div></div>
+    <div class="footer-col"><h4>Сайт</h4><ul><li><a href="events.html">Знайти подію</a></li><li><a href="results.html">Результати</a></li><li><a href="community.html">Ком'юніті</a></li><li><a href="support.html">Підтримати</a></li></ul></div>
+    <div class="footer-col"><h4>Допомога</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="report.html">Сповістити</a></li><li><a href="news.html">Новини</a></li><li><a href="mailto:hello@ekotoloka.org">hello@ekotoloka.org</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookie.html">Cookie</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів.</span><span>Зроблено з 💚</span></div>
+</div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

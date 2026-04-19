@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Результати — Екотолока</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+<header class="site-header"><div class="container site-header__inner">
+  <a href="index.html" class="logo"><span class="logo__mark">Е</span><span>Екотолока</span></a>
+  <nav class="nav"><a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a></nav>
+  <div class="header-actions"><a href="events.html" class="btn btn--primary btn--sm">Знайти подію</a><button class="burger" data-burger aria-label="Меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
+</div></header>
+<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close>✕ Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="login.html">Увійти</a><a href="profile.html">Профіль</a></div></div>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Що ми зробили</span>
+      <h1>Що ми прибрали разом</h1>
+      <p class="hero__sub">Усе, що зібрали за рік. Реальні фото, реальні люди, реальні райони Львова.</p>
+      <div class="stats-strip" style="background:var(--color-surface)">
+        <div class="stat"><div class="stat__value"><span data-counter="340">340</span> кг</div><div class="stat__label">зібрано сміття</div></div>
+        <div class="stat"><div class="stat__value"><span data-counter="32">32</span></div><div class="stat__label">толоки</div></div>
+        <div class="stat"><div class="stat__value"><span data-counter="156">156</span></div><div class="stat__label">учасників</div></div>
+        <div class="stat"><div class="stat__value"><span data-counter="18">18</span></div><div class="stat__label">районів</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:var(--space-3); flex-wrap:wrap; margin-bottom: var(--space-6)">
+        <div><h2>Галерея «До / Після»</h2><p class="muted">Фільтруй за районом чи роком.</p></div>
+        <div style="display:flex; gap: var(--space-2); flex-wrap:wrap">
+          <select class="select" style="min-width: 160px"><option>Всі райони</option><option>Галицький</option><option>Сихівський</option><option>Шевченківський</option></select>
+          <select class="select" style="min-width: 120px"><option>2026</option><option>2025</option><option>2024</option></select>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card">
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-1); margin-bottom: var(--space-3)">
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="До"></div><span class="ba-pair__label">До</span></div>
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="Після"></div><span class="ba-pair__label">Після</span></div>
+          </div>
+          <h3 style="font-size: 1.125rem; margin-bottom: var(--space-1)">Стрийський парк</h3>
+          <p class="muted" style="margin:0; font-size: var(--fs-small)">26 березня · 18 кг · 12 учасників</p>
+        </div>
+        <div class="card">
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-1); margin-bottom: var(--space-3)">
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="До"></div><span class="ba-pair__label">До</span></div>
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="Після"></div><span class="ba-pair__label">Після</span></div>
+          </div>
+          <h3 style="font-size: 1.125rem; margin-bottom: var(--space-1)">Двір на Сихові</h3>
+          <p class="muted" style="margin:0; font-size: var(--fs-small)">12 березня · 22 кг · 18 учасників</p>
+        </div>
+        <div class="card">
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-1); margin-bottom: var(--space-3)">
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="До"></div><span class="ba-pair__label">До</span></div>
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="Після"></div><span class="ba-pair__label">Після</span></div>
+          </div>
+          <h3 style="font-size: 1.125rem; margin-bottom: var(--space-1)">Полтва</h3>
+          <p class="muted" style="margin:0; font-size: var(--fs-small)">1 березня · 45 кг · 32 учасники</p>
+        </div>
+        <div class="card">
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-1); margin-bottom: var(--space-3)">
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="До"></div><span class="ba-pair__label">До</span></div>
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="Після"></div><span class="ba-pair__label">Після</span></div>
+          </div>
+          <h3 style="font-size: 1.125rem; margin-bottom: var(--space-1)">Парк Знесіння</h3>
+          <p class="muted" style="margin:0; font-size: var(--fs-small)">18 лютого · 14 кг · 9 учасників</p>
+        </div>
+        <div class="card">
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-1); margin-bottom: var(--space-3)">
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="До"></div><span class="ba-pair__label">До</span></div>
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="Після"></div><span class="ba-pair__label">Після</span></div>
+          </div>
+          <h3 style="font-size: 1.125rem; margin-bottom: var(--space-1)">Високий замок</h3>
+          <p class="muted" style="margin:0; font-size: var(--fs-small)">4 лютого · 11 кг · 14 учасників</p>
+        </div>
+        <div class="card">
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-1); margin-bottom: var(--space-3)">
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="До"></div><span class="ba-pair__label">До</span></div>
+            <div class="ba-wrap"><div class="img-placeholder img-placeholder--square" data-label="Після"></div><span class="ba-pair__label">Після</span></div>
+          </div>
+          <h3 style="font-size: 1.125rem; margin-bottom: var(--space-1)">Шевченківський гай</h3>
+          <p class="muted" style="margin:0; font-size: var(--fs-small)">20 січня · 29 кг · 28 учасників</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--color-surface-alt)">
+    <div class="container">
+      <span class="eyebrow">Вплив</span>
+      <h2>Що значать ці 340 кг насправді</h2>
+      <div class="grid grid--3" style="margin-top: var(--space-6)">
+        <div class="card"><div style="font-family: var(--font-display); font-size: 2.5rem; font-weight:700; color: var(--color-primary); line-height:1">1 700</div><p style="margin-top: var(--space-2)">пластикових пляшок, які <strong>не поїхали у Полтву</strong></p></div>
+        <div class="card"><div style="font-family: var(--font-display); font-size: 2.5rem; font-weight:700; color: var(--color-primary); line-height:1">100+</div><p style="margin-top: var(--space-2)">років, за які це сміття б розкладалось</p></div>
+        <div class="card"><div style="font-family: var(--font-display); font-size: 2.5rem; font-weight:700; color: var(--color-primary); line-height:1">18</div><p style="margin-top: var(--space-2)">локацій, які тепер чисті щонайменше до наступної зими</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 style="color:#fff">Приходь на наступну</h2>
+        <p style="opacity:0.95; max-width: 40ch; margin-inline:auto">Цими вихідними — 3 толоки у Львові. Обери свою.</p>
+        <a href="events.html" class="btn btn--accent" style="margin-top: var(--space-4)">Знайти подію</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+  <div class="footer-col"><a href="index.html" class="logo" style="color:#fff"><span class="logo__mark">Е</span>Екотолока</a><p style="margin-top: var(--space-3); opacity:0.75">Сусідські прибирання у Львові.</p></div>
+  <div class="footer-col"><h4>Сайт</h4><ul><li><a href="events.html">Знайти подію</a></li><li><a href="results.html">Результати</a></li><li><a href="community.html">Ком'юніті</a></li><li><a href="support.html">Підтримати</a></li></ul></div>
+  <div class="footer-col"><h4>Допомога</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="report.html">Сповістити</a></li><li><a href="news.html">Новини</a></li></ul></div>
+  <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookie.html">Cookie</a></li></ul></div>
+</div><div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів.</span><span>Зроблено з 💚</span></div></div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

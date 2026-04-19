@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сповістити про забруднення — Екотолока</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+<header class="site-header"><div class="container site-header__inner">
+  <a href="index.html" class="logo"><span class="logo__mark">Е</span><span>Екотолока</span></a>
+  <nav class="nav"><a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a></nav>
+  <div class="header-actions"><a href="events.html" class="btn btn--primary btn--sm">Знайти подію</a><button class="burger" data-burger aria-label="Меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
+</div></header>
+<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close>✕ Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="login.html">Увійти</a><a href="profile.html">Профіль</a></div></div>
+
+<main>
+  <section class="section">
+    <div class="container container--narrow">
+      <span class="eyebrow">Ініціатива від тебе</span>
+      <h1>Знаєш, де брудно? Покажи нам</h1>
+      <p class="muted">Надішли фото і координати — ми подивимось цього тижня й напишемо, що далі. Можливо, організуємо толоку саме там.</p>
+
+      <form data-demo-form="#report-success" class="card stack-lg" style="margin-top: var(--space-6)">
+
+        <div class="field">
+          <label class="field__label">1. Де це?</label>
+          <div class="map-embed" style="aspect-ratio: 4 / 3">
+            <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d42228.77!2d24.01!3d49.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1700000002" title="Карта Львова"></iframe>
+          </div>
+          <div style="display:flex; gap: var(--space-2); margin-top: var(--space-3); flex-wrap:wrap">
+            <button type="button" class="btn btn--secondary btn--sm">📍 Визначити моє місцезнаходження</button>
+            <button type="button" class="btn btn--ghost btn--sm">Ввести адресу вручну</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label">2. Покажи</label>
+          <div class="field__hint" style="margin-bottom: var(--space-3)">Мін. 1 фото. Достатньо телефонного знімку.</div>
+          <div class="grid grid--4" style="gap: var(--space-2)">
+            <label class="card center" style="padding: var(--space-5); border-style: dashed; cursor:pointer">
+              <input type="file" accept="image/*" style="display:none">
+              <div style="font-size: 1.5rem">+</div>
+              <small>Додати фото</small>
+            </label>
+            <div class="card" style="padding: var(--space-2); position:relative"><div class="img-placeholder img-placeholder--square" data-label="Фото 1"></div></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="desc">3. Опиши <span class="muted" style="font-weight: 400">(опціонально)</span></label>
+          <textarea class="textarea" id="desc" placeholder="Стихійне звалище біля підземного переходу..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="contact2">4. Як з тобою зв'язатись <span class="muted" style="font-weight: 400">(опціонально)</span></label>
+          <input class="input" type="email" id="contact2" placeholder="Email або телефон">
+          <div class="field__hint">Якщо хочеш отримати звіт про те, що ми зробили.</div>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg btn--block">Надіслати</button>
+
+        <p class="muted center" style="font-size: var(--fs-small); margin:0">Можна без реєстрації. Анонімно теж приймаємо.</p>
+      </form>
+
+      <div id="report-success" style="display:none" class="card card--highlight stack center" role="status">
+        <div style="font-size: 3rem">✅</div>
+        <h2 style="margin:0">Дякуємо! Повернемось з відповіддю</h2>
+        <p>Подивимось цього тижня і напишемо тобі, що далі. Якщо місце підійде — організуємо толоку саме там.</p>
+        <div class="progress" style="margin: var(--space-3) 0"><div class="progress__bar" style="width: 33%"></div></div>
+        <p class="muted" style="margin:0"><strong>1/3</strong> до бейджа «Очі міста»</p>
+        <a href="index.html" class="btn btn--secondary" style="margin-top: var(--space-4)">На головну</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:0"><span>© 2026 ГО «Екотолока». Львів.</span><a href="privacy.html" style="color:#fff; opacity:0.85">Privacy</a></div></div></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

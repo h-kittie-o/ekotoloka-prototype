@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Увійти — Екотолока</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+<header class="site-header"><div class="container site-header__inner">
+  <a href="index.html" class="logo"><span class="logo__mark">Е</span><span>Екотолока</span></a>
+  <div class="header-actions"><a href="events.html" class="btn btn--secondary btn--sm">Без реєстрації</a></div>
+</div></header>
+
+<main>
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="card" style="padding: var(--space-8); max-width: 440px; margin: 0 auto">
+        <h1 style="text-align: center; margin-bottom: var(--space-3)">Увійти</h1>
+        <p class="muted center" style="margin-bottom: var(--space-8)">Так ми зможемо нагадати про толоку і зберегти твій прогрес.</p>
+
+        <div class="stack">
+          <a href="onboarding.html" class="btn btn--secondary btn--block btn--lg">
+            <span>G</span> <span>Через Google</span>
+          </a>
+          <a href="onboarding.html" class="btn btn--secondary btn--block btn--lg">
+            <span>f</span> <span>Через Facebook</span>
+          </a>
+        </div>
+
+        <div style="display:flex; align-items:center; gap: var(--space-3); margin: var(--space-6) 0">
+          <hr style="flex:1; border: 0; border-top: 1px solid var(--color-border)">
+          <span class="muted" style="font-size: var(--fs-small)">або</span>
+          <hr style="flex:1; border: 0; border-top: 1px solid var(--color-border)">
+        </div>
+
+        <form data-demo-form="#sent" class="stack">
+          <div class="field">
+            <label class="field__label" for="email">Email</label>
+            <input class="input" type="email" id="email" required placeholder="ty@example.com">
+            <div class="field__hint">Пришлемо лист — тицни, і ти всередині. Без паролів.</div>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block btn--lg">Надіслати magic-link</button>
+        </form>
+
+        <div id="sent" style="display:none" class="alert alert--info" role="status">
+          📧 Лист в дорозі. Перевір пошту — у листі буде кнопка «Увійти». Якщо нема за хвилину — глянь у спам.
+        </div>
+
+        <p class="muted center" style="margin-top: var(--space-6); font-size: var(--fs-small)">
+          Немає акаунту? Він створиться автоматично.
+        </p>
+      </div>
+
+      <p class="muted center" style="margin-top: var(--space-6); font-size: var(--fs-small); max-width: 50ch; margin-inline: auto">
+        Продовжуючи, ти погоджуєшся з <a href="terms.html">умовами</a> і <a href="privacy.html">політикою конфіденційності</a>.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:0"><span>© 2026 ГО «Екотолока».</span><a href="privacy.html" style="color:#fff; opacity:0.85">Privacy</a></div></div></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

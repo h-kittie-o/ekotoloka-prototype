@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мій профіль — Екотолока</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+<header class="site-header"><div class="container site-header__inner">
+  <a href="index.html" class="logo"><span class="logo__mark">Е</span><span>Екотолока</span></a>
+  <nav class="nav"><a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a></nav>
+  <div class="header-actions"><a href="events.html" class="btn btn--primary btn--sm">Знайти подію</a><button class="burger" data-burger aria-label="Меню"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
+</div></header>
+<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close>✕ Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="profile.html">Профіль</a></div></div>
+
+<main>
+  <section class="section--tight">
+    <div class="container">
+
+      <div class="profile-hero">
+        <div class="profile-hero__inner">
+          <div class="profile-hero__avatar">М</div>
+          <div style="flex:1; min-width: 200px">
+            <h1 style="margin: 0 0 var(--space-1); font-size: 2rem">Привіт, Марко</h1>
+            <p class="muted" style="margin:0">Галицький район · з нами з січня 2026 · <strong>Свій</strong></p>
+          </div>
+          <div><a href="#" class="btn btn--secondary">Поділитись профілем</a></div>
+        </div>
+        <div class="stats-strip" style="margin: var(--space-6) var(--space-5) 0; background: rgba(255,255,255,0.6)">
+          <div class="stat"><div class="stat__value">18 кг</div><div class="stat__label">прибрав сміття</div></div>
+          <div class="stat"><div class="stat__value">3</div><div class="stat__label">толоки</div></div>
+          <div class="stat"><div class="stat__value">5 год</div><div class="stat__label">часу</div></div>
+          <div class="stat"><div class="stat__value">2</div><div class="stat__label">бейджі</div></div>
+        </div>
+      </div>
+
+      <div class="tabs" data-tabs="profile" role="tablist" style="margin-bottom: var(--space-6)">
+        <button data-tab="history" class="is-active">Історія</button>
+        <button data-tab="badges">Бейджі</button>
+        <button data-tab="teams">Команди</button>
+        <button data-tab="perks">Знижки</button>
+        <button data-tab="settings">Налаштування</button>
+      </div>
+
+      <!-- HISTORY -->
+      <div data-tab-panel="history" data-group="profile" class="tab-panel is-active stack">
+        <div class="card card--highlight">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap: var(--space-4); flex-wrap:wrap">
+            <div>
+              <span class="chip">Майбутня</span>
+              <h3 style="margin: var(--space-2) 0">Толока в Стрийському парку</h3>
+              <p class="muted" style="margin:0">Сб 26.04 · 10:00–13:00 · біля фонтану</p>
+            </div>
+            <div style="display:flex; gap: var(--space-2); flex-wrap: wrap">
+              <a href="event.html" class="btn btn--secondary btn--sm">Деталі</a>
+              <button class="btn btn--ghost btn--sm" onclick="showToast('Учасника вилучено')">Не зможу</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap: var(--space-4); flex-wrap:wrap">
+            <div>
+              <span class="chip chip--muted">Завершено</span>
+              <h3 style="margin: var(--space-2) 0">Толока у Стрийському</h3>
+              <p class="muted" style="margin:0">26 березня · 6 кг твоїх · 🏆 бейдж «Перша толока»</p>
+            </div>
+            <button class="btn btn--secondary btn--sm" data-modal-open="share2">Поділитись</button>
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap: var(--space-4); flex-wrap:wrap">
+            <div>
+              <span class="chip chip--muted">Завершено</span>
+              <h3 style="margin: var(--space-2) 0">After-work на Валах</h3>
+              <p class="muted" style="margin:0">12 березня · 4 кг твоїх</p>
+            </div>
+            <button class="btn btn--secondary btn--sm" data-modal-open="share2">Поділитись</button>
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap: var(--space-4); flex-wrap:wrap">
+            <div>
+              <span class="chip chip--muted">Завершено</span>
+              <h3 style="margin: var(--space-2) 0">Двір на Сихові</h3>
+              <p class="muted" style="margin:0">24 лютого · 8 кг твоїх</p>
+            </div>
+            <button class="btn btn--secondary btn--sm" data-modal-open="share2">Поділитись</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BADGES -->
+      <div data-tab-panel="badges" data-group="profile" class="tab-panel">
+        <p class="muted">2 з 12 відкрито</p>
+        <div class="grid grid--4" style="margin-top: var(--space-6)">
+          <div class="badge-tile"><div class="badge-tile__icon">🥉</div><strong>Перша толока</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Ну все, ти в темі.</p></div>
+          <div class="badge-tile"><div class="badge-tile__icon">🌅</div><strong>Ранкова пташка</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">До кави і прибрав.</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🤝</div><strong>Тандем</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">3 толоки з напарником</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🏘️</div><strong>Актив району</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">10 толок у своєму районі</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🌧️</div><strong>Мокрий і щасливий</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Толока під дощем</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">❄️</div><strong>Зимовий герой</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Толока в грудні–лютому</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🗺️</div><strong>Всеміщанин</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">5 різних районів</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">👥</div><strong>Командир</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">3 друзі дійшли на толоку</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">👁️</div><strong>Очі міста</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">3 повідомлення</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">⭐</div><strong>Свій серед своїх</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">5 толок</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🏛️</div><strong>Легенда</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">25 толок</p></div>
+          <div class="badge-tile badge-tile--locked"><div class="badge-tile__icon">🎯</div><strong>Мер одного дня</strong><p class="muted" style="font-size: var(--fs-small); margin: var(--space-2) 0 0">Організуй свою толоку</p></div>
+        </div>
+      </div>
+
+      <!-- TEAMS -->
+      <div data-tab-panel="teams" data-group="profile" class="tab-panel">
+        <p class="muted">Ти в 1 команді</p>
+        <div class="card" style="margin-top: var(--space-4)">
+          <div style="display:flex; justify-content: space-between; align-items:flex-start; gap: var(--space-4); flex-wrap:wrap">
+            <div><h3 style="margin-top:0">Команда Марка</h3><p class="muted" style="margin:0">2 людини · створена для толоки в Стрийському</p></div>
+            <button class="btn btn--secondary btn--sm" data-modal-open="invite2">Запросити ще</button>
+          </div>
+        </div>
+        <div class="card" style="margin-top: var(--space-4); text-align: center; border-style: dashed">
+          <p class="muted" style="margin:0">Ще не в команді? Запроси друга на наступну толоку</p>
+          <button class="btn btn--primary" style="margin-top: var(--space-3)" data-modal-open="invite2">Запросити друга</button>
+        </div>
+      </div>
+
+      <!-- PERKS -->
+      <div data-tab-panel="perks" data-group="profile" class="tab-panel">
+        <p class="muted">Знижки відкриваються залежно від кількості толок</p>
+        <div class="grid grid--3" style="margin-top: var(--space-6)">
+          <div class="card"><div class="chip">Доступно</div><h3 style="margin: var(--space-3) 0 var(--space-2)">Зелене зерно</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−20% на каву у день толоки</p><button class="btn btn--secondary btn--block" style="margin-top: var(--space-4)">Показати код</button></div>
+          <div class="card"><div class="chip">Доступно</div><h3 style="margin: var(--space-3) 0 var(--space-2)">Ровер</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">1 год безкоштовно за 1-шу толоку</p><button class="btn btn--secondary btn--block" style="margin-top: var(--space-4)">Активувати</button></div>
+          <div class="card" style="opacity: 0.55"><div class="chip chip--muted">Ще 2 толоки</div><h3 style="margin: var(--space-3) 0 var(--space-2)">Голка</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−15% після 3+ толок</p></div>
+          <div class="card" style="opacity: 0.55"><div class="chip chip--muted">Ще 1 толока</div><h3 style="margin: var(--space-3) 0 var(--space-2)">Hart</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−30% на перший місяць за 2+ толок</p></div>
+          <div class="card" style="opacity: 0.55"><div class="chip chip--muted">Ще 4 толоки</div><h3 style="margin: var(--space-3) 0 var(--space-2)">Книгарня «На розі»</h3><p class="muted" style="margin:0; font-size: var(--fs-small)">−10% після 5+ толок</p></div>
+        </div>
+      </div>
+
+      <!-- SETTINGS -->
+      <div data-tab-panel="settings" data-group="profile" class="tab-panel">
+        <div class="card stack-lg" style="max-width: 560px">
+          <h3 style="margin-top:0">Ім'я та email</h3>
+          <div class="field"><label class="field__label" for="s-name">Ім'я</label><input class="input" id="s-name" value="Марко"></div>
+          <div class="field"><label class="field__label" for="s-email">Email</label><input class="input" id="s-email" value="marko@example.com"></div>
+          <div class="field"><label class="field__label" for="s-district">Район</label>
+            <select class="select" id="s-district"><option>Галицький</option><option>Шевченківський</option><option>Личаківський</option><option>Сихівський</option><option>Франківський</option><option>Залізничний</option></select>
+          </div>
+
+          <hr class="divider">
+
+          <h3 style="margin-top:0">Як звертатись</h3>
+          <div class="radio"><input type="radio" name="voice" checked id="v-ti"> <label for="v-ti"><strong>На «ти»</strong><div class="muted" style="font-size: var(--fs-small)">Приходь у суботу, друже</div></label></div>
+          <div class="radio"><input type="radio" name="voice" id="v-vy"> <label for="v-vy"><strong>На «Ви»</strong><div class="muted" style="font-size: var(--fs-small)">Запрошуємо Вас у суботу</div></label></div>
+
+          <hr class="divider">
+
+          <h3 style="margin-top:0">Нагадування</h3>
+          <div class="checkbox"><input type="checkbox" checked id="n1"> <label for="n1">Нагадати за тиждень (Save-the-date)</label></div>
+          <div class="checkbox"><input type="checkbox" checked id="n2"> <label for="n2">Нагадати за день до толоки</label></div>
+          <div class="checkbox"><input type="checkbox" id="n3"> <label for="n3">Нагадати за 2 години</label></div>
+          <div class="checkbox"><input type="checkbox" checked id="n4"> <label for="n4">Фото та статистика після толоки</label></div>
+          <div class="checkbox"><input type="checkbox" id="n5"> <label for="n5">Новини і анонси</label></div>
+
+          <hr class="divider">
+
+          <button class="btn btn--primary" onclick="showToast('Збережено')">Зберегти</button>
+          <p class="muted" style="font-size: var(--fs-small); margin: 0">
+            <a href="#" onclick="return confirm('Точно видалити акаунт? Всі дані підуть.')">Видалити акаунт</a> · <a href="login.html">Вийти</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- MODAL: Share -->
+<div class="modal-bg" data-modal="share2" role="dialog">
+  <div class="modal">
+    <div class="modal__header"><h3 style="margin:0">Поділитись результатом</h3><button class="modal__close" data-modal-close>✕</button></div>
+    <p class="muted">Ось три шаблони — обери формат і завантаж.</p>
+    <div class="grid grid--3" style="margin: var(--space-4) 0">
+      <div class="card center"><div class="img-placeholder" style="aspect-ratio: 9/16" data-label="Story IG"></div><small class="muted">Instagram 9:16</small></div>
+      <div class="card center"><div class="img-placeholder" style="aspect-ratio: 9/16" data-label="TikTok"></div><small class="muted">TikTok 9:16</small></div>
+      <div class="card center"><div class="img-placeholder" style="aspect-ratio: 1/1" data-label="FB"></div><small class="muted">Facebook 1:1</small></div>
+    </div>
+    <button class="btn btn--primary btn--block" onclick="showToast('Файл завантажено. Текст у буфері.')">Завантажити</button>
+  </div>
+</div>
+
+<!-- MODAL: Invite -->
+<div class="modal-bg" data-modal="invite2" role="dialog">
+  <div class="modal">
+    <div class="modal__header"><h3 style="margin:0">Запросити друзів</h3><button class="modal__close" data-modal-close>✕</button></div>
+    <div class="card" style="display:flex; gap: var(--space-3); align-items:center; padding: var(--space-3)">
+      <code style="flex:1; overflow:auto; font-size: var(--fs-small)">ekotoloka.org/team/marko</code>
+      <button class="btn btn--primary btn--sm" data-copy="ekotoloka.org/team/marko">Копія</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="container"><div class="footer-bottom" style="padding:0"><span>© 2026 ГО «Екотолока». Львів.</span></div></div></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
