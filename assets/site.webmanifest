@@ -1,0 +1,14 @@
+{
+  "name": "Екотолока",
+  "short_name": "Екотолока",
+  "description": "Сусідські прибирання у Львові",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAF7",
+  "theme_color": "#2E7D47",
+  "lang": "uk",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/apple-touch-icon.svg", "sizes": "180x180", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

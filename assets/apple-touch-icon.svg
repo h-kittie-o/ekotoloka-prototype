@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Екотолока">
+  <defs>
+    <linearGradient id="ekGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2E7D47"/>
+      <stop offset="100%" stop-color="#245A34"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" fill="#2E7D47"/>
+  <g transform="translate(36 36)">
+    <path d="M36 0 H84 Q108 0 108 24 V66 Q108 108 66 108 H24 Q0 108 0 72 V36 Q0 0 36 0 Z" fill="url(#ekGrad)"/>
+    <g fill="#ffffff">
+      <rect x="34"   y="27"   width="12"  height="54"  rx="2"/>
+      <rect x="34"   y="27"   width="41"  height="12"  rx="2"/>
+      <rect x="34"   y="48"   width="34"  height="11.5" rx="2"/>
+      <rect x="34"   y="69"   width="41"  height="12"  rx="2"/>
+    </g>
+  </g>
+</svg>

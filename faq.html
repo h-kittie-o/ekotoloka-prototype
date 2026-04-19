@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Часті питання — Екотолока</title>
 <meta name="theme-color" content="#2E7D47">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.svg">
+<link rel="manifest" href="assets/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
@@ -13,7 +16,7 @@
 <header class="site-header"><div class="container site-header__inner">
   <a href="index.html" class="logo"><span class="logo__mark">Е</span><span>Екотолока</span></a>
   <nav class="nav"><a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a></nav>
-  <div class="header-actions"><a href="events.html" class="btn btn--primary btn--sm">Знайти подію</a><button class="burger" data-burger aria-label="Меню"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
+  <div class="header-actions"><a href="events.html" class="btn btn--primary btn--sm">Знайти подію</a><a href="profile.html" class="btn btn--ghost btn--sm header-profile" aria-label="Профіль" style="padding:0; width:40px; height:40px; border-radius:50%; background:var(--color-surface); border:1px solid var(--color-border);"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><button class="burger" data-burger aria-label="Меню"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
 </div></header>
 <div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a></div></div>
 
@@ -30,29 +33,22 @@
   <section class="section--tight">
     <div class="container container--narrow">
 
-      <div class="split" style="grid-template-columns: 200px 1fr; gap: var(--space-8)">
-        <aside style="display: none">
-          <!-- sidebar navigation (desktop only — hidden for now) -->
-        </aside>
-        <div>
-          <h2 style="margin-top: 0">Про толоки</h2>
-          <details class="accordion" open><summary>Що таке толока?</summary><p>Сусідське прибирання. Збираємось у сквері, парку чи дворі на 1–2 години, прибираємо разом, потім п'ємо чай і йдемо по домах.</p></details>
-          <details class="accordion"><summary>Що мені взяти?</summary><p>Зручний одяг і гарний настрій. Решту дамо — граблі, рукавички, пакети, чай.</p></details>
-          <details class="accordion"><summary>А діти?</summary><p>Можна і треба. Для дітей є свої мінізавдання. До 12 років — з дорослим.</p></details>
-          <details class="accordion"><summary>Якщо буде дощ?</summary><p>Невеликий — прибираємо. Сильний — перенесемо, напишемо тобі за день до події.</p></details>
-          <details class="accordion"><summary>Я один піду?</summary><p>Ні. Середня толока — 15–20 людей. Організатор зустріне особисто біля точки збору.</p></details>
-          <details class="accordion"><summary>А якщо я нікого не знаю?</summary><p>Більшість приходить самі. На першій толоці познайомишся з 5–10 людьми — це нормально.</p></details>
+      <h2 style="margin-top: 0">Про толоки</h2>
+      <details class="accordion" open><summary>Що таке толока?</summary><p>Сусідське прибирання. Збираємось у сквері, парку чи дворі на 1–2 години, прибираємо разом, потім п'ємо чай і йдемо по домах.</p></details>
+      <details class="accordion"><summary>Що мені взяти?</summary><p>Зручний одяг і гарний настрій. Решту дамо — граблі, рукавички, пакети, чай.</p></details>
+      <details class="accordion"><summary>А діти?</summary><p>Можна і треба. Для дітей є свої мінізавдання. До 12 років — з дорослим.</p></details>
+      <details class="accordion"><summary>Якщо буде дощ?</summary><p>Невеликий — прибираємо. Сильний — перенесемо, напишемо тобі за день до події.</p></details>
+      <details class="accordion"><summary>Я один піду?</summary><p>Ні. Середня толока — 15–20 людей. Організатор зустріне особисто біля точки збору.</p></details>
+      <details class="accordion"><summary>А якщо я нікого не знаю?</summary><p>Більшість приходить самі. На першій толоці познайомишся з 5–10 людьми — це нормально.</p></details>
 
-          <h2>Безпека</h2>
-          <details class="accordion"><summary>Чи безпечно?</summary><p>Так. Ми видаємо рукавички і робимо короткий інструктаж на початку. Організатор має аптечку.</p></details>
-          <details class="accordion"><summary>Що з битим склом, шприцами?</summary><p>Збираємо окремо. У організатора є спецконтейнер. Ти сам не чіпаєш небезпечні предмети руками.</p></details>
+      <h2>Безпека</h2>
+      <details class="accordion"><summary>Чи безпечно?</summary><p>Так. Ми видаємо рукавички і робимо короткий інструктаж на початку. Організатор має аптечку.</p></details>
+      <details class="accordion"><summary>Що з битим склом, шприцами?</summary><p>Збираємо окремо. У організатора є спецконтейнер. Ти сам не чіпаєш небезпечні предмети руками.</p></details>
 
-          <h2>Акаунт</h2>
-          <details class="accordion"><summary>Навіщо реєструватись?</summary><p>Щоб нагадати про толоку на email і зберегти твій прогрес — кг, години, бейджі. Без реєстрації теж можна долучитись.</p></details>
-          <details class="accordion"><summary>Як скасувати участь?</summary><p>Профіль → Історія → «Не зможу». Без драми — хтось з листа очікування зрадіє.</p></details>
-          <details class="accordion"><summary>Як видалити акаунт?</summary><p>Налаштування → внизу «Видалити акаунт». Всі дані підуть протягом 30 днів.</p></details>
-        </div>
-      </div>
+      <h2>Акаунт</h2>
+      <details class="accordion"><summary>Навіщо реєструватись?</summary><p>Щоб нагадати про толоку на email і зберегти твій прогрес — кг, години, бейджі. Без реєстрації теж можна долучитись.</p></details>
+      <details class="accordion"><summary>Як скасувати участь?</summary><p>Профіль → Історія → «Не зможу». Без драми — хтось з листа очікування зрадіє.</p></details>
+      <details class="accordion"><summary>Як видалити акаунт?</summary><p>Налаштування → внизу «Видалити акаунт». Всі дані підуть протягом 30 днів.</p></details>
 
       <div class="card card--warm center reveal" style="margin-top: var(--space-10)">
         <div class="icon-circle icon-circle--accent" style="margin-inline: auto; margin-bottom: var(--space-3)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
