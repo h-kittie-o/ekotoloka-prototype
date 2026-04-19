@@ -154,8 +154,8 @@ a.card:hover, a.card-link:hover { color: inherit; }
   background-position: 14px center;
 }
 
-.checkbox, .radio { display: flex; align-items: flex-start; gap: var(--space-3); cursor: pointer; padding: var(--space-2) 0; }
-.checkbox input, .radio input { margin: 0; width: 22px; height: 22px; flex-shrink: 0; accent-color: var(--color-primary); margin-top: 3px; }
+.checkbox, .radio { display: flex; align-items: flex-start; gap: var(--space-3); cursor: pointer; padding: var(--space-2) 0; min-height: var(--tap-min); }
+.checkbox input, .radio input { margin: 0; width: 24px; height: 24px; flex-shrink: 0; accent-color: var(--color-primary); margin-top: 2px; }
 
 /* ===== Header ===== */
 .site-header {
@@ -215,6 +215,11 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .nav a.is-active { background: var(--color-primary); color: var(--color-text-inverse); }
 
 .header-actions { display: flex; align-items: center; gap: var(--space-2); }
+
+/* Hide desktop-style CTA in header on mobile — burger covers it */
+@media (max-width: 639px) {
+  .header-actions > .btn:not(.burger) { display: none; }
+}
 
 .burger {
   display: inline-flex; align-items: center; justify-content: center;
@@ -527,11 +532,12 @@ a.card:hover, a.card-link:hover { color: inherit; }
 /* ===== Org shapes (decorative) ===== */
 .blob {
   position: absolute; pointer-events: none; z-index: 0;
-  width: 520px; height: 520px;
+  width: min(520px, 80vw); height: min(520px, 80vw);
+  max-width: 520px;
   background: var(--color-primary-100);
   filter: blur(60px); opacity: 0.6;
   border-radius: 42% 58% 62% 38% / 54% 42% 58% 46%;
 }
 .blob--accent { background: var(--color-accent-100); }
 .blob--warm { background: #FDE9C8; }
-.blob--sm { width: 280px; height: 280px; filter: blur(40px); }
+.blob--sm { width: min(280px, 60vw); height: min(280px, 60vw); filter: blur(40px); }

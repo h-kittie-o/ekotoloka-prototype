@@ -20,7 +20,11 @@ body {
   font-feature-settings: "kern", "liga", "ss01", "cv11";
   text-rendering: optimizeLegibility;
   min-height: 100svh;
+  overflow-x: hidden;
 }
+
+/* Prevent decorative blobs / gradients from triggering horizontal scroll */
+main { overflow-x: clip; }
 
 /* Subtle noise/grain texture for natural feel */
 body::before {

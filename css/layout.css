@@ -18,66 +18,79 @@
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
 
 /* Hero two-column with visual */
-.hero-split { display: grid; grid-template-columns: 1fr; gap: var(--space-10); align-items: center; }
+.hero-split { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-10); align-items: center; }
 @media (min-width: 1024px) {
-  .hero-split { grid-template-columns: 1.1fr 1fr; gap: var(--space-16); }
+  .hero-split { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--space-16); }
 }
 
 /* Hero visual (organic collage) */
 .hero-collage {
   position: relative;
-  aspect-ratio: 5 / 4;
   width: 100%;
+  padding: 0 4%;
+  align-self: center;
+  margin: var(--space-8) 0;
 }
 .hero-collage__main {
-  position: absolute; inset: 0;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 4;
   border-radius: var(--radius-organic-1);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   background: var(--color-primary-100);
 }
+.hero-collage__main .img-placeholder {
+  width: 100%; height: 100%;
+  aspect-ratio: auto;
+  border-radius: 0;
+}
 .hero-collage__accent {
-  position: absolute; right: -8%; bottom: -6%;
-  width: 42%; aspect-ratio: 1;
+  position: absolute; right: -2%; bottom: -8%;
+  width: 40%; aspect-ratio: 1;
   border-radius: 50% 42% 56% 46% / 48% 58% 42% 52%;
   background: var(--gradient-warm);
   box-shadow: var(--shadow-md);
   display: flex; align-items: center; justify-content: center;
   text-align: center; padding: var(--space-4);
+  z-index: 2;
 }
 .hero-collage__badge {
-  position: absolute; top: -6%; left: -4%;
+  position: absolute; top: -4%; left: 0;
   background: var(--color-surface);
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-pill);
   box-shadow: var(--shadow-md);
   display: inline-flex; align-items: center; gap: var(--space-2);
   font-weight: var(--fw-semibold); font-size: var(--fs-small);
+  z-index: 2;
 }
 
-/* ===== Grids ===== */
+/* ===== Grids — use minmax(0, 1fr) so grid items can shrink ===== */
 .grid { display: grid; gap: var(--space-5); }
-.grid--2 { grid-template-columns: 1fr; }
-.grid--3 { grid-template-columns: 1fr; }
-.grid--4 { grid-template-columns: 1fr 1fr; }
+.grid > * { min-width: 0; }
+.grid--2 { grid-template-columns: minmax(0, 1fr); }
+.grid--3 { grid-template-columns: minmax(0, 1fr); }
+.grid--4 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 @media (min-width: 640px) {
-  .grid--2 { grid-template-columns: 1fr 1fr; }
-  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 768px) {
-  .grid--3 { grid-template-columns: repeat(3, 1fr); }
-  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 @media (min-width: 1024px) { .grid { gap: var(--space-6); } }
 
 /* ===== BENTO GRID ===== */
 .bento {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-4);
 }
+.bento > * { min-width: 0; }
 @media (min-width: 768px) {
-  .bento { grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(160px, auto); gap: var(--space-5); }
+  .bento { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: minmax(160px, auto); gap: var(--space-5); }
   .bento--tight { grid-auto-rows: minmax(140px, auto); }
   .bento > .bento__wide { grid-column: span 2; }
   .bento > .bento__tall { grid-row: span 2; }
@@ -87,10 +100,11 @@
 .bento > .card { padding: var(--space-5); }
 
 /* ===== Split (content + sidebar) ===== */
-.split { display: grid; gap: var(--space-8); grid-template-columns: 1fr; }
+.split { display: grid; gap: var(--space-8); grid-template-columns: minmax(0, 1fr); }
+.split > * { min-width: 0; }
 @media (min-width: 1024px) {
-  .split { grid-template-columns: 1fr 400px; gap: var(--space-12); }
-  .split--reverse { grid-template-columns: 400px 1fr; }
+  .split { grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: var(--space-12); }
+  .split--reverse { grid-template-columns: minmax(0, 400px) minmax(0, 1fr); }
 }
 
 /* ===== Event card ===== */
@@ -325,14 +339,27 @@
 .prose h2 { margin-top: var(--space-10); margin-bottom: var(--space-4); padding-top: var(--space-6); border-top: 1px solid var(--color-border); }
 .prose h2:first-child { padding-top: 0; border-top: 0; margin-top: 0; }
 .prose h3 { margin-top: var(--space-8); margin-bottom: var(--space-3); }
-.prose table {
-  width: 100%; border-collapse: collapse; margin: var(--space-5) 0;
-  border: 1px solid var(--color-border); border-radius: var(--radius-md);
+/* Tables scroll horizontally inside a wrapper on narrow screens */
+.prose table, .table-scroll table {
+  width: 100%; border-collapse: collapse; margin: 0;
+  border-radius: var(--radius-md);
   overflow: hidden;
+  min-width: 480px;
 }
-.prose th, .prose td { padding: var(--space-3) var(--space-4); text-align: left; border-bottom: 1px solid var(--color-border); vertical-align: top; }
-.prose tr:last-child td { border-bottom: 0; }
-.prose th { background: var(--color-surface-alt); font-weight: var(--fw-bold); font-size: var(--fs-small); }
+.prose table { margin: var(--space-5) 0; }
+.prose th, .prose td, .table-scroll th, .table-scroll td { padding: var(--space-3) var(--space-4); text-align: left; border-bottom: 1px solid var(--color-border); vertical-align: top; font-size: var(--fs-small); }
+.prose tr:last-child td, .table-scroll tr:last-child td { border-bottom: 0; }
+.prose th, .table-scroll th { background: var(--color-surface-alt); font-weight: var(--fw-bold); font-size: var(--fs-small); text-transform: uppercase; letter-spacing: var(--tracking-widest); color: var(--color-text-muted); }
+
+/* Scroll wrapper for tables on mobile */
+.table-scroll {
+  width: 100%; overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin: var(--space-5) 0;
+  -webkit-overflow-scrolling: touch;
+}
+.table-scroll table { margin: 0; border-radius: 0; border: 0; }
 
 /* Drop cap for editorial */
 .prose--editorial > p:first-of-type::first-letter {
