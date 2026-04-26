@@ -600,6 +600,111 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .icon-circle--dark { background: var(--color-text); color: #fff; }
 .icon-circle .icon { width: 28px; height: 28px; }
 
+/* ===== Share card (profile, social-shareable) ===== */
+.share-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(var(--space-5), 4vw, var(--space-7));
+  background: linear-gradient(160deg, var(--color-surface) 0%, var(--color-primary-50) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-organic-1);
+  box-shadow: var(--shadow-md);
+  display: grid;
+  gap: clamp(var(--space-5), 3vw, var(--space-6));
+  isolation: isolate;
+}
+.share-card__bg {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(420px 280px at 110% -10%, rgba(46,125,71,0.16), transparent 60%),
+    radial-gradient(360px 240px at -10% 110%, rgba(200,90,30,0.10), transparent 65%);
+}
+.share-card__header {
+  display: flex; justify-content: space-between; align-items: center; gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.share-card__brand {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-family: var(--font-display); font-weight: var(--fw-bold);
+  color: var(--color-text); text-decoration: none;
+  font-size: var(--fs-small);
+}
+.share-card__brand .logo__mark {
+  width: 28px; height: 28px; font-size: 0.95rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--color-primary); color: #fff;
+  border-radius: var(--radius-sm);
+}
+.share-card__url {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--tracking-wide, 0.02em);
+  color: var(--color-text-muted);
+  background: rgba(255,255,255,0.55);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+}
+.share-card__identity {
+  display: flex; gap: var(--space-5); align-items: center; flex-wrap: wrap;
+}
+.share-card__avatar {
+  flex-shrink: 0;
+  width: 80px; height: 80px;
+  border-radius: 24px 18px 28px 20px;
+  background: var(--gradient-deep);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: var(--fw-bold);
+  box-shadow: var(--shadow-primary);
+}
+.share-card__identity-meta { flex: 1; min-width: 200px; }
+.share-card__hero-stat {
+  text-align: center;
+  padding: var(--space-4) var(--space-3);
+  background: rgba(255,255,255,0.65);
+  border: 1px dashed var(--color-primary-200);
+  border-radius: var(--radius-lg);
+}
+.share-card__stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  text-align: center;
+}
+.share-card__stat {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: var(--space-3) var(--space-2);
+  background: rgba(255,255,255,0.55);
+  border-radius: var(--radius-md);
+}
+.share-card__stat .icon-circle { width: 44px; height: 44px; border-radius: 14px 10px 16px 12px; }
+.share-card__stat .icon-circle .icon { width: 22px; height: 22px; }
+.share-card__stat strong {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  line-height: 1.1;
+  margin-top: 2px;
+}
+.share-card__stat .muted { font-size: var(--fs-micro); letter-spacing: var(--tracking-wide, 0.02em); text-transform: uppercase; }
+.share-card__progress {
+  background: var(--gradient-deep);
+  color: #fff;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-primary);
+}
+.share-card__progress .progress { height: 8px; border-radius: var(--radius-pill); overflow: hidden; }
+.share-card__progress .progress__bar { height: 100%; border-radius: var(--radius-pill); }
+
+@media (max-width: 480px) {
+  .share-card__stats-row { grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
+  .share-card__stat { padding: var(--space-2); }
+  .share-card__stat strong { font-size: 1.125rem; }
+}
+
 /* ===== Social proof bar ===== */
 .social-bar {
   display: inline-flex; align-items: center; gap: var(--space-3);

@@ -24,46 +24,74 @@
   <section class="section--tight" style="padding-top: var(--space-8)">
     <div class="container">
 
-      <div class="profile-hero">
-        <div class="profile-hero__inner">
-          <div class="profile-hero__avatar">М</div>
-          <div style="flex:1; min-width: 220px">
+      <article class="share-card" id="profile-share-card" aria-label="Картка профілю для поширення">
+        <div class="share-card__bg" aria-hidden="true"></div>
+
+        <header class="share-card__header">
+          <a href="index.html" class="share-card__brand">
+            <span class="logo__mark">Е</span>
+            <span>Екотолока</span>
+          </a>
+          <span class="share-card__url">ekotoloka.org</span>
+        </header>
+
+        <div class="share-card__identity">
+          <div class="share-card__avatar" aria-hidden="true">М</div>
+          <div class="share-card__identity-meta">
             <span class="eyebrow" style="margin-bottom: 0">Привіт</span>
-            <h1 style="margin: var(--space-1) 0; font-size: 2rem">Марко</h1>
-            <div class="tag-row" style="margin-top: var(--space-2)">
+            <h1 style="margin: 4px 0 var(--space-2); font-size: clamp(1.75rem, 4vw, 2.25rem)">Марко</h1>
+            <div class="tag-row">
               <span class="chip">Свій</span>
               <span class="chip chip--muted">Галицький</span>
               <span class="chip chip--outline">з січня 2026</span>
             </div>
           </div>
-          <a href="#" class="btn btn--secondary">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-            Поділитись
-          </a>
         </div>
-      </div>
 
-      <div class="bento" style="margin-bottom: var(--space-8)">
-        <div class="card bento__wide" style="display: flex; flex-direction: column; justify-content: center">
-          <span class="eyebrow" style="margin-bottom: var(--space-2)">Сміття</span>
-          <div class="number-display" style="font-size: 3.5rem">18 <span style="font-size: 1.5rem; color: var(--color-text-muted)">кг</span></div>
-          <p class="muted" style="margin: var(--space-2) 0 0">прибрано за 3 толоки</p>
+        <div class="share-card__hero-stat">
+          <span class="eyebrow" style="margin-bottom: var(--space-1)">Сміття</span>
+          <div class="number-display" style="font-size: clamp(3rem, 9vw, 4.5rem); line-height: 1">
+            18 <span style="font-size: 0.4em; color: var(--color-text-muted); font-weight: var(--fw-bold)">кг</span>
+          </div>
+          <p class="muted" style="margin: var(--space-2) 0 0">прибрав за 3 толоки</p>
         </div>
-        <div class="card" style="display: flex; flex-direction: column; justify-content: center; text-align: center">
-          <div class="icon-circle" style="margin-inline: auto; margin-bottom: var(--space-2)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-          <strong style="font-size: 1.5rem; font-family: var(--font-display)">3</strong>
-          <div class="muted" style="font-size: var(--fs-small)">толоки</div>
+
+        <div class="share-card__stats-row">
+          <div class="share-card__stat">
+            <div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <strong>3</strong>
+            <span class="muted">толоки</span>
+          </div>
+          <div class="share-card__stat">
+            <div class="icon-circle icon-circle--accent"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <strong>5</strong>
+            <span class="muted">годин</span>
+          </div>
+          <div class="share-card__stat">
+            <div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+            <strong>Свій</strong>
+            <span class="muted">рівень</span>
+          </div>
         </div>
-        <div class="card" style="display: flex; flex-direction: column; justify-content: center; text-align: center">
-          <div class="icon-circle icon-circle--accent" style="margin-inline: auto; margin-bottom: var(--space-2)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <strong style="font-size: 1.5rem; font-family: var(--font-display)">5</strong>
-          <div class="muted" style="font-size: var(--fs-small)">годин</div>
+
+        <div class="share-card__progress">
+          <div class="row-between" style="margin-bottom: var(--space-2)">
+            <span style="font-weight: var(--fw-bold)">2 толоки до «Актива»</span>
+            <span style="font-size: var(--fs-small); opacity: 0.85">60%</span>
+          </div>
+          <div class="progress" style="background: rgba(255,255,255,0.22)"><div class="progress__bar" style="width: 60%; background: var(--color-accent)"></div></div>
         </div>
-        <div class="card card--primary bento__wide" style="display: flex; flex-direction: column; justify-content: center">
-          <span class="chip chip--dark" style="align-self: flex-start; margin-bottom: var(--space-2)">Рівень · Свій</span>
-          <strong style="font-family: var(--font-display); font-size: 1.75rem; color: #fff">2 толоки до «Актива»</strong>
-          <div class="progress" style="margin-top: var(--space-3); background: rgba(255,255,255,0.2)"><div class="progress__bar" style="width: 60%; background: var(--color-accent)"></div></div>
-        </div>
+      </article>
+
+      <div class="row" style="justify-content: flex-end; margin: var(--space-4) 0 var(--space-8); gap: var(--space-2)">
+        <button class="btn btn--ghost btn--sm" onclick="showToast('Скопійовано в буфер')" aria-label="Копіювати посилання на профіль">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Копіювати посилання
+        </button>
+        <button class="btn btn--primary" data-modal-open="share2">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Поділитись карткою
+        </button>
       </div>
 
       <div class="tabs" data-tabs="profile" role="tablist" style="margin-bottom: var(--space-6)">
