@@ -245,15 +245,24 @@
 <div class="modal-bg" data-modal="share2" role="dialog">
   <div class="modal">
     <div class="modal__header"><h3 style="margin:0">Поділитись результатом</h3><button class="modal__close" data-modal-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
-    <p class="muted">Три шаблони — обери формат і завантаж.</p>
-    <div class="grid grid--3" style="margin: var(--space-4) 0">
-      <div class="card center" style="padding: var(--space-2)"><div class="img-placeholder img-placeholder--story">Story</div><small class="muted" style="display: block; margin-top: var(--space-2)">IG 9:16</small></div>
-      <div class="card center" style="padding: var(--space-2)"><div class="img-placeholder img-placeholder--story">TikTok</div><small class="muted" style="display: block; margin-top: var(--space-2)">9:16</small></div>
-      <div class="card center" style="padding: var(--space-2)"><div class="img-placeholder img-placeholder--square">FB</div><small class="muted" style="display: block; margin-top: var(--space-2)">FB 1:1</small></div>
+    <p class="muted">Обери формат і завантаж PNG.</p>
+    <div class="grid grid--3" style="margin: var(--space-4) 0" role="radiogroup" aria-label="Формат картки">
+      <button type="button" class="card center share-format-btn is-selected" data-share-format="square" data-share-target="profile-share-card" role="radio" aria-checked="true" style="padding: var(--space-2); cursor: pointer; border: 2px solid transparent">
+        <div class="img-placeholder img-placeholder--square">FB / IG</div>
+        <small class="muted" style="display: block; margin-top: var(--space-2)">1080×1080</small>
+      </button>
+      <button type="button" class="card center share-format-btn" data-share-format="story" data-share-target="profile-share-card" role="radio" aria-checked="false" style="padding: var(--space-2); cursor: pointer; border: 2px solid transparent">
+        <div class="img-placeholder img-placeholder--story">IG Story</div>
+        <small class="muted" style="display: block; margin-top: var(--space-2)">1080×1920</small>
+      </button>
+      <button type="button" class="card center share-format-btn" data-share-format="tiktok" data-share-target="profile-share-card" role="radio" aria-checked="false" style="padding: var(--space-2); cursor: pointer; border: 2px solid transparent">
+        <div class="img-placeholder img-placeholder--story">TikTok</div>
+        <small class="muted" style="display: block; margin-top: var(--space-2)">1080×1920</small>
+      </button>
     </div>
-    <button class="btn btn--primary btn--block" onclick="showToast('Файл завантажено · текст у буфері')">
+    <button class="btn btn--primary btn--block" data-share-download data-share-target="profile-share-card">
       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Завантажити
+      <span data-share-label>Завантажити PNG</span>
     </button>
   </div>
 </div>
@@ -271,5 +280,6 @@
 
 <footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів.</span></div></div></footer>
 <script src="js/main.js"></script>
+<script src="js/share-card.js" defer></script>
 </body>
 </html>
