@@ -159,7 +159,7 @@
   // CTA button label
   var ctaBtn = $('[data-ef="cta-btn"]');
   if (ctaBtn) {
-    var label = data.cta === 'waitlist' ? 'Приєднатись до waitlist' : 'Записатись на толоку';
+    var label = data.cta === 'waitlist' ? 'Приєднатись до листа очікування' : 'Записатись на толоку';
     ctaBtn.innerHTML = label + ' <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>';
   }
 
