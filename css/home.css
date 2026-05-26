@@ -160,8 +160,7 @@ h2 { font-size: 40px; line-height: 1.1; }
 .hero__media { position: relative; }
 .media-card {
   background: var(--placeholder); border-radius: 24px; height: 453px;
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  color: var(--muted); font-weight: 500; font-size: 15px; line-height: 1.5;
+  width: 100%; object-fit: cover; display: block;
   box-shadow: 0 24px 48px -28px rgba(26,46,31,.35);
 }
 .hero__badge {
@@ -220,7 +219,7 @@ h2 { font-size: 40px; line-height: 1.1; }
   box-shadow: 0 18px 40px -30px rgba(26,46,31,.45); transition: transform .15s ease, box-shadow .15s ease;
 }
 .event-card:hover { transform: translateY(-3px); box-shadow: 0 26px 50px -28px rgba(26,46,31,.5); }
-.event-card__media { background: var(--placeholder); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: var(--muted); font-weight: 500; font-size: 15px; }
+.event-card__media { background: var(--placeholder) center/cover no-repeat; aspect-ratio: 16/9; }
 .event-card__body { padding: 22px 24px 24px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .chip {
@@ -275,8 +274,8 @@ h2 { font-size: 40px; line-height: 1.1; }
   background: linear-gradient(110deg, #4f8b5a 0 50%, #e9e07a 50% 100%);
 }
 .ba__half { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 500; font-size: 15px; color: var(--ink); }
-.ba__before { right: 50%; color: #fff; }
-.ba__after { left: 50%; }
+.ba__before { right: 50%; background-image: url(../assets/home-ba-before.jpg); background-size: 200% 100%; background-position: left center; }
+.ba__after { left: 50%; background-image: url(../assets/home-ba-after.jpg); background-size: 200% 100%; background-position: right center; }
 .ba__tag { position: absolute; top: 14px; font-weight: 700; font-size: 13px; padding: 5px 12px; border-radius: var(--pill); }
 .ba__tag--before { left: 14px; background: rgba(26,46,31,.55); color: #fff; }
 .ba__tag--after { right: 14px; background: var(--yellow); color: var(--ink); }
@@ -292,7 +291,7 @@ h2 { font-size: 40px; line-height: 1.1; }
    NEWS
    ========================================================================== */
 .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.news-card { display: block; background: #fff; border-radius: var(--r-card); overflow: hidden; box-shadow: 0 18px 40px -30px rgba(26,46,31,.45); transition: transform .15s ease; }
+.news-card { display: block; background: #FFE534; border-radius: var(--r-card); overflow: hidden; box-shadow: 0 18px 40px -30px rgba(26,46,31,.45); transition: transform .15s ease; }
 .news-card:hover { transform: translateY(-3px); }
 .news-card__img { aspect-ratio: 16/9; width: 100%; object-fit: cover; }
 .news-card__body { padding: 22px 24px 24px; }
@@ -300,6 +299,9 @@ h2 { font-size: 40px; line-height: 1.1; }
 .news-card h3 { font-size: 20px; margin: 12px 0 10px; line-height: 1.15; }
 .news-card p { margin: 0 0 16px; font-size: 18px; color: var(--ink); }
 .news-card .link-btn { color: var(--ink); }
+
+/* Ant mascot — decorative, events→community transition (desktop only) */
+.ant-deco { position: absolute; right: -8px; bottom: -56px; width: 150px; height: auto; z-index: 2; pointer-events: none; }
 
 /* ==========================================================================
    CTA banners
@@ -357,6 +359,7 @@ h2 { font-size: 40px; line-height: 1.1; }
 @media (max-width: 1240px) {
   .hero__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   .community { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .ant-deco { display: none; }
 }
 @media (max-width: 900px) {
   h1 { font-size: 44px; } h2 { font-size: 32px; }
