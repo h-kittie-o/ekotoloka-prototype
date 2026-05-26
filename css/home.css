@@ -39,7 +39,7 @@
   --r-xl: 32px;
   --pill: 9999px;
 
-  --content: 1176px;
+  --content: 1240px;       /* matched to inner pages (site.css) for site-wide parity */
   --wide: 1240px;
   --font-head: "Unbounded", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -80,8 +80,9 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-head); font-weight: 700; col
 }
 .page > *:not(.page__deco) { position: relative; z-index: 1; }
 
-.container { width: 100%; max-width: var(--content); margin: 0 auto; padding: 0 24px; }
+.container { width: 100%; max-width: var(--content); margin: 0 auto; padding: 0 20px; }
 .container--wide { max-width: var(--wide); }
+@media (min-width: 768px) { .container, .site-header .container { padding: 0 32px; } }
 
 .section { padding: 64px 0; }
 
@@ -127,7 +128,7 @@ h2 { font-size: 40px; line-height: 1.1; }
    HEADER
    ========================================================================== */
 .site-header { background: var(--green); height: 83px; }
-.site-header .container { max-width: var(--wide); padding: 0 24px; height: 100%; display: flex; align-items: center; gap: 24px; }
+.site-header .container { max-width: var(--wide); height: 100%; display: flex; align-items: center; gap: 24px; }
 .logo { display: inline-flex; align-items: center; gap: 14px; }
 .logo img { height: 40px; }
 .site-header .logo { color: #fff; }
