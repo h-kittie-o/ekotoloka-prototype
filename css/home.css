@@ -69,9 +69,9 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-head); font-weight: 700; col
 .page__deco {
   position: absolute;
   top: 0;                    /* SVG y0 == header top; header covers its top 83px */
+  bottom: 0;                 /* stretch to actual page height — no fixed 6178px tail below footer */
   left: 50%;
   width: 1920px;
-  height: 6178px;
   margin-left: -960px;
   background: url(../assets/home-decor.svg) top center no-repeat;
   background-size: 1920px auto;
