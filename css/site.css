@@ -231,7 +231,7 @@ small { font-size: var(--fs-small); }
 .stack-sm > * + * { margin-top: var(--space-2); }
 .stack-lg > * + * { margin-top: var(--space-6); }
 .stack-xl > * + * { margin-top: var(--space-8); }
-.section { padding: var(--section-y) 0; }
+.section { padding: var(--section-y) 0; position: relative; overflow-x: clip; }
 .section--tight { padding: var(--space-10) 0; }
 .divider { height: 1px; background: var(--color-border); border: 0; margin: var(--space-8) 0; }
 .row { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
