@@ -4,21 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Умови використання — Екотолока</title>
-<meta name="theme-color" content="#2E7D47">
+<meta name="theme-color" content="#327A40">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.svg">
 <link rel="manifest" href="assets/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 <header class="site-header"><div class="container site-header__inner">
-  <a href="index.html" class="logo"><span class="logo__mark">Е</span><span>Екотолока</span></a>
-  <nav class="nav"><a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a></nav>
-  <div class="header-actions"><a href="profile.html" class="btn btn--ghost btn--sm header-profile" aria-label="Профіль" style="padding:0; width:40px; height:40px; border-radius:50%; background:var(--color-surface); border:1px solid var(--color-border);"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><button class="burger" data-burger aria-label="Меню"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button></div>
+  <a href="index.html" class="logo" aria-label="Екотолока — головна"><img src="assets/logo.svg" alt="Екотолока"></a>
+  <nav class="nav" aria-label="Головна навігація"><a href="events.html" data-nav>Знайти подію</a><a href="results.html" data-nav>Результати</a><a href="community.html" data-nav>Ком'юніті</a><a href="support.html" data-nav>Підтримати</a><a href="faq.html" data-nav>FAQ</a></nav>
+  <div class="header-actions">
+    <a href="login.html" class="btn btn--primary">
+      <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Увійти
+    </a>
+    <a href="profile.html" class="profile-btn" aria-label="Профіль"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+    <button class="burger" data-burger aria-label="Меню"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+  </div>
 </div></header>
-<div class="drawer" data-drawer><div class="drawer__panel"><button class="btn btn--ghost btn--sm drawer__close" data-drawer-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Закрити</button><a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookie.html">Cookie</a></div></div>
+
+<div class="drawer" data-drawer role="dialog" aria-modal="true">
+  <div class="drawer__panel">
+    <button class="btn btn--ghost btn--sm drawer__close" data-drawer-close><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Закрити</span></button>
+    <a href="events.html">Знайти подію</a><a href="results.html">Результати</a><a href="community.html">Ком'юніті</a><a href="support.html">Підтримати</a><a href="report.html">Сповістити</a><a href="faq.html">FAQ</a><a href="news.html">Новини</a><hr class="divider"><a href="login.html">Увійти</a><a href="profile.html">Профіль</a>
+  </div>
+</div>
 
 <main>
   <section class="section">
@@ -91,7 +104,23 @@
   </section>
 </main>
 
-<footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів.</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="cookie.html">Cookie</a></span></div></div></footer>
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-about">
+      <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Екотолока" style="height:44px"></a>
+      <p>Соціальна ініціатива, що організовує прибирання у Львові. Об'єднуємо людей, щоб разом дбати про свій простір.</p>
+      <div class="footer-social" aria-label="Соцмережі">
+        <a href="#" aria-label="Instagram"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" aria-label="Telegram"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3 2 11l6 2 2 6 3-4 5 4z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Сайт</h4><ul><li><a href="events.html">Знайти подію</a></li><li><a href="results.html">Результати</a></li><li><a href="community.html">Ком'юніті</a></li><li><a href="support.html">Підтримати</a></li></ul></div>
+    <div class="footer-col"><h4>Допомога</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="report.html">Сповістити</a></li><li><a href="news.html">Новини</a></li><li><a href="mailto:hello@ekotoloka.org">hello@ekotoloka.org</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookie.html">Cookies</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів, Україна.</span><span>Зроблено руками ком'юніті</span></div>
+</div></footer>
 <script src="js/main.js"></script>
 </body>
 </html>
