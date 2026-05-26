@@ -63,7 +63,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 h1, h2, h3, h4 { margin: 0; font-family: var(--font-head); font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
 
 /* ---- page shell + decorative backdrop ---------------------------------- */
-.page { position: relative; }
+/* overflow-x: clip contains the 1920px .page__deco on narrow viewports
+   without creating a scroll container (so it never affects sticky/fixed). */
+.page { position: relative; overflow-x: clip; }
 .page__deco {
   position: absolute;
   top: 0;                    /* SVG y0 == header top; header covers its top 83px */
