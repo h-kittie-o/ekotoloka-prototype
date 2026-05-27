@@ -622,22 +622,21 @@ a.card:hover, a.card-link:hover { color: inherit; }
    Стосується всіх героїв, бо .hero--lg тепер теж має відступ 64px зверху. */
 .hero { min-height: 23vw; }
 
-/* ==== сторінка «ком'юніті»: фоновий декор (квіти по краях) + мурашки ====
-   Повний композит вставляється всередину КОЖНОЇ секції (бо непрозорі фони
-   секцій сховали б декор, якби він був позаду <main>). Кожна копія зсунута
-   вгору на --comm-decor-top (vw, = дизайн-Y старту секції / 17.21), тож слайси
-   складаються у суцільний візерунок; секція кліпить свій фрагмент. */
-.page-community .hero,
-.page-community .section,
-.page-community .section--tight { position: relative; overflow: hidden; }
-.page-community .hero > .container,
-.page-community .section > .container,
-.page-community .section--tight > .container { position: relative; z-index: 1; }
-.comm-decor {
-  position: absolute; left: 0; top: var(--comm-decor-top, 0);
-  width: 100%; height: auto; z-index: 0; pointer-events: none; user-select: none;
+/* ==== сторінка «ком'юніті»: рівномірний бежевий фон + суцільний декор-шар ====
+   Декор — background-image на <main>: лежить позаду всього контенту, тож не
+   ріжеться по секціях; прозорі секції дають йому проступати крізь них. Градієнти
+   героя (.hero__bg, .blob) та сірі фони секцій прибрано — фон однорідно бежевий. */
+.page-community {
+  position: relative;
+  background-color: #FAF1E8;
+  background-image: url(../assets/community-decor.png?v=1);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 100%;
 }
-@media (max-width: 1024px) { .comm-decor { display: none; } }
+.page-community > section { background: transparent; }
+.page-community .hero__bg, .page-community .blob { display: none; }
+@media (max-width: 1024px) { .page-community { background-image: none; } }
 
 /* буквиця (drop-cap) інфо-картки — новий знак: білий пелюстковий блоб із «Е».
    Замінює стандартний ::first-letter prose--editorial на цьому абзаці. */
