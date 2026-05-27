@@ -663,6 +663,12 @@ a.card:hover, a.card-link:hover { color: inherit; }
 }
 @media (max-width: 1024px) { .comm-ant { display: none; } }
 
+/* картки партнерів — однакова висота (картка «+ти?» має min-height і розтягувала
+   свій ряд; задаємо спільну мінімальну висоту + вертикальне центрування всім) */
+.partners-grid > .card {
+  min-height: 88px; display: flex; align-items: center; justify-content: center;
+}
+
 /* буквиця (drop-cap) інфо-картки — новий знак: білий пелюстковий блоб із «Е».
    Замінює стандартний ::first-letter prose--editorial на цьому абзаці. */
 .bukvytsia {
