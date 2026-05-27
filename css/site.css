@@ -635,10 +635,10 @@ a.card:hover, a.card-link:hover { color: inherit; }
      «Стіна слави» і «Відгуки» (як у Figma). */
   --comm-spread: 5vw;
   --comm-drop: 11vw;
-  background-image: url(../assets/comm-decor-tl.png?v=1),
-                    url(../assets/comm-decor-tr.png?v=1),
-                    url(../assets/comm-decor-bl.png?v=1),
-                    url(../assets/comm-decor-br.png?v=1);
+  background-image: url(../assets/comm-decor-tl.png?v=2),
+                    url(../assets/comm-decor-tr.png?v=2),
+                    url(../assets/comm-decor-bl.png?v=2),
+                    url(../assets/comm-decor-br.png?v=2);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position:
     calc(0%   - var(--comm-spread)) top,
@@ -653,6 +653,15 @@ a.card:hover, a.card-link:hover { color: inherit; }
    проміжку від margin-top футера) */
 .page-community + .site-footer { margin-top: 0; }
 @media (max-width: 1024px) { .page-community { background-image: none; } }
+
+/* нижня мурашка — окремий шар (відчеплена від фонового декору), щоб підняти її
+   над футером і не дати картці monobank її перекрити. Стоїть у правому полі
+   нижче карток. */
+.comm-ant {
+  position: absolute; right: 1.5vw; bottom: 40px;
+  width: 120px; height: auto; z-index: 2; pointer-events: none; user-select: none;
+}
+@media (max-width: 1024px) { .comm-ant { display: none; } }
 
 /* буквиця (drop-cap) інфо-картки — новий знак: білий пелюстковий блоб із «Е».
    Замінює стандартний ::first-letter prose--editorial на цьому абзаці. */
