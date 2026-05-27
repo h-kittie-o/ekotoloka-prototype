@@ -10,7 +10,7 @@
 <link rel="manifest" href="assets/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=20260528g">
+<link rel="stylesheet" href="css/site.css?v=20260528h">
 </head>
 <body>
 <header class="site-header"><div class="container site-header__inner">
@@ -161,61 +161,57 @@
 
       <!-- HISTORY -->
       <div data-tab-panel="history" data-group="profile" class="tab-panel is-active stack">
-        <article class="card card--highlight history-card">
-          <div class="history-card__info">
-            <span class="chip">Майбутня</span>
-            <h3 style="margin: var(--space-2) 0">Толока в Стрийському парку</h3>
-            <p class="muted" style="margin:0">Сб 26.04 · 10:00–13:00 · біля фонтану</p>
+        <article class="hist-card hist-card--up">
+          <div class="hist-card__info">
+            <span class="hist-chip"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Майбутня</span>
+            <h3>Толока в Стрийському парку</h3>
+            <p>Сб 26.04 · 10:00–13:00 · біля фонтану</p>
           </div>
-          <div class="history-card__actions">
-            <a href="event.html" class="btn btn--secondary btn--sm">Деталі</a>
-            <button class="btn btn--ghost btn--sm" onclick="showToast('Учасника вилучено')">Не зможу</button>
+          <div class="hist-card__actions">
+            <a href="event.html" class="btn btn--primary btn--sm">Деталі</a>
+            <button class="btn btn--sm hist-btn-ghost" onclick="showToast('Учасника вилучено')">Не зможу</button>
           </div>
         </article>
-        <article class="card history-card">
-          <div class="history-card__info">
-            <span class="chip chip--muted">Завершено · 26.03</span>
-            <h3 style="margin: var(--space-2) 0">Толока у Стрийському</h3>
-            <p class="muted" style="margin:0">6 кг твоїх · бейдж «Перша толока»</p>
+        <article class="hist-card hist-card--done">
+          <div class="hist-card__info">
+            <span class="hist-chip">Завершено · 26.03</span>
+            <h3>Толока у Стрийському</h3>
+            <p>6 кг твоїх · бейдж «Перша толока»</p>
           </div>
-          <div class="history-card__actions">
-            <button class="btn btn--secondary btn--sm" data-modal-open="share2">
-              <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          <div class="hist-card__actions">
+            <button class="btn btn--sm hist-btn-share" data-modal-open="share2">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
               Поділитись
             </button>
           </div>
         </article>
-        <article class="card history-card">
-          <div class="history-card__info">
-            <span class="chip chip--muted">Завершено · 12.03</span>
-            <h3 style="margin: var(--space-2) 0">After-work на Валах</h3>
-            <p class="muted" style="margin:0">4 кг твоїх</p>
+        <article class="hist-card hist-card--done">
+          <div class="hist-card__info">
+            <span class="hist-chip">Завершено · 12.03</span>
+            <h3>After-work на Валах</h3>
+            <p>4 кг твоїх</p>
           </div>
-          <div class="history-card__actions">
-            <button class="btn btn--secondary btn--sm" data-modal-open="share2">Поділитись</button>
+          <div class="hist-card__actions">
+            <button class="btn btn--sm hist-btn-share" data-modal-open="share2">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Поділитись
+            </button>
           </div>
         </article>
-        <article class="card history-card">
-          <div class="history-card__info">
-            <span class="chip chip--muted">Завершено · 24.02</span>
-            <h3 style="margin: var(--space-2) 0">Двір на Сихові</h3>
-            <p class="muted" style="margin:0">8 кг твоїх</p>
+        <article class="hist-card hist-card--done">
+          <div class="hist-card__info">
+            <span class="hist-chip">Завершено · 24.02</span>
+            <h3>Двір на Сихові</h3>
+            <p>8 кг твоїх</p>
           </div>
-          <div class="history-card__actions">
-            <button class="btn btn--secondary btn--sm" data-modal-open="share2">Поділитись</button>
+          <div class="hist-card__actions">
+            <button class="btn btn--sm hist-btn-share" data-modal-open="share2">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Поділитись
+            </button>
           </div>
         </article>
       </div>
-
-      <style>
-        .history-card { display: flex; flex-direction: column; gap: var(--space-4); }
-        .history-card__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-        @media (min-width: 768px) {
-          .history-card { flex-direction: row; justify-content: space-between; align-items: center; }
-          .history-card__info { flex: 1; min-width: 0; }
-          .history-card__actions { flex-shrink: 0; }
-        }
-      </style>
 
       <!-- BADGES -->
       <div data-tab-panel="badges" data-group="profile" class="tab-panel">
