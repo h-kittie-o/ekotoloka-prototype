@@ -73,7 +73,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-head); font-weight: 700; col
   left: 50%;
   width: 1920px;
   margin-left: -960px;
-  background: url(../assets/home-decor.svg) top center no-repeat;
+  background: url(../assets/home-decor.svg?v=20260527b) top center no-repeat;
   background-size: 1920px auto;
   z-index: 0;
   pointer-events: none;
