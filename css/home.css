@@ -173,7 +173,7 @@ h2 { font-size: 40px; line-height: 1.1; }
 .hero__badge b { font-family: var(--font-head); font-weight: 700; font-size: 40px; color: var(--orange-rust); }
 .hero__badge span { font-size: 15px; color: var(--muted); margin-top: 2px; }
 .hero__ant {
-  position: absolute; left: -48px; bottom: -22px; width: 188px; height: auto;
+  position: absolute; right: calc(100% + 12px); left: auto; bottom: 0; width: 168px; height: auto;
   pointer-events: none; z-index: 2;
 }
 
@@ -376,7 +376,7 @@ h2 { font-size: 40px; line-height: 1.1; }
 @media (max-width: 1240px) {
   .hero__grid { grid-template-columns: 1fr 1fr; gap: 40px; }
   .community { grid-template-columns: 1fr 1fr; gap: 40px; }
-  .ant-deco { display: none; }
+  .ant-deco, .hero__ant { display: none; }
 }
 @media (max-width: 900px) {
   h1 { font-size: 44px; } h2 { font-size: 32px; }
