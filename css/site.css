@@ -609,6 +609,13 @@ a.card:hover, a.card-link:hover { color: inherit; }
 /* секції, що лежать на зеленому: прозорий фон, щоб зелений просвічував */
 .section--on-green { background: transparent; }
 
+/* декор під хедером (Figma «під хедер»): квіткові кластери у верхніх кутах,
+   підрізані зверху — тулиться під хедер. Повна ширина, позаду контенту героя. */
+.hero--lg .results-under-header {
+  position: absolute; top: 0; left: 0; width: 100%; height: auto;
+  z-index: 1; pointer-events: none; user-select: none;
+}
+
 /* мурашка, що стоїть зверху на смузі статистики (над «18 районів») — як у Figma */
 .stats-strip { position: relative; }
 .results-ant-top {
