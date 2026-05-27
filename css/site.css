@@ -232,7 +232,7 @@ small { font-size: var(--fs-small); }
 .stack-lg > * + * { margin-top: var(--space-6); }
 .stack-xl > * + * { margin-top: var(--space-8); }
 .section { padding: var(--section-y) 0; position: relative; overflow-x: clip; }
-.section--tight { padding: var(--space-10) 0; }
+.section--tight { padding: var(--space-10) 0; position: relative; }
 .divider { height: 1px; background: var(--color-border); border: 0; margin: var(--space-8) 0; }
 .row { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
 .row-between { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
@@ -610,10 +610,12 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .section--on-green { background: transparent; }
 
 /* декор під хедером (Figma «під хедер»): квіткові кластери у верхніх кутах,
-   підрізані зверху — тулиться під хедер. Повна ширина, позаду контенту героя. */
-.hero--lg .results-under-header {
+   підрізані зверху — тулиться під хедер. На всіх сторінках вставляється першим
+   декор-шаром першої секції (після фону/blob, перед контентом). Повна ширина,
+   z-index:0 → над фоном секції та плямами, під текстом. */
+.under-header {
   position: absolute; top: 0; left: 0; width: 100%; height: auto;
-  z-index: 1; pointer-events: none; user-select: none;
+  z-index: 0; pointer-events: none; user-select: none;
 }
 
 /* мурашка, що стоїть зверху на смузі статистики (над «18 районів») — як у Figma */
