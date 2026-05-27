@@ -118,7 +118,7 @@ h2 { font-size: 40px; line-height: 1.1; }
 .btn--outline { background: transparent; color: var(--green-deep); border: 1.5px solid rgba(36,90,52,.35); }
 .btn--dark { background: var(--ink); }
 .btn--dark.is-pink { color: var(--pink); }
-.btn--dark.is-orange { color: var(--orange); }
+.btn--dark.is-green { color: #78C586; }
 
 .link-btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 18px; color: var(--green); }
 .link-btn:hover { gap: 12px; }
@@ -318,11 +318,15 @@ h2 { font-size: 40px; line-height: 1.1; }
   display: flex; flex-direction: column; align-items: center;
 }
 .cta--pink { background: var(--pink); }
-.cta--orange { background: var(--orange); }
-.cta__wm { position: absolute; right: -40px; top: 50%; transform: translateY(-50%); width: 420px; height: 420px; opacity: .12; color: #000; pointer-events: none; }
+.cta--green { background: var(--green-bright); }
+.cta__icon, .cta h2, .cta p, .cta .btn { position: relative; z-index: 1; }
+/* Decorative watermarks from Figma (baked-in fills, sit behind content) */
+.cta__wm { position: absolute; z-index: 0; pointer-events: none; }
+.cta__wm--glove { left: 56px;  top: -68px; width: 488px; height: auto; }
+.cta__wm--lens  { left: 140px; top: -57px; width: 492px; height: auto; }
 .cta__icon { width: 56px; height: 56px; border-radius: 16px; background: var(--ink); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
 .cta--pink .cta__icon { color: var(--pink); }
-.cta--orange .cta__icon { color: var(--orange); }
+.cta--green .cta__icon { color: var(--green-bright); }
 .cta h2 { margin-bottom: 14px; max-width: 16ch; }
 .cta p { margin: 0 0 26px; font-size: 18px; font-weight: 500; color: var(--ink-soft); max-width: 42ch; }
 .cta__content { position: relative; z-index: 1; display: contents; }
