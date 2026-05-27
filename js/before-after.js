@@ -5,10 +5,12 @@
 
   function setPosition(slider, percent) {
     const p = clamp(percent, 0, 100);
-    const before = slider.querySelector('.ba-slider__before');
-    const divider = slider.querySelector('.ba-slider__divider');
+    const before = slider.querySelector('.ba-slider__before, .ba__before');
+    const divider = slider.querySelector('.ba-slider__divider, .ba__divider');
+    const handle = slider.querySelector('.ba__handle'); // .ba keeps the handle separate from the divider
     if (before) before.style.clipPath = `inset(0 ${100 - p}% 0 0)`;
     if (divider) divider.style.left = `${p}%`;
+    if (handle) handle.style.left = `${p}%`;
     slider.setAttribute('aria-valuenow', String(Math.round(p)));
     slider.dataset.position = String(p);
   }
@@ -76,7 +78,7 @@
   }
 
   function initAll(root) {
-    (root || document).querySelectorAll('.ba-slider').forEach(init);
+    (root || document).querySelectorAll('.ba-slider, .ba').forEach(init);
   }
 
   if (document.readyState === 'loading') {

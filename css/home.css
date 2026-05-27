@@ -277,20 +277,24 @@ h2 { font-size: 40px; line-height: 1.1; }
 .ba {
   position: relative; aspect-ratio: 1; border-radius: 14px; overflow: hidden;
   background: linear-gradient(110deg, #4f8b5a 0 50%, #e9e07a 50% 100%);
+  cursor: ew-resize; touch-action: none; user-select: none; outline: none;
 }
-.ba__half { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 500; font-size: 15px; color: var(--ink); }
-.ba__before { right: 50%; background-image: url(../assets/home-ba-before.jpg); background-size: 200% 100%; background-position: left center; }
-.ba__after { left: 50%; background-image: url(../assets/home-ba-after.jpg); background-size: 200% 100%; background-position: right center; }
-.ba__tag { position: absolute; top: 14px; font-weight: 700; font-size: 13px; padding: 5px 12px; border-radius: var(--pill); }
+.ba:focus-visible { box-shadow: 0 0 0 3px rgba(46,125,71,.4); }
+.ba__half { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.ba__after  { z-index: 1; }
+.ba__before { z-index: 2; clip-path: inset(0 50% 0 0); will-change: clip-path; }
+.ba__tag { position: absolute; top: 14px; z-index: 3; font-weight: 700; font-size: 13px; padding: 5px 12px; border-radius: var(--pill); pointer-events: none; }
 .ba__tag--before { left: 14px; background: rgba(26,46,31,.55); color: #fff; }
 .ba__tag--after { right: 14px; background: var(--yellow); color: var(--ink); }
-.ba__date { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; font-weight: 700; font-size: 13px; padding: 5px 12px; border-radius: var(--pill); }
+.ba__date { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); z-index: 3; background: var(--ink); color: #fff; font-weight: 700; font-size: 13px; padding: 5px 12px; border-radius: var(--pill); pointer-events: none; }
 .ba__handle {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 5;
   width: 40px; height: 40px; border-radius: 50%; background: #fff; color: var(--ink);
   display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  pointer-events: none; transition: transform .15s ease;
 }
-.ba__divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); }
+.ba:hover .ba__handle, .ba.is-dragging .ba__handle { transform: translate(-50%,-50%) scale(1.08); }
+.ba__divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; z-index: 4; background: #fff; transform: translateX(-50%); pointer-events: none; }
 
 /* ==========================================================================
    NEWS
