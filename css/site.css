@@ -629,10 +629,14 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .page-community {
   position: relative;
   background-color: #FAF1E8;
-  background-image: url(../assets/community-decor.png?v=1);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% 100%;
+  /* два шматки декору (без розтягу — природні пропорції, точно як у Figma):
+     верхній прив'язаний до верху, нижній — до низу; розрив між ними припадає
+     на порожнечу між «Стіна слави» і «Відгуки» (як у дизайні). */
+  background-image: url(../assets/community-decor-top.png?v=1),
+                    url(../assets/community-decor-bottom.png?v=1);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center bottom;
+  background-size: 100% auto, 100% auto;
 }
 .page-community > section { background: transparent; }
 .page-community .hero__bg, .page-community .blob { display: none; }
