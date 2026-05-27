@@ -629,17 +629,29 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .page-community {
   position: relative;
   background-color: #FAF1E8;
-  /* два шматки декору (без розтягу — природні пропорції, точно як у Figma):
-     верхній прив'язаний до верху, нижній — до низу; розрив між ними припадає
-     на порожнечу між «Стіна слави» і «Відгуки» (як у дизайні). */
-  background-image: url(../assets/community-decor-top.png?v=1),
-                    url(../assets/community-decor-bottom.png?v=1);
-  background-repeat: no-repeat, no-repeat;
-  background-position: center top, center bottom;
-  background-size: 100% auto, 100% auto;
+  /* декор — 4 чверті (ліво/право × верх/низ), без розтягу (природні пропорції).
+     --comm-spread: ліва колонка лівіше, права правіше; --comm-drop: нижній декор
+     опущено, щоб заходив під футер. Розрив верх/низ припадає на порожнечу між
+     «Стіна слави» і «Відгуки» (як у Figma). */
+  --comm-spread: 5vw;
+  --comm-drop: 11vw;
+  background-image: url(../assets/comm-decor-tl.png?v=1),
+                    url(../assets/comm-decor-tr.png?v=1),
+                    url(../assets/comm-decor-bl.png?v=1),
+                    url(../assets/comm-decor-br.png?v=1);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position:
+    calc(0%   - var(--comm-spread)) top,
+    calc(100% + var(--comm-spread)) top,
+    calc(0%   - var(--comm-spread)) calc(100% + var(--comm-drop)),
+    calc(100% + var(--comm-spread)) calc(100% + var(--comm-drop));
+  background-size: 50% auto, 50% auto, 50% auto, 50% auto;
 }
 .page-community > section { background: transparent; }
 .page-community .hero__bg, .page-community .blob { display: none; }
+/* футер впритул до контенту, щоб нижній декор тулився під нього (без бежевого
+   проміжку від margin-top футера) */
+.page-community + .site-footer { margin-top: 0; }
 @media (max-width: 1024px) { .page-community { background-image: none; } }
 
 /* буквиця (drop-cap) інфо-картки — новий знак: білий пелюстковий блоб із «Е».
