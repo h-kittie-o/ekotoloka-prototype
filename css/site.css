@@ -567,7 +567,7 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .hero--find { padding-bottom: var(--space-16); }
 .hero--find .find-flowers { position: absolute; top: 0; z-index: 0; height: auto; pointer-events: none; }
 .hero--find .find-flowers--left { left: 0; width: 200px; }
-.hero--find .find-flowers--right { right: 0; width: 240px; }
+.hero--find .find-flowers--right { right: 0; top: -3vw; width: 23vw; }
 .hero--find .find-ant { position: absolute; right: 20%; bottom: 4%; width: 160px; height: auto; z-index: 0; pointer-events: none; }
 @media (max-width: 1240px) {
   .page-find .find-green { display: none; }
