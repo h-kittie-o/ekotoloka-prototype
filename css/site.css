@@ -1108,3 +1108,74 @@ details.accordion > p, details.accordion > div { padding-bottom: var(--space-5);
 .share-card__progress { background: var(--gradient-deep); color: #fff; padding: var(--space-4) var(--space-5); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
 .share-card__progress .progress { height: 8px; }
 @media (max-width: 480px) { .share-card__stat { padding: var(--space-2); } .share-card__stat strong { font-size: 1.125rem; } }
+
+/* ====================================================================
+   Сторінка «Профіль» — хедер за дизайном Figma + нижній декор
+   (scoped під .page-profile, інші сторінки не зачеплено)
+   ==================================================================== */
+
+/* off-screen картка-джерело для генерації PNG (share-card.js захоплює #profile-share-card) */
+.capture-host { position: absolute; left: -99999px; top: 0; width: 560px; pointer-events: none; }
+
+.profile-head { display: grid; gap: clamp(var(--space-5), 3vw, var(--space-8)); margin-bottom: var(--space-10); }
+
+/* ідентичність: квітка-бейдж + ім'я + чипи */
+.profile-id { display: flex; align-items: center; gap: clamp(var(--space-4), 2vw, var(--space-6)); flex-wrap: wrap; }
+.profile-id__badge { position: relative; flex-shrink: 0; width: 88px; height: 88px; display: grid; place-items: center; }
+.profile-id__badge img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.profile-id__badge b { position: relative; font-family: var(--font-display); font-weight: var(--fw-bold); font-size: 1.75rem; color: var(--cyan); line-height: 1; }
+.profile-id__meta { flex: 1; min-width: 200px; }
+.profile-id__meta h1 { font-size: clamp(2rem, 4vw, 2.75rem); }
+.chip--reward { background: var(--color-primary-100); color: var(--green); display: inline-flex; align-items: center; gap: 4px; }
+.chip--reward .icon-sm { width: 14px; height: 14px; }
+
+/* банер «зібрано сміття» — рожевий із жовтими фігурами-сміттям */
+.trash-banner {
+  position: relative; overflow: hidden; border-radius: var(--radius-xl);
+  background: var(--pink); min-height: clamp(150px, 16vw, 190px);
+  display: flex; align-items: center; justify-content: center;
+}
+.trash-banner__shape { position: absolute; width: auto; pointer-events: none; user-select: none; }
+.trash-banner__shape--a { left: -2%;  top: 50%; transform: translateY(-50%); height: 188%; }
+.trash-banner__shape--b { left: 15%;  bottom: -28%; height: 135%; }
+.trash-banner__shape--c { right: 16%; bottom: -28%; height: 124%; }
+.trash-banner__shape--d { right: -3%; top: 50%; transform: translateY(-50%); height: 196%; }
+.trash-banner__text { position: relative; text-align: center; color: #152519; padding: var(--space-3); }
+.trash-banner__num { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: clamp(2.75rem, 7vw, 4rem); line-height: 1; }
+.trash-banner__num span { font-size: 0.42em; }
+.trash-banner__label { margin-top: var(--space-1); font-weight: var(--fw-bold); font-size: var(--fs-small); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* три білі картки статистики з блоб-іконками */
+.profile-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(var(--space-3), 2vw, var(--space-6)); }
+.pstat {
+  background: #fff; border-radius: var(--radius-xl);
+  padding: clamp(var(--space-4), 3vw, var(--space-6)) var(--space-3);
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-3);
+  text-align: center; box-shadow: var(--shadow-sm);
+}
+.pstat__icon { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; color: #152519; }
+.pstat__icon svg { width: 28px; height: 28px; }
+.pstat__icon--cyan   { background: #39BEEB; }
+.pstat__icon--yellow { background: #FFE534; }
+.pstat__icon--pink   { background: #FFAADB; }
+.pstat strong { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1; color: #152519; }
+.pstat .muted { font-size: var(--fs-small); }
+@media (max-width: 480px) { .pstat { padding: var(--space-4) var(--space-2); gap: var(--space-2); } .pstat strong { font-size: 1.375rem; } }
+
+/* нижній декор: зелені кущі по кутах (фон) + помаранчева мурашка (окремий шар) */
+.page-profile { position: relative; overflow-x: clip; padding-bottom: clamp(140px, 17vw, 240px); }
+@media (min-width: 1025px) {
+  .page-profile {
+    background-image: url(../assets/profile-bush-bl.png?v=1), url(../assets/profile-bush-br.png?v=1);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, right bottom;
+    background-size: 32% auto, 42% auto;
+  }
+}
+.page-profile + .site-footer { margin-top: 0; }
+.profile-ant {
+  position: absolute; left: clamp(8px, 4vw, 72px); bottom: -8px;
+  width: clamp(96px, 11vw, 158px); height: auto; z-index: 2;
+  pointer-events: none; user-select: none;
+}
+@media (max-width: 1024px) { .profile-ant { display: none; } }
