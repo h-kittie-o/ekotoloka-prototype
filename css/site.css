@@ -617,6 +617,9 @@ a.card:hover, a.card-link:hover { color: inherit; }
   position: absolute; top: 0; left: 0; width: 100%; height: auto;
   z-index: 0; pointer-events: none; user-select: none;
 }
+/* короткі герої нижчі за band (висота band = 100vw*428/1920 ≈ 22.3vw), тож
+   overflow:hidden героя обрізав нижні листочки. Мінімальна висота вміщає band. */
+.hero:not(.hero--lg) { min-height: 23vw; }
 
 /* мурашка, що стоїть зверху на смузі статистики (над «18 районів») — як у Figma */
 .stats-strip { position: relative; }
