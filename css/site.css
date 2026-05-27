@@ -580,6 +580,51 @@ a.card:hover, a.card-link:hover { color: inherit; }
   .hero--find .find-flowers--left { left: 0; width: 120px; }
   .hero--find .find-flowers--right { right: 0; width: 140px; }
 }
+
+/* Результати — декор (квіти, листя, мурашки) по краях галереї «До / Після».
+   Дві крайові смуги, зведені з елементів Figma; прив'язані до країв вікна,
+   ширина 50vw → при 1920px кожна = 960px (точний збіг із кадром Figma).
+   Декор позаду карток. */
+.section--results-deco { position: relative; overflow: hidden; }
+.section--results-deco > .container { position: relative; z-index: 1; }
+.section--results-deco .results-decor {
+  position: absolute; top: 0; width: 50vw; height: auto;
+  z-index: 0; pointer-events: none; user-select: none;
+}
+.section--results-deco .results-decor--left { left: 0; }
+.section--results-deco .results-decor--right { right: 0; }
+@media (max-width: 1024px) {
+  .section--results-deco .results-decor { display: none; }
+}
+
+/* Зелений прямокутник-фон (Rectangle 167, #459253): тягнеться від верху
+   галереї (рівень верхньої лівої мурашки) на всю ширину аж під футер.
+   Лежить позаду декору й контенту; білі картки/галерея — поверх. */
+.page-results { position: relative; }
+.page-results .results-green-band {
+  position: absolute; left: 0; right: 0;
+  top: 1130px; bottom: calc(-1 * var(--space-20));
+  background: #459253; z-index: -1; pointer-events: none;
+}
+/* секції, що лежать на зеленому: прозорий фон, щоб зелений просвічував */
+.section--on-green { background: transparent; }
+
+/* мурашка, що стоїть зверху на смузі статистики (над «18 районів») — як у Figma */
+.stats-strip { position: relative; }
+.results-ant-top {
+  position: absolute; bottom: 100%; left: 79%; width: 15%;
+  height: auto; z-index: 3; pointer-events: none;
+}
+/* нижня-права мурашка: окремий шар, приколотий до правого краю поверх картки,
+   щоб була повністю видима навіть коли поля вузькі */
+.section--results-deco .results-ant-roam {
+  position: absolute; right: 14px; top: 1140px; width: 170px;
+  height: auto; z-index: 2; pointer-events: none;
+}
+@media (max-width: 1024px) {
+  .results-ant-top, .section--results-deco .results-ant-roam { display: none; }
+}
+
 .hero h1 { max-width: 18ch; margin-bottom: var(--space-5); }
 .hero__sub { font-size: var(--fs-body-lg); color: var(--color-text-muted); max-width: 52ch; margin-bottom: var(--space-8); line-height: var(--lh-tight); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }

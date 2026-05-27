@@ -10,7 +10,7 @@
 <link rel="manifest" href="assets/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=20260526c">
+<link rel="stylesheet" href="css/site.css?v=20260527res5">
 </head>
 <body>
 <header class="site-header"><div class="container site-header__inner">
@@ -33,7 +33,8 @@
   </div>
 </div>
 
-<main>
+<main class="page-results">
+  <div class="results-green-band" aria-hidden="true"></div>
   <section class="hero hero--lg">
     <div class="hero__bg" aria-hidden="true"></div>
     <span class="blob" style="top: -10%; right: -10%" aria-hidden="true"></span>
@@ -43,6 +44,7 @@
       <p class="hero__sub">За цими результатами — люди, які не чекали змін, а створювали їх. Реальні фото, реальні історії та очищені райони Львова.</p>
 
       <div class="stats-strip reveal" style="background: var(--color-surface)">
+        <img class="results-ant-top" src="assets/results-ant-top.png?v=20260527res5" alt="" aria-hidden="true">
         <div class="stat"><div class="stat__value"><span data-counter="340">340</span> <sup>кг</sup></div><div class="stat__label">зібрано сміття за рік</div></div>
         <div class="stat"><div class="stat__value"><span data-counter="32">32</span></div><div class="stat__label">толоки за рік</div></div>
         <div class="stat"><div class="stat__value"><span data-counter="156">156</span></div><div class="stat__label">учасників за рік</div></div>
@@ -51,7 +53,10 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section--results-deco">
+    <img class="results-decor results-decor--left" src="assets/results-decor-left.png?v=20260527res5" alt="" aria-hidden="true">
+    <img class="results-decor results-decor--right" src="assets/results-decor-right.png?v=20260527res5" alt="" aria-hidden="true">
+    <img class="results-ant-roam" src="assets/results-ant-roam.png?v=20260527res5" alt="" aria-hidden="true">
     <div class="container">
       <div class="row-between" style="margin-bottom: var(--space-6); align-items: flex-end">
         <div>
@@ -134,7 +139,7 @@
     </div>
   </section>
 
-  <section class="section" style="background: var(--color-surface-alt)">
+  <section class="section section--on-green">
     <div class="container">
       <span class="eyebrow">Вплив</span>
       <h2>340 кг змін за рік, які мають значення</h2>
