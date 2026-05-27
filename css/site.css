@@ -540,7 +540,7 @@ a.card:hover, a.card-link:hover { color: inherit; }
    HERO (inner pages — cream, simple)
    ========================================================================== */
 .hero { position: relative; padding: var(--space-16) 0 var(--space-12); overflow: hidden; }
-.hero--lg { padding: clamp(4rem, 9vw, 7rem) 0 var(--space-16); }
+.hero--lg { padding: var(--space-16) 0 var(--space-16); }
 .hero__bg {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background:
@@ -618,8 +618,9 @@ a.card:hover, a.card-link:hover { color: inherit; }
   z-index: 0; pointer-events: none; user-select: none;
 }
 /* короткі герої нижчі за band (висота band = 100vw*428/1920 ≈ 22.3vw), тож
-   overflow:hidden героя обрізав нижні листочки. Мінімальна висота вміщає band. */
-.hero:not(.hero--lg) { min-height: 23vw; }
+   overflow:hidden героя обрізав нижні листочки. Мінімальна висота вміщає band.
+   Стосується всіх героїв, бо .hero--lg тепер теж має відступ 64px зверху. */
+.hero { min-height: 23vw; }
 
 /* мурашка, що стоїть зверху на смузі статистики (над «18 районів») — як у Figma */
 .stats-strip { position: relative; }
