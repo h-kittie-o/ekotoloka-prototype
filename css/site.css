@@ -548,6 +548,31 @@ a.card:hover, a.card-link:hover { color: inherit; }
     radial-gradient(520px 300px at 92% 6%, rgba(255,168,218,.20) 0%, transparent 60%);
 }
 .hero__inner { position: relative; z-index: 1; }
+/* events.html — floral hero decoration, full-length green sides, ant with map */
+.page-find { position: relative; }
+.page-find .find-green {
+  position: absolute; top: 0; height: 100%;
+  width: max(0px, calc((100vw - var(--container-max)) / 2 + var(--space-8)));
+  object-fit: cover; z-index: -1; pointer-events: none;
+}
+.page-find .find-green--left { left: 0; object-position: left center; }
+.page-find .find-green--right { right: 0; object-position: right center; }
+.hero--find { padding-bottom: var(--space-16); }
+.hero--find .find-flowers { position: absolute; top: 0; z-index: 0; height: auto; pointer-events: none; }
+.hero--find .find-flowers--left { left: -64px; width: 230px; }
+.hero--find .find-flowers--right { right: -64px; width: 310px; }
+.hero--find .find-ant { position: absolute; right: 20%; bottom: 4%; width: 160px; height: auto; z-index: 0; pointer-events: none; }
+@media (max-width: 1240px) {
+  .page-find .find-green { display: none; }
+}
+@media (max-width: 1100px) {
+  .hero--find .find-ant { right: 6%; width: 134px; }
+}
+@media (max-width: 760px) {
+  .hero--find .find-ant { display: none; }
+  .hero--find .find-flowers--left { left: -54px; width: 140px; }
+  .hero--find .find-flowers--right { right: -54px; width: 170px; }
+}
 .hero h1 { max-width: 18ch; margin-bottom: var(--space-5); }
 .hero__sub { font-size: var(--fs-body-lg); color: var(--color-text-muted); max-width: 52ch; margin-bottom: var(--space-8); line-height: var(--lh-tight); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
