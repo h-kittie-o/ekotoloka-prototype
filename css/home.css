@@ -196,19 +196,24 @@ h2 { font-size: 40px; line-height: 1.1; }
   padding: 36px 32px 40px; min-height: 300px;
 }
 .step--pink { background: var(--pink); }
-.step--green { background: linear-gradient(150deg, #6fc77f, #3f9950); }
+.step--green { background: var(--green-bright); }
 .step--yellow { background: var(--yellow); }
 .step__num {
-  width: 56px; height: 56px; border-radius: 16px; background: var(--ink); color: #fff;
+  position: relative; z-index: 1;
+  width: 56px; height: 56px; border-radius: 16px; background: var(--ink);
   font-family: var(--font-head); font-weight: 700; font-size: 26px;
   display: inline-flex; align-items: center; justify-content: center; margin-bottom: 64px;
 }
-.step h3 { font-size: 28px; margin-bottom: 14px; line-height: 1.1; }
-.step p { margin: 0; font-size: 18px; font-weight: 500; color: var(--ink); max-width: 30ch; }
-.step__wm { position: absolute; top: 10px; right: -10px; width: 220px; height: 220px; pointer-events: none; }
-.step--pink .step__wm  { color: #000; opacity: .07; }
-.step--green .step__wm { color: #000; opacity: .10; }
-.step--yellow .step__wm { color: #fff; opacity: .55; }
+.step--pink   .step__num { color: var(--pink); }
+.step--green  .step__num { color: var(--green-bright); }
+.step--yellow .step__num { color: var(--yellow); }
+.step h3 { position: relative; z-index: 1; font-size: 28px; margin-bottom: 14px; line-height: 1.1; }
+.step p  { position: relative; z-index: 1; margin: 0; font-size: 18px; font-weight: 500; color: var(--ink); max-width: 30ch; }
+/* Decorative watermarks from Figma (baked-in lighter fills, sit behind content) */
+.step__wm { position: absolute; z-index: 0; height: auto; pointer-events: none; }
+.step__wm--pin   { top: -8px; right: -8px;  width: 230px; }
+.step__wm--green { top: 4px;  right: -15px; width: 305px; }
+.step__wm--plane { top: 17px; right: 8px;   width: 343px; }
 
 /* ==========================================================================
    EVENTS (bento)
