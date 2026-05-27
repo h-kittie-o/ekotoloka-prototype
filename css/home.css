@@ -314,7 +314,7 @@ h2 { font-size: 40px; line-height: 1.1; }
 .news-card .link-btn { color: var(--ink); }
 
 /* Ant mascot — decorative, events→community transition (desktop only) */
-.ant-deco { position: absolute; right: -8px; bottom: -56px; width: 150px; height: auto; z-index: 2; pointer-events: none; }
+.ant-deco { grid-column: 2; grid-row: 2; align-self: center; justify-self: center; width: 210px; height: auto; pointer-events: none; }
 
 /* ==========================================================================
    CTA banners
