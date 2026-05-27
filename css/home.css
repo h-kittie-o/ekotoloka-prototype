@@ -77,6 +77,8 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-head); font-weight: 700; col
   background-size: 1920px auto;
   z-index: 0;
   pointer-events: none;
+  /* верхній декор SVG прибрано — його замінив новий band під хедером (.under-header) */
+  clip-path: inset(500px 0 0 0);
 }
 .page > *:not(.page__deco) { position: relative; z-index: 1; }
 
@@ -151,7 +153,14 @@ h2 { font-size: 40px; line-height: 1.1; }
 /* ==========================================================================
    HERO
    ========================================================================== */
-.hero { padding: 64px 0 56px; }
+.hero { padding: 64px 0 56px; position: relative; }
+/* декор під хедером (квіткові кластери у кутах): поза потоком, під хедер,
+   позаду контенту героя — home.css не підключає site.css, тож правило дублюємо */
+.hero > .under-header {
+  position: absolute; top: 0; left: 0; width: 100%; height: auto;
+  z-index: 0; pointer-events: none; user-select: none;
+}
+.hero > .container { position: relative; z-index: 1; }
 .hero__grid { display: grid; grid-template-columns: 582px 529px; justify-content: space-between; align-items: center; gap: 64px; }
 .hero h1 { margin-bottom: 22px; }
 .hero__sub { font-size: 20px; color: var(--muted); max-width: 30ch; margin: 0 0 32px; }
