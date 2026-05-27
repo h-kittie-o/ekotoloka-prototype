@@ -10,7 +10,7 @@
 <link rel="manifest" href="assets/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=20260528c">
+<link rel="stylesheet" href="css/site.css?v=20260528i">
 </head>
 <body>
 <header class="site-header"><div class="container site-header__inner">
@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<main>
+<main class="page-faq">
   <section class="hero">
     <div class="hero__bg" aria-hidden="true"></div>
     <img class="under-header" src="assets/decor-under-header.png?v=20260528d" alt="" aria-hidden="true">
@@ -44,7 +44,7 @@
     </div>
   </section>
 
-  <section class="section--tight">
+  <section class="faq-field">
     <div class="container container--narrow">
 
       <h2 style="margin-top: 0">Про толоки</h2>
@@ -64,14 +64,15 @@
       <details class="accordion"><summary>Як скасувати участь?</summary><p>Профіль → Історія → «Не зможу». Без драми — хтось з листа очікування зрадіє.</p></details>
       <details class="accordion"><summary>Як видалити акаунт?</summary><p>Налаштування → внизу «Видалити акаунт». Всі дані підуть протягом 30 днів.</p></details>
 
-      <div class="card card--warm center reveal" style="margin-top: var(--space-10)">
-        <div class="icon-circle icon-circle--accent" style="margin-inline: auto; margin-bottom: var(--space-3)"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3 style="margin-top: 0">Не знайшов відповідь?</h3>
-        <p class="muted" style="margin-inline: auto; margin-bottom: var(--space-4)">Напиши нам — відповімо за день.</p>
+      <div class="faq-cta reveal">
+        <div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Не знайшов відповідь?</h3>
+        <p>Напиши нам — відповімо за день.</p>
         <a href="mailto:hello@ekotoloka.org" class="btn btn--primary">Написати</a>
       </div>
     </div>
   </section>
+  <img class="faq-ant" src="assets/faq-ant.png?v=1" alt="" aria-hidden="true">
 </main>
 
 <footer class="site-footer"><div class="container">
