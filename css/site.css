@@ -557,6 +557,13 @@ a.card:hover, a.card-link:hover { color: inherit; }
 }
 .page-find .find-green--left { left: 0; object-position: left center; }
 .page-find .find-green--right { right: 0; object-position: right center; }
+/* зелені кущі заповнюють проміжок між контентом і футером (як у Figma):
+   прив'язані до верху футера (від'ємний bottom = margin-top футера) */
+.page-find .find-bush-bottom {
+  position: absolute; left: 0; right: 0; width: 100%; height: auto;
+  bottom: calc(-1 * var(--space-20));
+  z-index: -1; pointer-events: none;
+}
 .hero--find { padding-bottom: var(--space-16); }
 .hero--find .find-flowers { position: absolute; top: 0; z-index: 0; height: auto; pointer-events: none; }
 .hero--find .find-flowers--left { left: -64px; width: 230px; }
