@@ -1589,45 +1589,78 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
   background: #327A40;
 }
 
-/* ── 3. Organizer card ─────────────────────────────────────────────── */
+/* ── 3. Organizer card (Figma: жовта картка з хвилястою хмарною силуеткою) ── */
 .event-org {
-  border-radius: var(--r-card);
-  padding: clamp(22px, 2.4vw, 32px);
-  display: flex; gap: var(--space-4); align-items: flex-start;
-  box-shadow: var(--shadow-sm);
+  position: relative;
+  background: #FFE534;
+  border-radius: 28px;
+  padding: clamp(28px, 3vw, 44px) clamp(28px, 3vw, 48px);
+  display: flex; gap: clamp(20px, 2vw, 32px); align-items: center;
+  overflow: visible;     /* щоб хмари виходили за межі */
+  isolation: isolate;
+  box-shadow: none;
 }
+/* перевизначаємо event-cloudy::before: розширюємо межі для виступаючих хмар */
+.event-org.event-cloudy::before {
+  inset: -14% -2% -14% -2%;
+  background-image: url(../assets/evt-org-bg.png);
+  background-position: center;
+  background-size: 100% 100%;
+}
+
 .event-org__avatar {
+  position: relative;
   flex-shrink: 0;
-  width: 64px; height: 64px;
-  font-size: 1.4rem;
-  background: #fff; color: #327A40;
+  width: clamp(72px, 6.5vw, 96px);
+  height: clamp(72px, 6.5vw, 96px);
+  background: url(../assets/evt-org-frame.png) no-repeat center/contain;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #327A40;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(20px, 2vw, 26px);
+  isolation: isolate;
 }
-.event-org__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--space-2); }
-.event-org__body .tag-row { gap: 8px; flex-wrap: wrap; }
+.event-org__avatar::before {
+  content: ""; position: absolute; inset: 22%;
+  background: #FAF1E8;        /* cream center */
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.event-org__body {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.event-org__body .tag-row { gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
 .event-org__body .chip {
   background: #fff; color: #1F3727;
-  padding: 4px 12px; border-radius: 999px;
+  padding: 5px 14px; border-radius: 999px;
   font-size: var(--fs-small); font-weight: var(--fw-semibold);
+  border: none;
 }
-.event-org__body .chip:not(.chip--outline) { background: #FDD9DE; color: #B23F4E; }
+.event-org__body .chip:not(.chip--outline) {
+  background: #FBB6C8; color: #FFF;
+}
 .event-org__name {
   font-family: var(--font-display);
   font-weight: 800; color: #1F3727;
-  font-size: clamp(28px, 2.6vw, 38px);
-  line-height: 1.1;
-  margin-top: var(--space-1);
+  font-size: clamp(28px, 2.8vw, 42px);
+  line-height: 1.05; letter-spacing: -.01em;
+  margin: 0;
 }
 .event-org__quote {
-  margin: var(--space-2) 0 0;
-  color: #1F3727; font-style: italic;
+  margin: 6px 0 0;
+  color: #1F3727;
+  font-size: var(--fs-body);
 }
 .event-org__contact {
-  margin: var(--space-1) 0 0;
-  color: #1F3727; opacity: .75;
-  font-size: var(--fs-small);
+  margin: 0;
+  color: #1F3727;
+  font-size: var(--fs-body);
 }
 
 @media (max-width: 640px) {
-  .event-org { flex-direction: column; }
+  .event-org { flex-direction: column; align-items: flex-start; }
   .event-join__num { font-size: 56px; }
 }
