@@ -666,9 +666,8 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .page-community .deco-ant {
   position: absolute; pointer-events: none; user-select: none; z-index: 1; height: auto;
 }
-.page-community .deco-ant--tl-top { left: 5vw;    top: 22vw;   width: 10.5vw; }
-.page-community .deco-ant--tl-bot { left: 1.7vw;  top: 29.7vw; width: 7.7vw; }
-.page-community .deco-ant--tr     { right: 6.9vw; top: 22vw;   width: 11.6vw; }
+.page-community .deco-ant--tl-pair { left: 1.7vw;  top: 22vw;   width: 13.7vw; }
+.page-community .deco-ant--tr      { right: 6.9vw; top: 22vw;   width: 11.6vw; }
 @media (max-width: 1024px) { .page-community .deco-ant { display: none; } }
 
 .section--results-deco .deco-ant {
