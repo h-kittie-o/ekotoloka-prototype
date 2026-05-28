@@ -1431,11 +1431,21 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
 @media (max-width: 1024px) { .news-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px)  { .news-grid { grid-template-columns: 1fr; } }
 
-/* мурашка-читач газети — праворуч над футером */
+/* секція новин — стає relative-контейнером для мурашки, з достатнім padding-bottom
+   щоб мурашка не налазила на останній ряд карток */
+.page-news .section--tight {
+  position: relative;
+  padding-top: clamp(var(--space-8), 4vw, var(--space-12));
+  padding-bottom: clamp(180px, 18vw, 300px);
+}
+
+/* мурашка-читач газети — праворуч над футером, всередині padding-bottom секції */
 .news-ant {
-  position: absolute; right: clamp(16px, 4vw, 90px); bottom: -10px;
+  position: absolute; right: clamp(16px, 4vw, 90px); bottom: 0;
   width: clamp(140px, 16vw, 260px); height: auto; z-index: 3;
   pointer-events: none; user-select: none;
 }
-.section--tight { position: relative; }
-@media (max-width: 768px) { .news-ant { width: 120px; right: 12px; bottom: -4px; } }
+@media (max-width: 768px) { .news-ant { width: 120px; right: 12px; } }
+
+/* hero на сторінці новин — менший нижній відступ */
+.page-news .hero { padding-bottom: clamp(var(--space-6), 3vw, var(--space-10)); }
