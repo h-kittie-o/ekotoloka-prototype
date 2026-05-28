@@ -635,7 +635,7 @@ a.card:hover, a.card-link:hover { color: inherit; }
      «Стіна слави» і «Відгуки» (як у Figma). */
   --comm-spread: 5vw;
   --comm-drop: 11vw;
-  background-image: url(../assets/comm-decor-tl-noant.png?v=1),
+  background-image: url(../assets/comm-decor-tl-noant.png?v=2),
                     url(../assets/comm-decor-tr-noant.png?v=1),
                     url(../assets/comm-decor-bl.png?v=2),
                     url(../assets/comm-decor-br.png?v=2);
@@ -666,8 +666,8 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .page-community .deco-ant {
   position: absolute; pointer-events: none; user-select: none; z-index: 1; height: auto;
 }
-.page-community .deco-ant--tl-small { left: 9.96vw;  top: 21.37vw; width: 5.19vw; }
-.page-community .deco-ant--tl-big   { left: -0.88vw; top: 18.46vw; width: 18.96vw; }
+.page-community .deco-ant--tl-small { left: 9.31vw;  top: 20.64vw; width: 6.49vw; }
+.page-community .deco-ant--tl-big   { left: -3.25vw; top: 15.78vw; width: 23.70vw; }
 .page-community .deco-ant--tr       { right: 2.19vw; top: 19.56vw; width: 13.50vw; }
 @media (max-width: 1024px) { .page-community .deco-ant { display: none; } }
 
