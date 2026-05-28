@@ -1449,3 +1449,166 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
 
 /* hero на сторінці новин — менший нижній відступ */
 .page-news .hero { padding-bottom: clamp(var(--space-6), 3vw, var(--space-10)); }
+
+/* ====================================================================
+   Сторінка події — картки за дизайном Figma (.page-event)
+   ==================================================================== */
+
+/* Жовте поле з м'якими «хмарками» — спільний фон для join, provide, organizer */
+.event-cloudy {
+  position: relative;
+  background-color: #FFDF01;
+  isolation: isolate;
+  overflow: hidden;
+}
+.event-cloudy::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(ellipse 42% 26% at 14% 6%,  rgba(255,255,255,.55), transparent 65%),
+    radial-gradient(ellipse 34% 22% at 52% 2%,  rgba(255,255,255,.5),  transparent 70%),
+    radial-gradient(ellipse 38% 24% at 92% 10%, rgba(255,255,255,.55), transparent 65%),
+    radial-gradient(ellipse 28% 18% at 24% 42%, rgba(255,255,255,.35), transparent 72%),
+    radial-gradient(ellipse 32% 20% at 80% 50%, rgba(255,255,255,.32), transparent 72%),
+    radial-gradient(ellipse 34% 20% at 12% 80%, rgba(255,255,255,.32), transparent 72%),
+    radial-gradient(ellipse 30% 18% at 82% 92%, rgba(255,255,255,.36), transparent 72%);
+}
+
+/* ── 1. Sidebar Join card ──────────────────────────────────────────── */
+.event-join {
+  border-radius: var(--r-card);
+  padding: clamp(20px, 2vw, 28px);
+  box-shadow: var(--shadow-md);
+  display: flex; flex-direction: column;
+}
+.event-join__chip {
+  align-self: flex-start;
+  background: #327A40; color: #fff;
+  padding: 5px 14px; border-radius: 999px;
+  font-size: var(--fs-small); font-weight: var(--fw-bold);
+  margin-bottom: var(--space-3);
+  display: inline-flex !important; align-items: center; gap: 6px;
+}
+.event-join__count {
+  display: flex; align-items: baseline; gap: 8px;
+  font-family: var(--font-display);
+  color: #1F3727;
+}
+.event-join__num { font-size: clamp(56px, 5.6vw, 88px); font-weight: 800; line-height: .9; letter-spacing: -.02em; }
+.event-join__cap { font-size: var(--fs-body-lg); font-weight: 600; color: #1F3727; }
+.event-join__note {
+  margin: var(--space-2) 0 0; color: #1F3727; font-size: var(--fs-small);
+}
+.event-join__progress {
+  margin: var(--space-4) 0;
+  height: 8px; border-radius: 999px;
+  background: rgba(31,55,39,.18); overflow: hidden;
+}
+.event-join__bar { height: 100%; background: #327A40; border-radius: 999px; transition: width .3s ease; }
+
+.event-join__cta { white-space: normal; }
+.event-join__invite {
+  margin-top: var(--space-2);
+  background: transparent; color: var(--orange);
+  border: 2px solid var(--orange);
+  box-shadow: none;
+}
+.event-join__invite:hover { background: rgba(255,81,20,.08); color: var(--orange); }
+.event-join__share {
+  background: transparent; color: #1F3727;
+  border: none; box-shadow: none;
+}
+.event-join__share:hover { background: rgba(31,55,39,.06); color: #1F3727; }
+
+.event-join__divider {
+  border: 0; height: 1px; background: rgba(31,55,39,.16);
+  margin: var(--space-4) 0;
+}
+.event-join__meta {
+  display: flex; align-items: center; gap: 10px;
+  color: #1F3727; font-size: var(--fs-small);
+  margin-top: var(--space-2);
+}
+.event-join__meta:first-of-type { margin-top: 0; }
+
+/* ── 2. Info cards (Що взяти / Що дамо) ────────────────────────────── */
+.info-cols--event { gap: var(--space-4); }
+
+.event-info {
+  position: relative; overflow: hidden;
+  border-radius: var(--r-card);
+  padding: clamp(22px, 2vw, 32px);
+  display: flex; flex-direction: column; gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  min-height: 260px;
+}
+.event-info--bring { background: #F9D5DF; }
+.event-info__icon {
+  width: 50px; height: 50px; border-radius: 12px;
+  background: #1F3727; color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: var(--space-2);
+}
+.event-info--provide .event-info__icon { background: var(--orange); }
+.event-info h3 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 800; color: #1F3727;
+  font-size: clamp(28px, 2.4vw, 36px);
+  letter-spacing: -.01em;
+}
+.event-info ul {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 10px;
+  color: #1F3727;
+}
+.event-info ul li {
+  position: relative; padding-left: 18px;
+}
+.event-info ul li::before {
+  content: ""; position: absolute; left: 0; top: .55em;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #327A40;
+}
+
+/* ── 3. Organizer card ─────────────────────────────────────────────── */
+.event-org {
+  border-radius: var(--r-card);
+  padding: clamp(22px, 2.4vw, 32px);
+  display: flex; gap: var(--space-4); align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+}
+.event-org__avatar {
+  flex-shrink: 0;
+  width: 64px; height: 64px;
+  font-size: 1.4rem;
+  background: #fff; color: #327A40;
+}
+.event-org__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.event-org__body .tag-row { gap: 8px; flex-wrap: wrap; }
+.event-org__body .chip {
+  background: #fff; color: #1F3727;
+  padding: 4px 12px; border-radius: 999px;
+  font-size: var(--fs-small); font-weight: var(--fw-semibold);
+}
+.event-org__body .chip:not(.chip--outline) { background: #FDD9DE; color: #B23F4E; }
+.event-org__name {
+  font-family: var(--font-display);
+  font-weight: 800; color: #1F3727;
+  font-size: clamp(28px, 2.6vw, 38px);
+  line-height: 1.1;
+  margin-top: var(--space-1);
+}
+.event-org__quote {
+  margin: var(--space-2) 0 0;
+  color: #1F3727; font-style: italic;
+}
+.event-org__contact {
+  margin: var(--space-1) 0 0;
+  color: #1F3727; opacity: .75;
+  font-size: var(--fs-small);
+}
+
+@media (max-width: 640px) {
+  .event-org { flex-direction: column; }
+  .event-join__num { font-size: 56px; }
+}
