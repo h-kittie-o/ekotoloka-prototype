@@ -419,5 +419,17 @@
   </div>
 </div>
 <script src="js/before-after.js?v=20260527f" defer></script>
+<script>
+  // Перезапуск анімації мурашки при кожному показі сторінки (включно з bfcache)
+  window.addEventListener('pageshow', function () {
+    var ant = document.querySelector('.hero__ant');
+    if (!ant) return;
+    var orig = ant.getAttribute('src');
+    ant.removeAttribute('src');
+    // форсуємо re-paint, потім повертаємо src — SVG перерендериться і анімація почнеться з 0%
+    void ant.offsetWidth;
+    ant.setAttribute('src', orig.split('#')[0] + '#r=' + Date.now());
+  });
+</script>
 </body>
 </html>
