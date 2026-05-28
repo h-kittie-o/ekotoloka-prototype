@@ -199,6 +199,17 @@ h2 { font-size: 40px; line-height: 1.1; }
 }
 @media (prefers-reduced-motion: reduce) { .hero__ant.is-waving .ant-arm { animation: none; } }
 
+/* Зіниця слідкує за курсором */
+.hero__ant .ant-pupil {
+  transform-box: view-box;
+  transform-origin: 45.9px 68.9px;
+  transition: transform .12s cubic-bezier(.2,.6,.3,1);
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce), (hover: none) {
+  .hero__ant .ant-pupil { transition: none; transform: none !important; }
+}
+
 /* ==========================================================================
    STATS
    ========================================================================== */

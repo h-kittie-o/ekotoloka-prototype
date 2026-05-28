@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/home.css?v=20260528d">
+<link rel="stylesheet" href="css/home.css?v=20260528e">
 </head>
 <body>
 <div class="page">
@@ -69,7 +69,7 @@
             <svg class="hero__ant" viewBox="0 0 179 221" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none">
               <path d="M72.8264 53.1251C61.5992 44.5298 3.0006 48.2404 2.02532 56.3782C0.0324325 73.0071 12.7845 91.6474 48.198 94.4206C83.6115 97.1937 86.9903 63.9688 72.8264 53.1251Z" fill="#FF5114"/>
               <circle cx="51.9326" cy="71.1581" r="11.9335" transform="rotate(-1.18306 51.9326 71.1581)" fill="#fff"/>
-              <path d="M54.615 68.6967C54.7122 73.4034 50.8801 77.2996 46.0558 77.3992C41.2315 77.4989 37.2418 73.7641 37.1446 69.0575C37.0474 64.3509 40.8795 60.4546 45.7038 60.355C50.5281 60.2554 54.5178 63.9901 54.615 68.6967Z" fill="#FF5114"/>
+              <path class="ant-pupil" d="M54.615 68.6967C54.7122 73.4034 50.8801 77.2996 46.0558 77.3992C41.2315 77.4989 37.2418 73.7641 37.1446 69.0575C37.0474 64.3509 40.8795 60.4546 45.7038 60.355C50.5281 60.2554 54.5178 63.9901 54.615 68.6967Z" fill="#FF5114"/>
               <path d="M38.2914 6.09982C45.2893 -1.82981 61.029 0.413302 63.5278 52.0549" stroke="#FF5114" stroke-width="5.22817" stroke-linecap="round"/>
               <path d="M128.522 216.689C137.985 221.412 150.402 199.733 133.334 150.93" stroke="#FF5114" stroke-width="5.22817" stroke-linecap="round"/>
               <path d="M78.323 215.54C100.494 219.245 103.384 195.369 107.684 143.846" stroke="#FF5114" stroke-width="5.22817" stroke-linecap="round"/>
@@ -443,6 +443,39 @@
     ant.classList.add('is-waving');
   }
   window.addEventListener('pageshow', waveAnt);
+
+  // Зіниця мурашки слідкує за курсором
+  (function () {
+    var ant = document.querySelector('.hero__ant');
+    var pupil = document.querySelector('.hero__ant .ant-pupil');
+    if (!ant || !pupil) return;
+    if (window.matchMedia && window.matchMedia('(hover: none)').matches) return;
+    var EYE_X = 51.93, EYE_Y = 71.16;        // центр ока в viewBox
+    var VBOX_W = 179, VBOX_H = 221;
+    var MAX = 3.0;                            // макс. зсув зіниці у viewBox-одиницях
+    var tx = 0, ty = 0, queued = false;
+    function onMove(e) {
+      var r = ant.getBoundingClientRect();
+      if (!r.width) return;
+      var scale = r.width / VBOX_W;
+      var cx = r.left + EYE_X * scale;
+      var cy = r.top  + EYE_Y * scale;
+      var dx = (e.clientX - cx) / scale;
+      var dy = (e.clientY - cy) / scale;
+      var d = Math.hypot(dx, dy);
+      var k = d > 0 ? Math.min(MAX, d * 0.04) / d : 0;
+      tx = dx * k;
+      ty = dy * k;
+      if (!queued) {
+        queued = true;
+        requestAnimationFrame(function () {
+          queued = false;
+          pupil.style.transform = 'translate(' + tx.toFixed(2) + 'px,' + ty.toFixed(2) + 'px)';
+        });
+      }
+    }
+    window.addEventListener('mousemove', onMove, { passive: true });
+  })();
 </script>
 </body>
 </html>
