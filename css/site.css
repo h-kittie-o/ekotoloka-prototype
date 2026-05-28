@@ -636,7 +636,7 @@ a.card:hover, a.card-link:hover { color: inherit; }
   --comm-spread: 5vw;
   --comm-drop: 11vw;
   background-image: url(../assets/comm-decor-tl-noant.png?v=2),
-                    url(../assets/comm-decor-tr-noant.png?v=1),
+                    url(../assets/comm-decor-tr-noant.png?v=2),
                     url(../assets/comm-decor-bl.png?v=2),
                     url(../assets/comm-decor-br.png?v=2);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -668,7 +668,7 @@ a.card:hover, a.card-link:hover { color: inherit; }
 }
 .page-community .deco-ant--tl-small { left: 8.81vw;  top: 21.50vw; width: 7.50vw; }
 .page-community .deco-ant--tl-big   { left: -3.25vw; top: 23.78vw; width: 23.70vw; }
-.page-community .deco-ant--tr       { right: 2.19vw; top: 19.56vw; width: 13.50vw; }
+.page-community .deco-ant--tr       { right: 1.00vw; top: 19.11vw; width: 16.88vw; }
 @media (max-width: 1024px) { .page-community .deco-ant { display: none; } }
 
 .section--results-deco .deco-ant {
