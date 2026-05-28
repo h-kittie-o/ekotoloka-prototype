@@ -635,8 +635,8 @@ a.card:hover, a.card-link:hover { color: inherit; }
      «Стіна слави» і «Відгуки» (як у Figma). */
   --comm-spread: 5vw;
   --comm-drop: 11vw;
-  background-image: url(../assets/comm-decor-tl.png?v=2),
-                    url(../assets/comm-decor-tr.png?v=2),
+  background-image: url(../assets/comm-decor-tl-noant.png?v=1),
+                    url(../assets/comm-decor-tr-noant.png?v=1),
                     url(../assets/comm-decor-bl.png?v=2),
                     url(../assets/comm-decor-br.png?v=2);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -661,6 +661,22 @@ a.card:hover, a.card-link:hover { color: inherit; }
   position: absolute; right: 1.5vw; bottom: 40px;
   width: 120px; height: auto; z-index: 2; pointer-events: none; user-select: none;
 }
+
+/* SVG-overlay'ї точно на місцях PNG-baked мурашок (PNG-decor → *-noant.png) */
+.page-community .deco-ant {
+  position: absolute; pointer-events: none; user-select: none; z-index: 1; height: auto;
+}
+.page-community .deco-ant--tl-small { left: 4.99vw;  top: 20.97vw; width: 10.47vw; }
+.page-community .deco-ant--tl-big   { left: 1.74vw;  top: 31.25vw; width: 7.67vw; }
+.page-community .deco-ant--tr       { right: 3.71vw; top: 21.21vw; width: 11.62vw; }
+@media (max-width: 1024px) { .page-community .deco-ant { display: none; } }
+
+.section--results-deco .deco-ant {
+  position: absolute; pointer-events: none; user-select: none; z-index: 1; height: auto;
+}
+.section--results-deco .deco-ant--left  { left: 2.58vw;  top: 18.06vw; width: 15.99vw; }
+.section--results-deco .deco-ant--right { right: 1.30vw; top: 30.26vw; width: 17.92vw; }
+@media (max-width: 1024px) { .section--results-deco .deco-ant { display: none; } }
 
 @media (max-width: 1024px) { .comm-ant { display: none; } }
 
