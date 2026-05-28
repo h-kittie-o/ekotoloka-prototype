@@ -325,7 +325,8 @@ h2 { font-size: 40px; line-height: 1.1; }
    NEWS
    ========================================================================== */
 .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.news-card { display: block; background: #FFE534; border-radius: var(--r-card); overflow: hidden; box-shadow: 0 18px 40px -30px rgba(26,46,31,.45); transition: transform .15s ease; }
+.news-card { display: block; background: #fff; border-radius: var(--r-card); overflow: hidden; box-shadow: 0 1px 3px rgba(26,46,31,.08), 0 8px 24px rgba(26,46,31,.06); transition: transform .15s ease, box-shadow .15s ease; }
+.news-card:hover { box-shadow: 0 3px 8px rgba(26,46,31,.10), 0 12px 32px rgba(26,46,31,.10); }
 .news-card:hover { transform: translateY(-3px); }
 .news-card__img { aspect-ratio: 16/9; width: 100%; object-fit: cover; }
 .news-card__body { padding: 22px 24px 24px; }
