@@ -666,7 +666,7 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .page-community .deco-ant {
   position: absolute; pointer-events: none; user-select: none; z-index: 1; height: auto;
 }
-.page-community .deco-ant--tl-small { left: 9.31vw;  top: 24.64vw; width: 6.49vw; }
+.page-community .deco-ant--tl-small { left: 8.81vw;  top: 21.50vw; width: 7.50vw; }
 .page-community .deco-ant--tl-big   { left: -3.25vw; top: 23.78vw; width: 23.70vw; }
 .page-community .deco-ant--tr       { right: 2.19vw; top: 19.56vw; width: 13.50vw; }
 @media (max-width: 1024px) { .page-community .deco-ant { display: none; } }
