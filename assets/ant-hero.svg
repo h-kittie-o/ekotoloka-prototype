@@ -1,4 +1,16 @@
 <svg width="179" height="221" viewBox="0 0 179 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+  .ant-arm { transform-origin: 78px 105px; animation: ant-wave 1.3s ease-in-out 3 both; animation-delay: .4s; }
+  .ant-arm--l { transform-origin: 66px 113px; animation-delay: .55s; }
+  @keyframes ant-wave {
+    0%   { transform: rotate(0deg); }
+    18%  { transform: rotate(-26deg); }
+    42%  { transform: rotate(18deg); }
+    68%  { transform: rotate(-18deg); }
+    100% { transform: rotate(0deg); }
+  }
+  @media (prefers-reduced-motion: reduce) { .ant-arm { animation: none; } }
+</style>
 <path d="M72.8264 53.1251C61.5992 44.5298 3.0006 48.2404 2.02532 56.3782C0.0324325 73.0071 12.7845 91.6474 48.198 94.4206C83.6115 97.1937 86.9903 63.9688 72.8264 53.1251Z" fill="#FF5114"/>
 <circle cx="51.9326" cy="71.1581" r="11.9335" transform="rotate(-1.18306 51.9326 71.1581)" fill="white"/>
 <path d="M54.615 68.6967C54.7122 73.4034 50.8801 77.2996 46.0558 77.3992C41.2315 77.4989 37.2418 73.7641 37.1446 69.0575C37.0474 64.3509 40.8795 60.4546 45.7038 60.355C50.5281 60.2554 54.5178 63.9901 54.615 68.6967Z" fill="#FF5114"/>
@@ -9,6 +21,6 @@
 <path d="M73.6225 121.979C59.9841 123.56 53.8972 103.907 62.0695 96.6613C69.7051 89.8914 79.292 90.0507 86.5033 97.7653C92.33 103.998 92.3831 119.804 73.6225 121.979Z" fill="#FF5114"/>
 <path d="M104.269 155.345C79.0798 144.207 77.5327 123.826 92.9533 112.736C108.374 101.647 128.216 101.226 139.707 103.505C159.343 107.401 184.515 115.25 162.898 137.571C141.281 159.891 117.633 161.254 104.269 155.345Z" fill="#FF5114"/>
 <path d="M128.612 216.973C138.075 221.696 150.492 200.018 133.423 151.214" stroke="#EC4207" stroke-width="5.22817" stroke-linecap="round"/>
-<path d="M83.428 100.776C105.768 83.5677 105.364 58.6823 93.6243 31.7064" stroke="#EC4207" stroke-width="5.22817" stroke-linecap="round"/>
-<path d="M64.8701 112.634C30.1439 120.93 17.7364 108.484 2.61814 96.3297" stroke="#FF5114" stroke-width="5.22817" stroke-linecap="round"/>
+<path class="ant-arm ant-arm--r" d="M83.428 100.776C105.768 83.5677 105.364 58.6823 93.6243 31.7064" stroke="#EC4207" stroke-width="5.22817" stroke-linecap="round"/>
+<path class="ant-arm ant-arm--l" d="M64.8701 112.634C30.1439 120.93 17.7364 108.484 2.61814 96.3297" stroke="#FF5114" stroke-width="5.22817" stroke-linecap="round"/>
 </svg>
