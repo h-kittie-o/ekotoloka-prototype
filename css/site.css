@@ -740,6 +740,55 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .event-card__image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .event-hero-photo { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--cream); }
 .event-hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Картки сторінки Підтримати (5 кольорових бенто-карток за Figma 1526:11489) */
+.sup-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.sup-cards > .sup-card--dark { grid-column: 1 / -1; }
+@media (max-width: 720px) { .sup-cards { grid-template-columns: 1fr; } .sup-cards > .sup-card--dark { grid-column: auto; } }
+
+.sup-card {
+  position: relative; overflow: hidden;
+  padding: 28px 32px; border-radius: 28px;
+  display: flex; flex-direction: column; gap: 18px;
+  color: #1A2E1F; min-height: 200px;
+  isolation: isolate;
+}
+.sup-card::before {
+  content: ""; position: absolute; inset: 0;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto 92%;
+  mix-blend-mode: multiply;
+  opacity: .55;
+  z-index: 0;
+  pointer-events: none;
+}
+.sup-card > * { position: relative; z-index: 1; }
+.sup-card__icon {
+  width: 56px; height: 56px; flex: 0 0 56px;
+  background: #1A2E1F; color: #fff;
+  border-radius: 16px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.sup-card__icon svg { width: 28px; height: 28px; }
+.sup-card__body { display: flex; flex-direction: column; gap: 6px; }
+.sup-card h3 { font-family: var(--font-display); font-size: 26px; font-weight: 800; margin: 0; line-height: 1.15; }
+.sup-card p { margin: 0; font-size: 17px; font-weight: 500; line-height: 1.4; }
+.sup-card__list { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.sup-card__list li { font-size: 17px; font-weight: 500; line-height: 1.4; }
+.sup-card__list strong { font-weight: 800; }
+
+.sup-card--pink   { background: #FF95D2; }
+.sup-card--cyan   { background: #04C1E6; }
+.sup-card--green  { background: #56B768; }
+.sup-card--yellow { background: #FFEC69; }
+.sup-card--dark   { background: #56B768; color: #1A2E1F; }
+
+.sup-card--pink::before   { background-image: url("../assets/support-wm-pink.png"); }
+.sup-card--cyan::before   { background-image: url("../assets/support-wm-cyan.png"); }
+.sup-card--green::before  { background-image: url("../assets/support-wm-green.png"); }
+.sup-card--yellow::before { background-image: url("../assets/support-wm-yellow.png"); }
+.sup-card--dark::before   { background-image: url("../assets/support-wm-dark.png"); background-size: auto 85%; }
 .event-card__body { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3); flex: 1; }
 .event-card__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .event-card__title { font-family: var(--font-display); font-size: 1.25rem; font-weight: var(--fw-bold); line-height: 1.2; margin: 0; }
