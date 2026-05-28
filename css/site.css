@@ -1454,7 +1454,7 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
    Сторінка події — картки за дизайном Figma (.page-event)
    ==================================================================== */
 
-/* Жовте поле з м'якими «хмарками» — спільний фон для join, provide, organizer */
+/* Жовтий фон з ілюстраціями (Figma) — спільний колір; декор-картинка задається на конкретному варіанті */
 .event-cloudy {
   position: relative;
   background-color: #FFDF01;
@@ -1463,14 +1463,22 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
 }
 .event-cloudy::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background:
-    radial-gradient(ellipse 42% 26% at 14% 6%,  rgba(255,255,255,.55), transparent 65%),
-    radial-gradient(ellipse 34% 22% at 52% 2%,  rgba(255,255,255,.5),  transparent 70%),
-    radial-gradient(ellipse 38% 24% at 92% 10%, rgba(255,255,255,.55), transparent 65%),
-    radial-gradient(ellipse 28% 18% at 24% 42%, rgba(255,255,255,.35), transparent 72%),
-    radial-gradient(ellipse 32% 20% at 80% 50%, rgba(255,255,255,.32), transparent 72%),
-    radial-gradient(ellipse 34% 20% at 12% 80%, rgba(255,255,255,.32), transparent 72%),
-    radial-gradient(ellipse 30% 18% at 82% 92%, rgba(255,255,255,.36), transparent 72%);
+  background-repeat: no-repeat;
+}
+.event-join.event-cloudy::before {
+  background-image: url(../assets/evt-join-decor.png);
+  background-position: center 50%;
+  background-size: 78% auto;
+}
+.event-info--provide.event-cloudy::before {
+  background-image: url(../assets/evt-provide-rake.png);
+  background-position: 115% -10%;
+  background-size: 55% auto;
+}
+.event-org.event-cloudy::before {
+  background-image: url(../assets/evt-org-cloud.png);
+  background-position: center;
+  background-size: 100% auto;
 }
 
 /* ── 1. Sidebar Join card ──────────────────────────────────────────── */
@@ -1541,7 +1549,17 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
   box-shadow: var(--shadow-sm);
   min-height: 260px;
 }
-.event-info--bring { background: #F9D5DF; }
+.event-info--bring {
+  background: #F9D5DF;
+  position: relative; overflow: hidden; isolation: isolate;
+}
+.event-info--bring::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: url(../assets/evt-bring-decor.png);
+  background-repeat: no-repeat;
+  background-position: 115% -8%;
+  background-size: 60% auto;
+}
 .event-info__icon {
   width: 50px; height: 50px; border-radius: 12px;
   background: #1F3727; color: #fff;
