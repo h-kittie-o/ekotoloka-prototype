@@ -80,7 +80,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--font-head); font-weight: 700; col
   /* верхній декор SVG прибрано — його замінив новий band під хедером (.under-header) */
   clip-path: inset(500px 0 0 0);
 }
-.page > *:not(.page__deco) { position: relative; z-index: 1; }
+.page > *:not(.page__deco):not(.site-header) { position: relative; z-index: 1; }
 
 .container { width: 100%; max-width: var(--content); margin: 0 auto; padding: 0 20px; }
 .container--wide { max-width: var(--wide); }
@@ -129,7 +129,8 @@ h2 { font-size: 40px; line-height: 1.1; }
 /* ==========================================================================
    HEADER
    ========================================================================== */
-.site-header { background: var(--green); height: 83px; }
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--green); height: 83px; }
+.site-header.is-scrolled { box-shadow: 0 6px 24px -12px rgba(26,46,31,.5); }
 .site-header .container { max-width: var(--wide); height: 100%; display: flex; align-items: center; gap: 24px; }
 .logo { display: inline-flex; align-items: center; gap: 14px; }
 .logo img { height: 40px; }
