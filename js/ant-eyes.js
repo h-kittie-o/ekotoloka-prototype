@@ -1,36 +1,40 @@
 // Зіниця кожної мурашки на сайті слідкує за курсором.
-// На SVG мурашки треба мати атрибути:
-//   data-ant-eye="<eyeX>,<eyeY>"        — центр білка ока (viewBox-coords)
-//   data-ant-pupil="<pupilX>,<pupilY>"  — базовий центр зіниці у вихідному SVG
-//   data-ant-max="<px>"                 — макс. зсув зіниці (radius eye − radius pupil)
-// і елемент <g class="ant-pupil"> навколо зіниці.
+// Розмітка:
+//   <svg ...> ...
+//     <g class="ant-pupil" data-eye="<eyeX,eyeY>" data-pupil-base="<pupX,pupY>" data-max="N">
+//       <ellipse/path .../>
+//     </g>
+//   </svg>
+// data-eye   — центр білка ока у viewBox-коорд.
+// data-pupil-base — центр зіниці у вихідному SVG (до transform)
+// data-max   — макс. зсув зіниці від центру ока (radius eye − radius pupil)
 (function () {
   if (window.matchMedia && window.matchMedia('(hover: none)').matches) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  var ants = [];
-  document.querySelectorAll('svg[data-ant-eye]').forEach(function (svg) {
-    var pupil = svg.querySelector('.ant-pupil');
-    if (!pupil) return;
-    var eye = svg.getAttribute('data-ant-eye').split(',').map(Number);
-    var pup = svg.getAttribute('data-ant-pupil').split(',').map(Number);
-    var max = parseFloat(svg.getAttribute('data-ant-max')) || 3.0;
+  var pupils = [];
+  document.querySelectorAll('.ant-pupil[data-eye]').forEach(function (g) {
+    var svg = g.closest('svg');
+    if (!svg) return;
+    var eye = g.getAttribute('data-eye').split(',').map(Number);
+    var pup = g.getAttribute('data-pupil-base').split(',').map(Number);
+    var max = parseFloat(g.getAttribute('data-max')) || 3.0;
     var vb = svg.viewBox.baseVal;
     var baseX = eye[0] - pup[0];
     var baseY = eye[1] - pup[1];
-    pupil.style.transformBox = 'view-box';
-    pupil.style.transform = 'translate(' + baseX + 'px,' + baseY + 'px)';
-    pupil.style.transition = 'transform .12s cubic-bezier(.2,.6,.3,1)';
-    pupil.style.willChange = 'transform';
-    ants.push({ svg: svg, pupil: pupil, eye: eye, base: [baseX, baseY], max: max, vboxW: vb.width });
+    g.style.transformBox = 'view-box';
+    g.style.transform = 'translate(' + baseX + 'px,' + baseY + 'px)';
+    g.style.transition = 'transform .12s cubic-bezier(.2,.6,.3,1)';
+    g.style.willChange = 'transform';
+    pupils.push({ svg: svg, g: g, eye: eye, base: [baseX, baseY], max: max, vboxW: vb.width });
   });
-  if (!ants.length) return;
+  if (!pupils.length) return;
 
   var queued = false;
   var lastX = 0, lastY = 0;
   function apply() {
     queued = false;
-    ants.forEach(function (a) {
+    pupils.forEach(function (a) {
       var r = a.svg.getBoundingClientRect();
       if (!r.width) return;
       var scale = r.width / a.vboxW;
@@ -42,7 +46,7 @@
       var k = d > 0 ? Math.min(a.max, d * 0.08) / d : 0;
       var tx = a.base[0] + dx * k;
       var ty = a.base[1] + dy * k;
-      a.pupil.style.transform = 'translate(' + tx.toFixed(2) + 'px,' + ty.toFixed(2) + 'px)';
+      a.g.style.transform = 'translate(' + tx.toFixed(2) + 'px,' + ty.toFixed(2) + 'px)';
     });
   }
   window.addEventListener('mousemove', function (e) {
