@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/home.css?v=20260528c">
+<link rel="stylesheet" href="css/home.css?v=20260528d">
 </head>
 <body>
 <div class="page">
@@ -66,7 +66,20 @@
           </div>
           <div class="hero__media">
             <img class="media-card" src="assets/home-hero.jpg" alt="Толока у міському парку — учасники прибирають разом">
-            <img class="hero__ant" src="assets/ant-hero.svg?v=20260528b" alt="" aria-hidden="true">
+            <svg class="hero__ant" viewBox="0 0 179 221" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path d="M72.8264 53.1251C61.5992 44.5298 3.0006 48.2404 2.02532 56.3782C0.0324325 73.0071 12.7845 91.6474 48.198 94.4206C83.6115 97.1937 86.9903 63.9688 72.8264 53.1251Z" fill="#FF5114"/>
+              <circle cx="51.9326" cy="71.1581" r="11.9335" transform="rotate(-1.18306 51.9326 71.1581)" fill="#fff"/>
+              <path d="M54.615 68.6967C54.7122 73.4034 50.8801 77.2996 46.0558 77.3992C41.2315 77.4989 37.2418 73.7641 37.1446 69.0575C37.0474 64.3509 40.8795 60.4546 45.7038 60.355C50.5281 60.2554 54.5178 63.9901 54.615 68.6967Z" fill="#FF5114"/>
+              <path d="M38.2914 6.09982C45.2893 -1.82981 61.029 0.413302 63.5278 52.0549" stroke="#FF5114" stroke-width="5.22817" stroke-linecap="round"/>
+              <path d="M128.522 216.689C137.985 221.412 150.402 199.733 133.334 150.93" stroke="#FF5114" stroke-width="5.22817" stroke-linecap="round"/>
+              <path d="M78.323 215.54C100.494 219.245 103.384 195.369 107.684 143.846" stroke="#FF5114" stroke-width="5.22817" stroke-linecap="round"/>
+              <path d="M6.98145 18.7061C10.6056 8.76638 24.458 0.000806596 46.4559 50.7897" stroke="#FF5114" stroke-width="5.22817" stroke-linecap="round"/>
+              <path d="M73.6225 121.979C59.9841 123.56 53.8972 103.907 62.0695 96.6613C69.7051 89.8914 79.292 90.0507 86.5033 97.7653C92.33 103.998 92.3831 119.804 73.6225 121.979Z" fill="#FF5114"/>
+              <path d="M104.269 155.345C79.0798 144.207 77.5327 123.826 92.9533 112.736C108.374 101.647 128.216 101.226 139.707 103.505C159.343 107.401 184.515 115.25 162.898 137.571C141.281 159.891 117.633 161.254 104.269 155.345Z" fill="#FF5114"/>
+              <path d="M128.612 216.973C138.075 221.696 150.492 200.018 133.423 151.214" stroke="#EC4207" stroke-width="5.22817" stroke-linecap="round"/>
+              <path class="ant-arm ant-arm--r" d="M83.428 100.776C105.768 83.5677 105.364 58.6823 93.6243 31.7064" stroke="#EC4207" stroke-width="5.22817" stroke-linecap="round"/>
+              <path class="ant-arm ant-arm--l" d="M64.8701 112.634C30.1439 120.93 17.7364 108.484 2.61814 96.3297" stroke="#FF5114" stroke-width="5.22817" stroke-linecap="round"/>
+            </svg>
             <div class="hero__badge"><b>340 кг</b><span>зібрано за рік</span></div>
           </div>
         </div>
@@ -420,16 +433,16 @@
 </div>
 <script src="js/before-after.js?v=20260527f" defer></script>
 <script>
-  // Перезапуск анімації мурашки при кожному показі сторінки (включно з bfcache)
-  window.addEventListener('pageshow', function () {
+  // Запуск/перезапуск махання мурашки при кожному показі сторінки (включно з bfcache)
+  function waveAnt() {
     var ant = document.querySelector('.hero__ant');
     if (!ant) return;
-    var orig = ant.getAttribute('src');
-    ant.removeAttribute('src');
-    // форсуємо re-paint, потім повертаємо src — SVG перерендериться і анімація почнеться з 0%
+    ant.classList.remove('is-waving');
+    // примусовий reflow → клас додається наново → CSS-анімація стартує з 0%
     void ant.offsetWidth;
-    ant.setAttribute('src', orig.split('#')[0] + '#r=' + Date.now());
-  });
+    ant.classList.add('is-waving');
+  }
+  window.addEventListener('pageshow', waveAnt);
 </script>
 </body>
 </html>

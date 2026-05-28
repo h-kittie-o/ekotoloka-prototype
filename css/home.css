@@ -186,6 +186,18 @@ h2 { font-size: 40px; line-height: 1.1; }
   position: absolute; right: calc(100% + 12px); left: auto; bottom: 0; width: 168px; height: auto;
   pointer-events: none; z-index: 2;
 }
+.hero__ant .ant-arm { transform-origin: 78px 105px; transform-box: view-box; will-change: transform; }
+.hero__ant .ant-arm--l { transform-origin: 66px 113px; }
+.hero__ant.is-waving .ant-arm   { animation: ant-wave 1.3s ease-in-out 3 both .4s; }
+.hero__ant.is-waving .ant-arm--l { animation-delay: .55s; }
+@keyframes ant-wave {
+  0%   { transform: rotate(0deg); }
+  18%  { transform: rotate(-26deg); }
+  42%  { transform: rotate(18deg); }
+  68%  { transform: rotate(-18deg); }
+  100% { transform: rotate(0deg); }
+}
+@media (prefers-reduced-motion: reduce) { .hero__ant.is-waving .ant-arm { animation: none; } }
 
 /* ==========================================================================
    STATS
