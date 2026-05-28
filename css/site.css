@@ -674,7 +674,7 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .section--results-deco .deco-ant {
   position: absolute; pointer-events: none; user-select: none; z-index: 1; height: auto;
 }
-.section--results-deco .deco-ant--left  { left: 2.60vw;  top: 17.68vw; width: 16.49vw; }
+.section--results-deco .deco-ant--left  { left: 1.40vw;  top: 16.85vw; width: 18.50vw; }
 .section--results-deco .deco-ant--right { right: 1.33vw; top: 29.85vw; width: 18.46vw; }
 @media (max-width: 1024px) { .section--results-deco .deco-ant { display: none; } }
 
