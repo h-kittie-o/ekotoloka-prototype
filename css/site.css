@@ -1470,10 +1470,11 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
   background-position: center 50%;
   background-size: 78% auto;
 }
+.event-info--provide { background-color: #FFE534; }
 .event-info--provide.event-cloudy::before {
   background-image: url(../assets/evt-provide-rake.png);
-  background-position: 115% -10%;
-  background-size: 55% auto;
+  background-position: 55% 60%;
+  background-size: 115% auto;
 }
 .event-org.event-cloudy::before {
   background-image: url(../assets/evt-org-cloud.png);
@@ -1550,15 +1551,15 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
   min-height: 260px;
 }
 .event-info--bring {
-  background: #F9D5DF;
+  background: #FBC1D8;
   position: relative; overflow: hidden; isolation: isolate;
 }
 .event-info--bring::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background-image: url(../assets/evt-bring-decor.png);
   background-repeat: no-repeat;
-  background-position: 115% -8%;
-  background-size: 60% auto;
+  background-position: 80% -8%;
+  background-size: 82% auto;
 }
 .event-info__icon {
   width: 50px; height: 50px; border-radius: 12px;
