@@ -450,10 +450,14 @@
     var pupil = document.querySelector('.hero__ant .ant-pupil');
     if (!ant || !pupil) return;
     if (window.matchMedia && window.matchMedia('(hover: none)').matches) return;
-    var EYE_X = 51.93, EYE_Y = 71.16;        // центр ока в viewBox
-    var VBOX_W = 179, VBOX_H = 221;
-    var MAX = 3.0;                            // макс. зсув зіниці у viewBox-одиницях
-    var tx = 0, ty = 0, queued = false;
+    var EYE_X = 51.93, EYE_Y = 71.16;        // центр білка ока (viewBox)
+    var PUP_X = 45.88, PUP_Y = 68.88;        // базовий центр зіниці у вихідному SVG
+    var BASE_X = EYE_X - PUP_X;              // зсув щоб зіниця стояла в центрі ока
+    var BASE_Y = EYE_Y - PUP_Y;
+    var VBOX_W = 179;
+    var MAX = 3.3;                           // макс. зсув від центру ока (radius eye − radius pupil)
+    var tx = BASE_X, ty = BASE_Y, queued = false;
+    pupil.style.transform = 'translate(' + BASE_X + 'px,' + BASE_Y + 'px)'; // rest = look straight
     function onMove(e) {
       var r = ant.getBoundingClientRect();
       if (!r.width) return;
@@ -463,9 +467,9 @@
       var dx = (e.clientX - cx) / scale;
       var dy = (e.clientY - cy) / scale;
       var d = Math.hypot(dx, dy);
-      var k = d > 0 ? Math.min(MAX, d * 0.04) / d : 0;
-      tx = dx * k;
-      ty = dy * k;
+      var k = d > 0 ? Math.min(MAX, d * 0.08) / d : 0;  // швидше досягає максимуму
+      tx = BASE_X + dx * k;
+      ty = BASE_Y + dy * k;
       if (!queued) {
         queued = true;
         requestAnimationFrame(function () {
