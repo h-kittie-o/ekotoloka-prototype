@@ -1589,23 +1589,23 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
   background: #327A40;
 }
 
-/* ── 3. Organizer card (Figma: жовта картка з хвилястою хмарною силуеткою) ── */
+/* ── 3. Organizer card (Figma: жовта картка зі світлішими хмаринками всередині) ── */
 .event-org {
   position: relative;
   background: #FFE534;
   border-radius: 28px;
   padding: clamp(28px, 3vw, 44px) clamp(28px, 3vw, 48px);
   display: flex; gap: clamp(20px, 2vw, 32px); align-items: center;
-  overflow: visible;     /* щоб хмари виходили за межі */
+  overflow: hidden;
   isolation: isolate;
   box-shadow: none;
 }
-/* перевизначаємо event-cloudy::before: розширюємо межі для виступаючих хмар */
+/* світліші хмаринки маскою — лишаються всередині карточки */
 .event-org.event-cloudy::before {
-  inset: -14% -2% -14% -2%;
-  background-image: url(../assets/evt-org-bg.png);
-  background-position: center;
-  background-size: 100% 100%;
+  inset: 0;
+  background: #FFEC7A;
+  -webkit-mask: url(../assets/evt-org-bg.png) no-repeat center/100% 100%;
+          mask: url(../assets/evt-org-bg.png) no-repeat center/100% 100%;
 }
 
 .event-org__avatar {
