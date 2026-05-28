@@ -635,8 +635,8 @@ a.card:hover, a.card-link:hover { color: inherit; }
      «Стіна слави» і «Відгуки» (як у Figma). */
   --comm-spread: 5vw;
   --comm-drop: 11vw;
-  background-image: url(../assets/comm-decor-tl-noant.png?v=2),
-                    url(../assets/comm-decor-tr-noant.png?v=3),
+  background-image: url(../assets/comm-decor-tl-noant.png?v=3),
+                    url(../assets/comm-decor-tr-noant.png?v=4),
                     url(../assets/comm-decor-bl.png?v=2),
                     url(../assets/comm-decor-br.png?v=2);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
