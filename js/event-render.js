@@ -57,8 +57,17 @@
     '<strong>' + p.count + ' людей вже ' + (p.count >= p.capacity ? 'у черзі' : 'йдуть') + '</strong> · ' +
     p.firstTime + ' вперше · ' + p.neighbors + ' з твого району');
 
-  // Hero image text
-  setHTML('[data-ef="hero-image"]', data.heroImage);
+  // Hero image: реальне фото, якщо є; інакше — текстовий плейсхолдер
+  var heroEl = $('[data-ef="hero-image"]');
+  if (heroEl) {
+    if (data.image) {
+      heroEl.classList.remove('img-placeholder', 'img-placeholder--wide');
+      heroEl.classList.add('event-hero-photo');
+      heroEl.innerHTML = '<img src="' + data.image + '" alt="' + data.title.replace(/"/g, '&quot;') + '">';
+    } else {
+      heroEl.innerHTML = data.heroImage;
+    }
+  }
 
   // Timeline
   var tl = $('[data-ef="timeline"]');

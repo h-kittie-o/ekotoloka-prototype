@@ -2,6 +2,7 @@
 window.EKO_EVENTS = {
 
   'stryiskyi': {
+    image: 'assets/event-stryiskyi.jpg?v=20260528a',
     title: 'Толока в Стрийському парку',
     chips: [
       { label: 'Парк' },
@@ -42,6 +43,7 @@ window.EKO_EVENTS = {
   },
 
   'vysokyi-zamok': {
+    image: 'assets/event-vysokyi-zamok.jpg?v=20260528a',
     title: 'Толока на Високому замку',
     chips: [
       { label: 'Пагорб' },
@@ -81,6 +83,7 @@ window.EKO_EVENTS = {
   },
 
   'valy': {
+    image: 'assets/event-valy.jpg?v=20260528a',
     title: 'After-work на Валах',
     chips: [
       { label: 'Після роботи', variant: 'accent' },
@@ -120,6 +123,7 @@ window.EKO_EVENTS = {
   },
 
   'sykhiv': {
+    image: 'assets/event-sykhiv.jpg?v=20260528a',
     title: 'Двір на Червоній Калині',
     chips: [
       { label: 'Двір' },
@@ -159,6 +163,7 @@ window.EKO_EVENTS = {
   },
 
   'znesinnya': {
+    image: 'assets/event-znesinnya.jpg?v=20260528a',
     title: 'Толока у парку Знесіння',
     chips: [
       { label: 'Парк' },
@@ -198,6 +203,7 @@ window.EKO_EVENTS = {
   },
 
   'poltva': {
+    image: 'assets/event-poltva.jpg?v=20260528a',
     title: 'Прибирання Полтви',
     chips: [
       { label: 'Річка' },
