@@ -666,16 +666,16 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .page-community .deco-ant {
   position: absolute; pointer-events: none; user-select: none; z-index: 1; height: auto;
 }
-.page-community .deco-ant--tl-small { left: 4.99vw;  top: 20.97vw; width: 10.47vw; }
-.page-community .deco-ant--tl-big   { left: 1.74vw;  top: 31.25vw; width: 7.67vw; }
-.page-community .deco-ant--tr       { right: 3.71vw; top: 21.21vw; width: 11.62vw; }
+.page-community .deco-ant--tl-small { left: 9.10vw;  top: 20.35vw; width: 6.61vw; }
+.page-community .deco-ant--tl-big   { left: 1.34vw;  top: 23.02vw; width: 14.48vw; }
+.page-community .deco-ant--tr       { right: 3.31vw; top: 20.68vw; width: 12.45vw; }
 @media (max-width: 1024px) { .page-community .deco-ant { display: none; } }
 
 .section--results-deco .deco-ant {
   position: absolute; pointer-events: none; user-select: none; z-index: 1; height: auto;
 }
-.section--results-deco .deco-ant--left  { left: 2.58vw;  top: 18.06vw; width: 15.99vw; }
-.section--results-deco .deco-ant--right { right: 1.30vw; top: 30.26vw; width: 17.92vw; }
+.section--results-deco .deco-ant--left  { left: 2.32vw;  top: 17.81vw; width: 16.51vw; }
+.section--results-deco .deco-ant--right { right: 1.04vw; top: 29.98vw; width: 18.49vw; }
 @media (max-width: 1024px) { .section--results-deco .deco-ant { display: none; } }
 
 @media (max-width: 1024px) { .comm-ant { display: none; } }
