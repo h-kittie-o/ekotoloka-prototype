@@ -1551,7 +1551,7 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
   min-height: 260px;
 }
 .event-info--bring {
-  background: #FBC1D8;
+  background: #F49AC0;
   position: relative; overflow: hidden; isolation: isolate;
 }
 .event-info--bring::before {
