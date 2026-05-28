@@ -1369,6 +1369,9 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
   padding-bottom: clamp(70px, 9vw, 130px);
 }
 .faq-field > .container { position: relative; z-index: 1; }
+/* на сторінці події FAQ йде після контентних карток — прибираємо negative margin,
+   щоб хвилястий верх не залазив на картки. */
+.section--tight + .faq-field { margin-top: clamp(var(--space-6), 3vw, var(--space-10)); }
 .faq-field h2 { color: #fff; margin-top: clamp(var(--space-8), 4vw, var(--space-12)); }
 .faq-field h2:first-of-type { margin-top: 0; }
 
