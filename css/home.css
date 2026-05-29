@@ -134,6 +134,7 @@ h2 { font-size: 40px; line-height: 1.1; }
 .site-header .container { max-width: var(--wide); height: 100%; display: flex; align-items: center; gap: 24px; }
 .logo { display: inline-flex; align-items: center; gap: 14px; }
 .logo img { height: 40px; }
+.logo--mark-only img { height: 56px; }
 .site-header .logo { color: #fff; }
 
 .nav { display: flex; align-items: center; gap: 6px; margin-left: auto; }
