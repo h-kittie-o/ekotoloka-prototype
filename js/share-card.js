@@ -2,9 +2,9 @@
   'use strict';
 
   const FORMATS = {
-    square: { src: 'assets/share-card-square.png', name: 'square' },
-    story:  { src: 'assets/share-card-story.png',  name: 'story' },
-    tiktok: { src: 'assets/share-card-story.png',  name: 'tiktok' },
+    square: { src: 'assets/share-card-square.png?v=20260529b', name: 'square' },
+    story:  { src: 'assets/share-card-story.png?v=20260529b',  name: 'story' },
+    tiktok: { src: 'assets/share-card-story.png?v=20260529b',  name: 'tiktok' },
   };
 
   function selectFormat(btn) {
