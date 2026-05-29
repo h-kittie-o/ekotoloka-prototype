@@ -1552,7 +1552,7 @@ body:has(.page-faq) .site-footer { margin-top: 0; }
 .event-join__meta:first-of-type { margin-top: 0; }
 
 /* ── 2. Info cards (Що взяти / Що дамо) ────────────────────────────── */
-.info-cols--event { gap: var(--space-4); }
+.info-cols--event { gap: var(--space-4); align-items: stretch; }
 
 .event-info {
   position: relative; overflow: hidden;
