@@ -920,8 +920,39 @@ a.card:hover, a.card-link:hover { color: inherit; }
 /* ==========================================================================
    MAP
    ========================================================================== */
-.map-embed { width: 100%; aspect-ratio: 16 / 10; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md); }
+.map-embed { width: 100%; aspect-ratio: 16 / 10; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md); position: relative; }
 .map-embed iframe { width: 100%; height: 100%; border: 0; filter: saturate(0.9); }
+
+/* Leaflet-контейнер: займає всю площу .map-embed */
+.leaflet-map { width: 100%; height: 100%; min-height: 360px; background: #E6EFE5; }
+
+/* Прибрати дефолтну тінь з divIcon — наш пін малюється SVG із власним border */
+.leaflet-div-icon.eko-pin,
+.eko-pin {
+  background: transparent;
+  border: none;
+}
+.eko-pin svg { display: block; filter: drop-shadow(0 6px 10px rgba(26,46,31,.25)); }
+
+/* Попап — у брендовій стилістиці */
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  box-shadow: 0 18px 40px -22px rgba(26,46,31,.4);
+  padding: 0;
+}
+.leaflet-popup-content { margin: 0; font-family: var(--font-body); font-size: var(--fs-small); line-height: 1.4; color: var(--color-text); width: auto !important; }
+.eko-popup { padding: 14px 16px 12px; display: flex; flex-direction: column; gap: 4px; min-width: 200px; }
+.eko-popup__title { font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--color-text); line-height: 1.2; }
+.eko-popup__meta { font-size: 13px; color: var(--color-text-muted); }
+.eko-popup__count { margin-top: 6px; font-size: 13px; color: var(--color-text); }
+.eko-popup__count strong { font-family: var(--font-display); font-weight: 700; }
+.eko-popup__cta {
+  display: inline-flex; align-items: center; gap: 4px; margin-top: 8px;
+  font-weight: 700; color: var(--orange); text-decoration: none; font-size: 14px;
+}
+.eko-popup__cta:hover { color: var(--orange-deep); text-decoration: underline; }
+.leaflet-popup-tip { box-shadow: none; }
+.leaflet-container a.leaflet-popup-close-button { color: var(--color-text-muted); font-size: 18px; padding: 6px 8px; }
 
 /* ==========================================================================
    CALENDAR (green-tinted, mirrors UI kit)

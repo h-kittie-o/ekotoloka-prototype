@@ -11,7 +11,8 @@
 <link rel="manifest" href="assets/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=20260529f">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="css/site.css?v=20260529g">
 </head>
 <body>
 <a href="#main" class="skip-link">Перейти до основного вмісту</a>
@@ -109,7 +110,7 @@
       <!-- MAP -->
       <div data-tab-panel="map" data-group="events-view" class="tab-panel is-active">
         <div class="map-embed" aria-label="Карта подій у Львові">
-          <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d42228.77!2d24.01!3d49.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1700000000" title="Карта Львова"></iframe>
+          <div id="events-map" class="leaflet-map" role="application" aria-label="Карта толок Львова"></div>
         </div>
         <p class="muted" style="margin-top: var(--space-3); font-size: var(--fs-small)">Пінами позначені толоки у найближчі 2 тижні. Клікни пін, щоб побачити деталі.</p>
       </div>
@@ -241,7 +242,25 @@
   <div class="footer-bottom"><span>© 2026 ГО «Екотолока». Львів, Україна.</span><span>Зроблено руками ком'юніті</span></div>
 </div></footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/events-data.js?v=20260529a"></script>
+<script src="js/eko-map.js?v=20260529a"></script>
 <script src="js/main.js"></script>
 <script src="js/ant-eyes.js?v=20260528a" defer></script>
+<script>
+  // Init events map after Leaflet/data loaded
+  (function () {
+    var el = document.getElementById('events-map');
+    if (!el || !window.EkoMap) return;
+    var map = window.EkoMap.initEventsMap(el);
+    // Invalidate size when map tab becomes active again (Leaflet needs this after display:none)
+    var mapTabBtn = document.querySelector('[data-tab="map"][data-tabs="events-view"], [data-tab="map"]');
+    if (mapTabBtn && map) {
+      mapTabBtn.addEventListener('click', function () {
+        setTimeout(function () { map.invalidateSize(); }, 80);
+      });
+    }
+  })();
+</script>
 </body>
 </html>

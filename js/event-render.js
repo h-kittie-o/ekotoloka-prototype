@@ -101,12 +101,10 @@
   // Meet at
   setText('[data-ef="meet-at"]', data.meetAt);
 
-  // Map iframe
-  var iframe = $('[data-ef="map-iframe"]');
-  if (iframe) {
-    var lat = data.map.lat, lng = data.map.lng;
-    iframe.src = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2572.8!2d' + lng + '!3d' + lat + '!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1700000001';
-    iframe.title = data.map.title;
+  // Map — Leaflet single marker (брендовий помаранчевий пін)
+  var mapContainer = $('[data-ef="map-container"]');
+  if (mapContainer && window.EkoMap && data.map) {
+    window.EkoMap.initSingleEventMap(mapContainer, data, id);
   }
 
   // Organizer
