@@ -103,8 +103,13 @@ h2 { font-size: 40px; line-height: 1.1; }
 .icon { width: 24px; height: 24px; flex: none; }
 .icon-sm { width: 18px; height: 18px; }
 
-.section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 40px; }
-.section-head h2 { max-width: 22ch; }
+/* Заголовок секції — eyebrow + h2 + lead на повну ширину, дія під ним ліворуч. */
+.section-head { display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px; align-items: stretch; }
+.section-head > div:first-child { width: 100%; }
+.section-head > div:first-child > * { max-width: none; }
+.section-head h2 { max-width: none; }
+.section-head > .btn,
+.section-head > .link-btn { align-self: flex-start; }
 
 /* ---- buttons ------------------------------------------------------------ */
 .btn {

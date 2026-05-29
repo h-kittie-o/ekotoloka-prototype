@@ -238,23 +238,22 @@ small { font-size: var(--fs-small); }
 .row-between { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
 
 /* Section header — заголовок + кнопка/фільтри.
-   Вертикальний стек, щоб h2 не стискався у вузьку колонку коли праворуч кнопка.
-   Заголовок (eyebrow + h2 + опис) зверху на повну ширину, action під ним ліворуч. */
+   Вертикальний стек: eyebrow, h2/h3 та опис на повну ширину контейнера,
+   дії (.section-head__action) — окремим рядом ліворуч. */
 .section-head {
   display: flex; flex-direction: column;
   gap: var(--space-4);
   margin-bottom: var(--space-6);
-  align-items: flex-start;
+  align-items: stretch;
 }
 .section-head__title { width: 100%; }
-.section-head__title > * { margin: 0; }
+.section-head__title > * { margin: 0; max-width: none; }
 .section-head__title > * + * { margin-top: var(--space-2); }
 .section-head__title h2,
 .section-head__title h3 { letter-spacing: var(--tracking-tight); }
-.section-head__title .muted { max-width: 60ch; }
 .section-head__action {
   display: flex; gap: var(--space-3); flex-wrap: wrap;
-  align-items: center;
+  align-items: center; align-self: flex-start;
 }
 .round-organic { border-radius: var(--radius-organic-1); }
 
