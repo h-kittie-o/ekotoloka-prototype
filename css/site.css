@@ -921,6 +921,17 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .filter-bar .select, .filter-bar .input { flex: 1 1 160px; min-width: 140px; min-height: 44px; }
 .filter-bar .input[type="search"] { flex: 2 1 240px; min-width: 200px; }
 
+/* Порожній стан списку подій (нічого не знайдено) */
+.events-empty {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: var(--space-3); padding: var(--space-9) var(--space-4);
+  background: #fff; border-radius: var(--radius-xl); box-shadow: var(--shadow-sm);
+}
+.events-empty[hidden] { display: none; }
+.events-empty .icon { width: 40px; height: 40px; color: var(--green-bright, #56B768); }
+.events-empty h3 { margin: 0; }
+.events-empty p { margin: 0; max-width: 36ch; }
+
 /* ==========================================================================
    TABS
    ========================================================================== */

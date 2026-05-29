@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-<link rel="stylesheet" href="css/site.css?v=20260529n">
+<link rel="stylesheet" href="css/site.css?v=20260529o">
 </head>
 <body>
 <a href="#main" class="skip-link">Перейти до основного вмісту</a>
@@ -72,15 +72,15 @@
 
       <!-- FILTERS -->
       <div class="filter-bar reveal" role="search">
-        <input type="search" class="input input-search" placeholder="Стрийський, Личаківський, Сихів..." aria-label="Пошук">
-        <select class="select" aria-label="Район">
+        <input type="search" class="input input-search" placeholder="Стрийський, Личаківський, Сихів..." aria-label="Пошук" data-filter="search">
+        <select class="select" aria-label="Район" data-filter="district">
           <option>Всі райони</option>
           <option>Галицький</option><option>Шевченківський</option><option>Личаківський</option><option>Сихівський</option><option>Франківський</option><option>Залізничний</option>
         </select>
-        <select class="select" aria-label="Тип">
+        <select class="select" aria-label="Тип" data-filter="type">
           <option>Всі типи</option><option>Парк</option><option>Двір</option><option>Річка</option><option>Ліс</option><option>Сквер</option>
         </select>
-        <select class="select" aria-label="Дата">
+        <select class="select" aria-label="Дата" data-filter="date">
           <option>Будь-коли</option><option>Цього тижня</option><option>Наступного</option><option>За місяць</option>
         </select>
         <button class="btn btn--soft">
@@ -104,7 +104,7 @@
             Календар
           </button>
         </div>
-        <span class="muted" style="font-size: var(--fs-small)">Знайдено <strong>6</strong> толок</span>
+        <span class="muted" style="font-size: var(--fs-small)">Знайдено <strong data-events-count>6</strong> <span data-events-count-word>толок</span></span>
       </div>
 
       <!-- MAP -->
@@ -119,7 +119,7 @@
       <div data-tab-panel="list" data-group="events-view" class="tab-panel">
         <div class="bento">
 
-          <a href="event.html?id=stryiskyi" class="card card--hover event-card bento__wide">
+          <a href="event.html?id=stryiskyi" class="card card--hover event-card bento__wide" data-event data-district="Галицький" data-type="Парк" data-date="2026-04-26">
             <div class="event-card__image"><img src="assets/event-stryiskyi.jpg?v=20260528a" alt="Стрийський парк — біля фонтану" loading="lazy"></div>
             <div class="event-card__body">
               <div class="event-card__meta">
@@ -134,7 +134,7 @@
             </div>
           </a>
 
-          <a href="event.html?id=vysokyi-zamok" class="card card--hover event-card bento__wide">
+          <a href="event.html?id=vysokyi-zamok" class="card card--hover event-card bento__wide" data-event data-district="Шевченківський" data-type="Пагорб" data-date="2026-05-03">
             <div class="event-card__image"><img src="assets/event-vysokyi-zamok.jpg?v=20260528a" alt="Високий замок" loading="lazy"></div>
             <div class="event-card__body">
               <div class="event-card__meta"><span class="chip">Пагорб</span><span class="chip chip--muted">Шевченківський</span></div>
@@ -144,7 +144,7 @@
             </div>
           </a>
 
-          <a href="event.html?id=valy" class="card card--hover event-card bento__wide">
+          <a href="event.html?id=valy" class="card card--hover event-card bento__wide" data-event data-district="Галицький" data-type="Після роботи" data-date="2026-05-09">
             <div class="event-card__image"><img src="assets/event-valy.jpg?v=20260528a" alt="After-work на Валах" loading="lazy"></div>
             <div class="event-card__body">
               <div class="event-card__meta"><span class="chip chip--accent">Після роботи</span><span class="chip chip--muted">Галицький</span></div>
@@ -154,7 +154,7 @@
             </div>
           </a>
 
-          <a href="event.html?id=sykhiv" class="card card--hover event-card bento__wide">
+          <a href="event.html?id=sykhiv" class="card card--hover event-card bento__wide" data-event data-district="Сихівський" data-type="Двір" data-date="2026-05-10">
             <div class="event-card__image"><img src="assets/event-sykhiv.jpg?v=20260528a" alt="Двір на Червоної Калини" loading="lazy"></div>
             <div class="event-card__body">
               <div class="event-card__meta"><span class="chip">Двір</span><span class="chip chip--muted">Сихівський</span><span class="chip chip--accent">Family</span></div>
@@ -164,7 +164,7 @@
             </div>
           </a>
 
-          <a href="event.html?id=znesinnya" class="card card--hover event-card bento__wide">
+          <a href="event.html?id=znesinnya" class="card card--hover event-card bento__wide" data-event data-district="Личаківський" data-type="Парк" data-date="2026-05-17">
             <div class="event-card__image"><img src="assets/event-znesinnya.jpg?v=20260528a" alt="Парк Знесіння" loading="lazy"></div>
             <div class="event-card__body">
               <div class="event-card__meta"><span class="chip">Парк</span><span class="chip chip--muted">Личаківський</span></div>
@@ -174,7 +174,7 @@
             </div>
           </a>
 
-          <a href="event.html?id=poltva" class="card card--hover event-card bento__wide">
+          <a href="event.html?id=poltva" class="card card--hover event-card bento__wide" data-event data-district="Галицький" data-type="Річка" data-date="2026-05-24">
             <div class="event-card__image"><img src="assets/event-poltva.jpg?v=20260528a" alt="Прибирання Полтви" loading="lazy"></div>
             <div class="event-card__body">
               <div class="event-card__meta"><span class="chip">Річка</span><span class="chip chip--muted">Галицький</span><span class="chip chip--error">Складно</span></div>
@@ -184,6 +184,12 @@
             </div>
           </a>
 
+        </div>
+        <div class="events-empty" data-events-empty hidden>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <h3>Нічого не знайшли</h3>
+          <p class="muted">Спробуй інші слова або скинь фільтри — покажемо всі толоки.</p>
+          <button class="btn btn--soft" data-filter-reset>Скинути фільтри</button>
         </div>
       </div>
 
@@ -246,6 +252,7 @@
 <script src="js/events-data.js?v=20260529a"></script>
 <script src="js/eko-map.js?v=20260529a"></script>
 <script src="js/main.js"></script>
+<script src="js/events-filter.js?v=20260529a"></script>
 <script src="js/ant-eyes.js?v=20260528a" defer></script>
 <script>
   // Init events map after Leaflet/data loaded
