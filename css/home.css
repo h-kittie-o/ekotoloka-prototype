@@ -103,13 +103,18 @@ h2 { font-size: 40px; line-height: 1.1; }
 .icon { width: 24px; height: 24px; flex: none; }
 .icon-sm { width: 18px; height: 18px; }
 
-/* Заголовок секції — eyebrow + h2 + lead на повну ширину, дія під ним ліворуч. */
-.section-head { display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px; align-items: stretch; }
-.section-head > div:first-child { width: 100%; }
-.section-head > div:first-child > * { max-width: none; }
-.section-head h2 { max-width: none; }
-.section-head > .btn,
-.section-head > .link-btn { align-self: flex-start; }
+/* Заголовок секції — десктоп горизонтально (заголовок ліворуч, дія праворуч),
+   мобайл (<768px) — вертикальний стек на повну ширину. */
+.section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 40px; }
+.section-head h2 { max-width: 22ch; }
+@media (max-width: 767px) {
+  .section-head { flex-direction: column; align-items: stretch; gap: 20px; }
+  .section-head > div:first-child { width: 100%; }
+  .section-head > div:first-child > * { max-width: none; }
+  .section-head h2 { max-width: none; }
+  .section-head > .btn,
+  .section-head > .link-btn { align-self: flex-start; }
+}
 
 /* ---- buttons ------------------------------------------------------------ */
 .btn {
@@ -139,7 +144,14 @@ h2 { font-size: 40px; line-height: 1.1; }
 .site-header .container { max-width: var(--wide); height: 100%; display: flex; align-items: center; gap: 24px; }
 .logo { display: inline-flex; align-items: center; gap: 14px; }
 .logo img { height: 40px; }
-.logo--mark-only img { height: 56px; }
+/* Десктоп — повний лого з написом; мобайл (<768px) — лише квітка-mark, більша */
+.logo img.logo__mark { display: none; }
+@media (max-width: 767px) {
+  .logo img.logo__full { display: none; }
+  .logo img.logo__mark { display: inline-block; height: 56px; }
+  /* Більша іконка локації на CTA «Знайти подію» — лише мобайл */
+  .header-actions .btn--primary .icon-sm { width: 24px; height: 24px; }
+}
 .site-header .logo { color: #fff; }
 
 .nav { display: flex; align-items: center; gap: 6px; margin-left: auto; }
