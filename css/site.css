@@ -774,6 +774,9 @@ a.card:hover, a.card-link:hover { color: inherit; }
    EVENT CARD (white, colored chips — mirrors home)
    ========================================================================== */
 .event-card { display: flex; flex-direction: column; height: 100%; padding: 0; overflow: hidden; background: #fff; border-radius: var(--r-card); box-shadow: var(--shadow-md); transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); }
+/* Пошук/фільтр ховає картки атрибутом hidden — display:flex вище перебивав
+   стандартне [hidden]{display:none}, тож приховані картки лишались видимими. */
+.event-card[hidden] { display: none; }
 .event-card.card--hover:hover, a.event-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 .event-card__image { width: 100%; aspect-ratio: 16 / 10; position: relative; overflow: hidden; }
 .event-card__image .img-placeholder { border-radius: 0; }
