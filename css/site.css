@@ -1245,6 +1245,18 @@ details.accordion > p, details.accordion > div { padding-bottom: var(--space-5);
 .chip--reward .icon-sm { width: 14px; height: 14px; }
 
 /* банер «зібрано сміття» — рожевий із жовтими фігурами-сміттям */
+.trash-banner-wrap { position: relative; }
+.trash-banner-ant {
+  position: absolute;
+  right: clamp(20px, 9vw, 130px);
+  bottom: 100%;
+  width: clamp(80px, 11.1%, 134px);
+  height: auto;
+  pointer-events: none; user-select: none;
+  z-index: 2;
+  /* лапки трохи нижче — щоб виглядало ніби мурашка стоїть на верху банера */
+  margin-bottom: -6px;
+}
 .trash-banner {
   position: relative; overflow: hidden; border-radius: var(--radius-xl);
   background: var(--pink); min-height: clamp(150px, 16vw, 190px);

@@ -10,7 +10,7 @@
 <link rel="manifest" href="assets/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/site.css?v=20260528h">
+<link rel="stylesheet" href="css/site.css?v=20260529a">
 </head>
 <body>
 <header class="site-header"><div class="container site-header__inner">
@@ -41,10 +41,10 @@
       <!-- Профіль: ідентичність + статистика (дизайн Figma) -->
       <div class="profile-head">
         <div class="profile-id">
-          <span class="profile-id__badge" aria-hidden="true"><img src="assets/profile-flower.svg" alt=""><b>М</b></span>
+          <span class="profile-id__badge" aria-hidden="true"><img src="assets/profile-flower.svg" alt=""><b>С</b></span>
           <div class="profile-id__meta">
             <span class="eyebrow" style="margin-bottom: var(--space-1)">Привіт</span>
-            <h1 style="margin: 0 0 var(--space-3)">Марко</h1>
+            <h1 style="margin: 0 0 var(--space-3)">Саша</h1>
             <div class="tag-row">
               <span class="chip chip--reward"><svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>Свій</span>
               <span class="chip chip--muted">Галицький</span>
@@ -53,14 +53,17 @@
           </div>
         </div>
 
-        <div class="trash-banner" role="img" aria-label="18 кілограмів зібраного сміття">
-          <img class="trash-banner__shape trash-banner__shape--a" src="assets/pf-trash-10.png" alt="" aria-hidden="true">
-          <img class="trash-banner__shape trash-banner__shape--b" src="assets/pf-trash-9.png" alt="" aria-hidden="true">
-          <img class="trash-banner__shape trash-banner__shape--c" src="assets/pf-trash-11.png" alt="" aria-hidden="true">
-          <img class="trash-banner__shape trash-banner__shape--d" src="assets/pf-trash-12.png" alt="" aria-hidden="true">
-          <div class="trash-banner__text">
-            <div class="trash-banner__num">18 <span>кг</span></div>
-            <div class="trash-banner__label">зібраного сміття</div>
+        <div class="trash-banner-wrap">
+          <img class="trash-banner-ant" src="assets/profile-ant-banner.png" alt="" aria-hidden="true">
+          <div class="trash-banner" role="img" aria-label="18 кілограмів зібраного сміття">
+            <img class="trash-banner__shape trash-banner__shape--a" src="assets/pf-trash-10.png" alt="" aria-hidden="true">
+            <img class="trash-banner__shape trash-banner__shape--b" src="assets/pf-trash-9.png" alt="" aria-hidden="true">
+            <img class="trash-banner__shape trash-banner__shape--c" src="assets/pf-trash-11.png" alt="" aria-hidden="true">
+            <img class="trash-banner__shape trash-banner__shape--d" src="assets/pf-trash-12.png" alt="" aria-hidden="true">
+            <div class="trash-banner__text">
+              <div class="trash-banner__num">18 <span>кг</span></div>
+              <div class="trash-banner__label">зібраного сміття</div>
+            </div>
           </div>
         </div>
 
@@ -104,10 +107,10 @@
         </header>
 
         <div class="share-card__identity">
-          <div class="share-card__avatar" aria-hidden="true">М</div>
+          <div class="share-card__avatar" aria-hidden="true">С</div>
           <div class="share-card__identity-meta">
             <span class="eyebrow" style="margin-bottom: 0">Привіт</span>
-            <h1 style="margin: 4px 0 var(--space-2); font-size: clamp(1.75rem, 4vw, 2.25rem)">Марко</h1>
+            <h1 style="margin: 4px 0 var(--space-2); font-size: clamp(1.75rem, 4vw, 2.25rem)">Саша</h1>
             <div class="tag-row">
               <span class="chip">Свій</span>
               <span class="chip chip--muted">Галицький</span>
@@ -259,7 +262,7 @@
       <div data-tab-panel="settings" data-group="profile" class="tab-panel">
         <div class="card stack-lg" style="max-width: 600px">
           <h3 style="margin-top:0">Ім'я та email</h3>
-          <div class="field"><label class="field__label" for="s-name">Ім'я</label><input class="input" id="s-name" value="Марко"></div>
+          <div class="field"><label class="field__label" for="s-name">Ім'я</label><input class="input" id="s-name" value="Саша"></div>
           <div class="field"><label class="field__label" for="s-email">Email</label><input class="input" id="s-email" value="marko@example.com"></div>
           <div class="field"><label class="field__label" for="s-district">Район</label><select class="select" id="s-district"><option>Галицький</option><option>Шевченківський</option><option>Личаківський</option><option>Сихівський</option><option>Франківський</option><option>Залізничний</option></select></div>
 
