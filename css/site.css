@@ -1333,11 +1333,29 @@ details.accordion > p, details.accordion > div { padding-bottom: var(--space-5);
   .trash-banner { min-height: 120px; border-radius: var(--radius-lg); }
   .trash-banner__num { font-size: 2.5rem; }
   .trash-banner__label { font-size: var(--fs-micro); }
-  /* Share-format кнопки в модалці: 3 в ряд, навіть на телефоні */
-  .modal .grid--3 { grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
+}
+
+/* ── Модалки на мобільному ────────────────────────────────────────────
+   1. Соцшеринг (Instagram / Facebook / Telegram / ...) — 2 cols замість
+      довгої колонки. 6 кнопок стають 3×2.
+   2. Формат-пікер у профілі (role="radiogroup") — 3 cols бо це маленькі
+      картки-прев'ю, не текстові кнопки.
+   3. Зменшений padding модалки, м'якший header gap.                  */
+@media (max-width: 767px) {
   .modal { padding: var(--space-5); }
+  .modal .grid--3 { grid-template-columns: repeat(2, 1fr); gap: var(--space-2); }
+  .modal [role="radiogroup"].grid--3 { grid-template-columns: repeat(3, 1fr); }
   .modal .img-placeholder--square,
   .modal .img-placeholder--story { font-size: var(--fs-micro); }
+  .modal__header { gap: var(--space-2); margin-bottom: var(--space-4); }
+  .modal__header h3 { font-size: 1.25rem; }
+  /* Чітко відокремлений close-button у вуглу */
+  .modal__close { width: 36px; height: 36px; flex-shrink: 0; }
+}
+@media (max-width: 380px) {
+  /* Дуже вузькі телефони (iPhone SE 1st gen 320px) — Apple Pay / Google Pay поруч заголовків
+     не вистачає місця. Усі грідовані пари у модалці стають 1 col. */
+  .modal .grid:not([role="radiogroup"]) { grid-template-columns: 1fr !important; }
 }
 
 /* нижній декор: зелені кущі по кутах + помаранчева мурашка (окремі шари).
