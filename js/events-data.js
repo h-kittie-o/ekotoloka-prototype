@@ -124,7 +124,7 @@ window.EKO_EVENTS = {
 
   'sykhiv': {
     image: 'assets/event-sykhiv.jpg?v=20260528a',
-    title: 'Двір на Червоній Калині',
+    title: 'Двір на Червоної Калини',
     chips: [
       { label: 'Двір' },
       { label: 'Сихівський район', variant: 'muted' },
