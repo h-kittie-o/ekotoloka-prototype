@@ -949,6 +949,26 @@ a.card:hover, a.card-link:hover { color: inherit; }
 }
 .tabs button:hover { color: var(--color-text); }
 .tabs button.is-active { background: var(--green); color: #fff; }
+
+/* Перемикач виду подій (Карта/Список/Календар): на мобільному — три рівні
+   вкладки на всю ширину без горизонтального скролу. Профіль (5 вкладок) не чіпаємо. */
+@media (max-width: 767px) {
+  .tabs[data-tabs="events-view"] {
+    display: flex;
+    width: 100%;
+    overflow-x: visible;
+    gap: 2px;
+  }
+  .tabs[data-tabs="events-view"] button {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    gap: 6px;
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+  }
+}
+
 .tab-panel { display: none; }
 .tab-panel.is-active { display: block; animation: fadeIn var(--dur-base) var(--ease-out); }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
