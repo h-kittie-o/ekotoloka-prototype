@@ -421,6 +421,9 @@ h2 { font-size: 40px; line-height: 1.1; }
 }
 @media (max-width: 1023px) {
   .nav { display: none; }
+  /* nav (з margin-left:auto) сховано → штовхаємо кнопки до правого краю самі,
+     інакше кластер тиснеться вліво за лого і праворуч лишається порожнеча */
+  .header-actions { margin-left: auto; }
   .burger { display: inline-flex; background: var(--green-nav); border: none; color: #fff; width: 44px; height: 40px; border-radius: 12px; align-items: center; justify-content: center; cursor: pointer; }
 }
 @media (max-width: 900px) {
