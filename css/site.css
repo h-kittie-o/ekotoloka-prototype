@@ -1021,7 +1021,7 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .calendar { background: #fff; border-radius: var(--radius-xl); padding: var(--space-5); box-shadow: var(--shadow-md); }
 .calendar__header { display: grid; grid-template-columns: repeat(7,1fr); gap: var(--space-2); text-align: center; margin-bottom: var(--space-3); }
 .calendar__header > span { font-size: var(--fs-micro); font-weight: var(--fw-bold); color: var(--color-text-muted); letter-spacing: var(--tracking-widest); text-transform: uppercase; padding: var(--space-2) 0; }
-.calendar__grid { display: grid; grid-template-columns: repeat(7,1fr); gap: var(--space-2); }
+.calendar__grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--space-2); }
 .calendar__day {
   aspect-ratio: 1 / 1; border-radius: var(--radius-md); padding: var(--space-2);
   display: flex; flex-direction: column; justify-content: space-between;
@@ -1030,6 +1030,23 @@ a.card:hover, a.card-link:hover { color: inherit; }
 .calendar__day--event { background: #EAF3EC; color: var(--color-text); text-decoration: none; cursor: pointer; transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out); }
 .calendar__day--event:hover { background: var(--mint); transform: translateY(-2px); color: var(--color-text); }
 .calendar__day--event strong { color: var(--green-deep); font-family: var(--font-display); font-size: 1.125rem; }
+
+/* Мобільний: клітинки вузькі (~40px), тож текстовий чип не влазить і вилазить
+   за межі календаря. Замінюємо його на компактну крапку-індикатор події. */
+@media (max-width: 767px) {
+  .calendar { padding: var(--space-4); }
+  .calendar__day { padding: 4px; }
+  .calendar__day--event strong { font-size: 1rem; }
+  .calendar__day--event .chip {
+    font-size: 0 !important;          /* ховаємо текст (інлайн-стиль перебиваємо) */
+    padding: 0 !important;
+    width: 7px; height: 7px;
+    min-width: 0; border-radius: 50%;
+    align-self: center; overflow: hidden;
+    background: var(--green) !important;   /* насичена крапка на світло-зеленій клітинці */
+  }
+  .calendar__day--event .chip--accent { background: var(--orange-deep) !important; }
+}
 
 /* ==========================================================================
    TIMELINE
